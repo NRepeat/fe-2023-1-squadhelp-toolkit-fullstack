@@ -28,7 +28,7 @@ const initialState = {
 export const getContestById = decorateAsyncThunk({
   key: `${CONTEST_BY_ID_SLICE_NAME}/getContest`,
   thunk: async payload => {
-    const { data } = await restController.getContestById(payload);
+    const { data } = await restController.getContestById(payload.contestId);
     const { Offers } = data;
     delete data.Offers;
     return { contestData: data, offers: Offers };

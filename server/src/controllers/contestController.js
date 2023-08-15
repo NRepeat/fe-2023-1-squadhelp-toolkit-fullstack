@@ -5,7 +5,7 @@ const userQueries = require('./queries/userQueries');
 const controller = require('../socketInit');
 const UtilFunctions = require('../utils/functions');
 const CONSTANTS = require('../constants');
-const { query } = require('express');
+
 
 module.exports.dataForContest = async (req, res, next) => {
   const response = {};
@@ -36,7 +36,7 @@ module.exports.dataForContest = async (req, res, next) => {
 };
 
 module.exports.getContestById = async (req, res, next) => {
-  const { query: { contestId } } = req
+  const { params: { contestId } } = req;
   try {
     let contestInfo = await db.Contests.findOne({
 
