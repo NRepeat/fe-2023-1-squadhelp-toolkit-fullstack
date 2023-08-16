@@ -223,7 +223,7 @@ module.exports.getCustomersContests = (req, res, next) => {
 
   db.Contests.findAll({
     where: { status, userId: req.tokenData.userId },
-    limit: limit || 10, // Provide a default limit if not provided
+    limit: limit || 10, 
     offset: offset || 0,
     order: [['id', 'DESC']],
     include: [

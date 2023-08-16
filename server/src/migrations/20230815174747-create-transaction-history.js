@@ -10,16 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       operationType: {
-        field:"operation_type",
-        type: DataTypes.ENUM('INCOME', 'CONSUMPTION'),
+        field: "operation_type",
+        type: Sequelize.ENUM('customer', 'creator'),
         allowNull: false,
       },
       sum: {
-        type: DataTypes.FLOAT,
-    allowNull: false,
+        type: Sequelize.FLOAT,
+        allowNull: false,
       },
       userId: {
-        field:"user_id",
+        field: "user_id",
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -30,12 +30,12 @@ module.exports = {
         onUpdate: "cascade",
       },
       createdAt: {
-        field:"created_at",
+        field: "created_at",
         allowNull: false,
         type: Sequelize.DATE,
       },
       updatedAt: {
-        field:"updated_at",
+        field: "updated_at",
         allowNull: false,
         type: Sequelize.DATE,
       },

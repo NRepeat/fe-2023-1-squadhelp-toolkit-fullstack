@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   TransactionHistory.init({
    
     operationType: {
-      type: DataTypes.ENUM('INCOME', 'CONSUMPTION'),
+      type: DataTypes.ENUM('customer', 'creator'),
       allowNull: false,
     },
     sum: {
