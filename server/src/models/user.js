@@ -2,6 +2,18 @@
 const {
   Model,
 } = require('sequelize');
+const bcrypt = require('bcrypt');
+const { SALT_ROUNDS } = require('../constants');
+
+
+async function hashPassword(user, options) {
+  if (user.changed('password')) {
+    const { password } = user;
+    const hashedPass = await bcrypt.hash(password, SALT_ROUNDS);
+    user.password = hashedPass;
+  }
+}
+
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -16,6 +28,10 @@ module.exports = (sequelize, DataTypes) => {
         { foreignKey: 'userId', targetKey: 'id' });
       User.hasMany(Rating,
         { foreignKey: 'userId', targetKey: 'id' });
+    }
+
+    async comparePassword(password) {
+      return bcrypt.compare(password, this.getDataValue('password'));
     }
   }
   User.init({
@@ -71,5 +87,9 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'User',
     timestamps: false,
   });
+
+  User.beforeCreate(hashPassword);
+  User.beforeUpdate(hashPassword);
+
   return User;
 };

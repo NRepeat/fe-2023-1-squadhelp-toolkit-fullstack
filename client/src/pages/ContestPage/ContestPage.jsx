@@ -138,7 +138,7 @@ class ContestPage extends React.Component {
         {/* <Chat/> */}
         {isShowOnFull && (
           <LightBox
-            mainSrc={`${CONSTANTS.publicURL}${imagePath}`}
+            mainSrc={`${CONSTANTS.publicImgURL}${imagePath}`}
             onCloseRequest={() =>
               changeShowImage({ isShowOnFull: false, imagePath: null })
             }
