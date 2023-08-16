@@ -13,7 +13,7 @@ module.exports.dataForContest = async (req, res, next) => {
     const { body: { characteristic1, characteristic2 } } = req;
     const types = [characteristic1, characteristic2, 'industry'].filter(Boolean);
 
-    const characteristics = await db.Selects.findAll({
+    const characteristics = await db.Select.findAll({
       where: {
         type: {
           [db.Sequelize.Op.or]: types,
@@ -42,11 +42,11 @@ module.exports.getContestById = async (req, res, next) => {
 
       where: { id: contestId },
       order: [
-        [db.Offers, 'id', 'asc'],
+        [db.Offer, 'id', 'asc'],
       ],
       include: [
         {
-          model: db.Users,
+          model: db.User,
           required: true,
           attributes: {
             exclude: [
@@ -58,7 +58,7 @@ module.exports.getContestById = async (req, res, next) => {
           },
         },
         {
-          model: db.Offers,
+          model: db.Offer,
           required: false,
           where: req.tokenData.role === CONSTANTS.CREATOR
             ? { userId: req.tokenData.userId }
@@ -66,7 +66,7 @@ module.exports.getContestById = async (req, res, next) => {
           attributes: { exclude: ['userId', 'contestId'] },
           include: [
             {
-              model: db.Users,
+              model: db.User,
               required: true,
               attributes: {
                 exclude: [
@@ -78,7 +78,7 @@ module.exports.getContestById = async (req, res, next) => {
               },
             },
             {
-              model: db.Ratings,
+              model: db.Rating,
               required: false,
               where: { userId: req.tokenData.userId },
               attributes: { exclude: ['userId', 'offerId'] },
@@ -96,6 +96,8 @@ module.exports.getContestById = async (req, res, next) => {
     });
     res.send(contestInfo);
   } catch (e) {
+    console.log('==========================ERROR==========================');
+    console.log(e);
     next(new ServerError());
   }
 };
@@ -228,7 +230,7 @@ module.exports.getCustomersContests = (req, res, next) => {
     order: [['id', 'DESC']],
     include: [
       {
-        model: db.Offers,
+        model: db.Offer,
         required: false,
         attributes: ['id'],
       },

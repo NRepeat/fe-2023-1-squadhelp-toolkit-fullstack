@@ -1,11 +1,18 @@
+const {
+  SQUADHELP_BANK_NUMBER,
+  SQUADHELP_BANK_NAME,
+  SQUADHELP_BANK_CVC,
+  SQUADHELP_BANK_EXPIRY,
+} = require('../constants');
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Banks', [
       {
-        cardNumber: '4564654564564564',
-        name: 'SquadHelp',
-        expiry: '11/22',
-        cvc: '453',
+        cardNumber: SQUADHELP_BANK_NUMBER,
+        name: SQUADHELP_BANK_NAME,
+        expiry: SQUADHELP_BANK_EXPIRY,
+        cvc: SQUADHELP_BANK_CVC,
         balance: 0,
       },
       {
