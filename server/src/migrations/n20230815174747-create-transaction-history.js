@@ -11,7 +11,7 @@ module.exports = {
       },
       operationType: {
         field: "operation_type",
-        type: Sequelize.ENUM('customer', 'creator'),
+        type: Sequelize.ENUM('INCOME', 'CONSUMPTION'),
         allowNull: false,
       },
       sum: {
