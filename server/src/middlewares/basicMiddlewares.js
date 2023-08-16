@@ -21,7 +21,7 @@ module.exports.canGetContest = async (req, res, next) => {
   const { params: { contestId } } = req;
   try {
     if (req.tokenData.role === CONSTANTS.CUSTOMER) {
-      result = await bd.Contests.findOne({
+      result = await db.Contests.findOne({
         where: { id:contestId, userId: req.tokenData.userId },
       });
     } else if (req.tokenData.role === CONSTANTS.CREATOR) {
