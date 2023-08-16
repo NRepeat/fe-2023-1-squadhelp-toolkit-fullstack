@@ -5,7 +5,7 @@ export const loginRequest = data => http.post('login', data);
 export const getUser = () => http.post('getUser');
 export const updateContest = data => {
 
-  return http.put('updateContest', data);
+  return http.put(`updateContest:${data.contestId}`, data);
 }
 export const setNewOffer = data => http.post('setNewOffer', data);
 export const setOfferStatus = data => http.post('setOfferStatus', data);
@@ -29,7 +29,7 @@ export const removeChatFromCatalog = data =>
   http.post('removeChatFromCatalog', data);
 export const changeCatalogName = data => http.post('updateNameCatalog', data);
 export const getCustomersContests = data =>
-  http.get('getCustomersContests', {
+  http.get('token/CustomersContests', {
     params: {
       limit: data.limit,
       offset: data.offset,

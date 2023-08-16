@@ -108,7 +108,9 @@ module.exports.downloadFile = async (req, res, next) => {
 };
 
 module.exports.updateContest = async (req, res, next) => {
-  const { file, body: { fileName, originalFileName, contestId } } = req;
+  const { file } = req;
+  let {  body: { fileName, originalFileName, } } = req;
+  const { contestId } = req.params;
   if (file) {
     fileName = file.filename;
     originalFileName = file.originalname;
