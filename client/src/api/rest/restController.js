@@ -33,7 +33,7 @@ export const removeChatFromCatalog = data =>
   http.post('removeChatFromCatalog', data);
 export const changeCatalogName = data => http.post('updateNameCatalog', data);
 export const getCustomersContests = data =>
-  http.get('token/CustomersContests', {
+  http.get('getCustomersContests', {
     params: {
       limit: data.limit,
       offset: data.offset,
