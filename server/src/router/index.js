@@ -11,10 +11,5 @@ rootRouter.use('/',userValidationRouter)
 rootRouter.use('/',checkToken.checkToken,tokenRequestRouter)
 rootRouter.use('/transactions',transactionRouter)
 
-router.post(
-  '/registration',
-  validators.validateRegistrationData,
-  userController.registration,
-);
 
 module.exports = rootRouter;
