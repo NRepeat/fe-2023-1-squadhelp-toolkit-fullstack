@@ -1,4 +1,3 @@
-const jwt = require('jsonwebtoken');
 const CONSTANTS = require('../constants');
 const db = require('../models');
 const NotUniqueEmail = require('../errors/NotUniqueEmail');
@@ -9,6 +8,7 @@ const controller = require('../socketInit');
 const userQueries = require('./queries/userQueries');
 const bankQueries = require('./queries/bankQueries');
 const ratingQueries = require('./queries/ratingQueries');
+const AuthService = require('../services/auth.service');
 
 module.exports.login = async (req, res, next) => {
   try {
@@ -17,18 +17,9 @@ module.exports.login = async (req, res, next) => {
     if (!isSamePassword) {
       throw new NotFound('Wrong password');
     }
-    const accessToken = jwt.sign({
-      firstName: foundUser.firstName,
-      userId: foundUser.id,
-      role: foundUser.role,
-      lastName: foundUser.lastName,
-      avatar: foundUser.avatar,
-      displayName: foundUser.displayName,
-      balance: foundUser.balance,
-      email: foundUser.email,
-      rating: foundUser.rating,
-    }, CONSTANTS.JWT_SECRET, { expiresIn: CONSTANTS.ACCESS_TOKEN_TIME });
-    await userQueries.updateUser({ accessToken }, foundUser.id);
+
+    const accessToken = await AuthService.createSession(foundUser);
+
     res.send({ token: accessToken });
   } catch (err) {
     next(err);
@@ -37,18 +28,9 @@ module.exports.login = async (req, res, next) => {
 module.exports.registration = async (req, res, next) => {
   try {
     const newUser = await userQueries.userCreation(req.body);
-    const accessToken = jwt.sign({
-      firstName: newUser.firstName,
-      userId: newUser.id,
-      role: newUser.role,
-      lastName: newUser.lastName,
-      avatar: newUser.avatar,
-      displayName: newUser.displayName,
-      balance: newUser.balance,
-      email: newUser.email,
-      rating: newUser.rating,
-    }, CONSTANTS.JWT_SECRET, { expiresIn: CONSTANTS.ACCESS_TOKEN_TIME });
-    await userQueries.updateUser({ accessToken }, newUser.id);
+
+    const accessToken = await AuthService.createSession(newUser);
+
     res.send({ token: accessToken });
   } catch (err) {
     if (err.name === 'SequelizeUniqueConstraintError') {
@@ -59,7 +41,7 @@ module.exports.registration = async (req, res, next) => {
   }
 };
 
-function getQuery (offerId, userId, mark, isFirst, transaction) {
+function getQuery(offerId, userId, mark, isFirst, transaction) {
   const getCreateQuery = () => ratingQueries.createRating({
     offerId,
     mark,
@@ -92,7 +74,7 @@ module.exports.changeMark = async (req, res, next) => {
       transaction,
     });
     for (let i = 0; i < offersArray.length; i++) {
-      sum += offersArray[ i ].dataValues.mark;
+      sum += offersArray[i].dataValues.mark;
     }
     avg = sum / offersArray.length;
 
