@@ -1,16 +1,16 @@
 const db = require('../models');
-const NotFound = require('../errors/UserNotFoundError');
 const RightsError = require('../errors/RightsError');
 const ServerError = require('../errors/ServerError');
 const CONSTANTS = require('../constants');
 
 module.exports.parseBody = (req, res, next) => {
-  req.body.contests = JSON.parse(req.body.contests);
-  for (let i = 0; i < req.body.contests.length; i++) {
-    if (req.body.contests[i].haveFile) {
-      const file = req.files.splice(0, 1);
-      req.body.contests[i].fileName = file[0].filename;
-      req.body.contests[i].originalFileName = file[0].originalname;
+	const {files,body:{contests}}=req
+  contests = JSON.parse(contests);
+  for (let i = 0; i < contests.length; i++) {
+    if (contests[i].haveFile) {
+      const file = files.splice(0, 1);
+      contests[i].fileName = file[0].filename;
+      contests[i].originalFileName = file[0].originalname;
     }
   }
   next();
@@ -66,9 +66,10 @@ module.exports.canSendOffer = async (req, res, next) => {
     return next(new RightsError());
   }
   try {
+		const{body:{contestId}} =req
     const result = await db.Contest.findOne({
       where: {
-        id: req.body.contestId,
+        id: contestId,
       },
       attributes: ['status'],
     });
@@ -86,10 +87,11 @@ module.exports.canSendOffer = async (req, res, next) => {
 
 module.exports.onlyForCustomerWhoCreateContest = async (req, res, next) => {
   try {
+		const{body:{contestId}} =req
     const result = await db.Contest.findOne({
       where: {
         userId: req.tokenData.userId,
-        id: req.body.contestId,
+        id: contestId,
         status: CONSTANTS.CONTEST_STATUS_ACTIVE,
       },
     });
@@ -104,10 +106,11 @@ module.exports.onlyForCustomerWhoCreateContest = async (req, res, next) => {
 
 module.exports.canUpdateContest = async (req, res, next) => {
   try {
+		const{body:{contestId}} =req
     const result = db.Contest.findOne({
       where: {
         userId: req.tokenData.userId,
-        id: req.body.contestId,
+        id: contestId,
         status: { [db.Sequelize.Op.not]: CONSTANTS.CONTEST_STATUS_FINISHED },
       },
     });

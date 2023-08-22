@@ -1,40 +1,47 @@
 const schems = require('../validationSchemes/schems');
-const ServerError = require('../errors/ServerError');
 const BadRequestError = require('../errors/BadRequestError');
 
 module.exports.validateRegistrationData = async (req, res, next) => {
-  const validationResult = await schems.registrationSchem.isValid(req.body);
-  if (!validationResult) {
-    return next(new BadRequestError('Invalid data for registration'));
-  } else {
-    next();
-  }
+	try {
+		const{body} =req
+		const validationResult = await schems.registrationSchem.isValid(body);
+		if (!validationResult) {
+			throw new BadRequestError('Invalid data for registration');
+		}
+		next();
+	} catch (error) {
+		next(error);
+	}
 };
 
 module.exports.validateLogin = async (req, res, next) => {
-  const validationResult = await schems.loginSchem.isValid(req.body);
-  if (validationResult) {
-    next();
-  } else {
-    return next(new BadRequestError('Invalid data for login'));
-  }
+	try {
+		const{body} =req
+		const validationResult = await schems.loginSchem.isValid(body);
+		if (!validationResult) {
+			throw new BadRequestError('Invalid data for login');
+		}
+		next();
+	} catch (error) {
+		next(error);
+	}
 };
 
-module.exports.validateContestCreation = (req, res, next) => {
-  const promiseArray = [];
-  req.body.contests.forEach(el => {
-    promiseArray.push(schems.contestSchem.isValid(el));
-  });
-  return Promise.all(promiseArray)
-    .then(results => {
-      results.forEach(result => {
-        if (!result) {
-          return next(new BadRequestError());
-        }
-      });
-      next();
-    })
-    .catch(err => {
-      next(err);
-    });
+module.exports.validateContestCreation = async (req, res, next) => {
+	try {
+		const{body:{contests}} =req
+		const promiseArray = contests.map(el => schems.contestSchem.isValid(el));
+		const results = await Promise.all(promiseArray);
+
+		results.forEach(result => {
+			if (!result) {
+				throw new BadRequestError();
+			}
+		});
+
+		next();
+	} catch (error) {
+		next(error);
+	}
 };
+
