@@ -50,17 +50,19 @@ export const getActiveContests = ({
 	awardSort,
 	ownEntries,
 }) =>
-	http.get('contests/all', {
-		params: {
-			offset,
-			limit,
-			typeIndex,
-			contestId,
-			industry,
-			awardSort,
-			ownEntries,
-		}
+	http.post('contests/all', {
+
+		offset,
+		limit,
+		typeIndex,
+		contestId,
+		industry,
+		awardSort,
+		ownEntries,
+
+
 	});
 
 export const getContestById = (contestId) => {
-return http.get(`contests/${contestId}`); }
+	return http.get(`contests/${contestId}`);
+}
