@@ -1,47 +1,202 @@
 import http from '../interceptor';
+export const registerRequest = async (data) => {
+	try {
+		return await http.post('/registration', data);
+	} catch (error) {
+		throw error;
+	}
+};
 
-export const allTransactions = (data) => (http.get('allTransactions'))
+export const loginRequest = async (data) => {
+	try {
+		return await http.post('/login', data);
+	} catch (error) {
+		throw error;
+	}
+};
 
+export const getUser = async () => {
+	try {
+		return await http.post('/getUser');
+	} catch (error) {
+		throw error;
+	}
+};
 
+export const updateContest = async (data) => {
+	try {
+		return await http.put(`contests/${data.get('contestId')}`, data);
+	} catch (error) {
+		throw error;
+	}
+};
 
-export const registerRequest = data => http.post('/registration', data);
-export const loginRequest = data => http.post('/login', data);
-export const getUser = () => http.post('/getUser');
-export const updateContest = (data) => http.put(`contests/${data.get('contestId')}`, data);
-export const setNewOffer = data => http.post('contests/setNewOffer', data);
-export const setOfferStatus = data => http.post('contests/setOfferStatus', data);
-export const downloadContestFile = data =>
-	http.get(`contests/downloadFile/${data.fileName}`);
-export const payMent = data => http.post('pay', data.formData);
-export const changeMark = data => http.post('changeMark', data);
-export const getPreviewChat = () => http.post('chat/getPreview');
-export const getDialog = data => http.post('chat/getChat', data);
-export const dataForContest = data => http.post('contests/dataForContest', data);
-export const cashOut = data => http.post('cashout', data);
-export const updateUser = data => http.post('updateUser', data);
-export const newMessage = data => http.post('chat/newMessage', data);
-export const changeChatFavorite = data => http.post('chat/favorite', data);
-export const changeChatBlock = data => http.post('chat/blackList', data);
-export const getCatalogList = data => http.post('chat/getCatalogs', data);
-export const addChatToCatalog = data => http.post('chat/addNewChatToCatalog', data);
-export const createCatalog = data => http.post('chat/createCatalog', data);
-export const deleteCatalog = data => http.post('chat/deleteCatalog', data);
-export const removeChatFromCatalog = data =>
-	http.post('chat/removeChatFromCatalog', data);
-export const changeCatalogName = data => http.post('chat/updateNameCatalog', data);
-export const getCustomersContests = data =>
-	http.get(
-		'contests/customers',
-		{
+export const setNewOffer = async (data) => {
+	try {
+		return await http.post('contests/setNewOffer', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const setOfferStatus = async (data) => {
+	try {
+		return await http.post('contests/setOfferStatus', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const downloadContestFile = async (data) => {
+	try {
+		return await http.get(`contests/downloadFile/${data.fileName}`);
+	} catch (error) {
+		throw error;
+	}
+};
+export const payMent = async (data) => {
+	try {
+		return await http.post('pay', data.formData);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const changeMark = async (data) => {
+	try {
+		return await http.post('changeMark', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const getPreviewChat = async () => {
+	try {
+		return await http.post('chat/getPreview');
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const getDialog = async (data) => {
+	try {
+		return await http.post('chat/getChat', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const dataForContest = async (data) => {
+	try {
+		return await http.post('contests/dataForContest', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const cashOut = async (data) => {
+	try {
+		return await http.post('cashout', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const updateUser = async (data) => {
+	try {
+		return await http.post('updateUser', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const newMessage = async (data) => {
+	try {
+		return await http.post('chat/newMessage', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const changeChatFavorite = async (data) => {
+	try {
+		return await http.post('chat/favorite', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const changeChatBlock = async (data) => {
+	try {
+		return await http.post('chat/blackList', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const getCatalogList = async (data) => {
+	try {
+		return await http.post('chat/getCatalogs', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const addChatToCatalog = async (data) => {
+	try {
+		return await http.post('chat/addNewChatToCatalog', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const createCatalog = async (data) => {
+	try {
+		return await http.post('chat/createCatalog', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const deleteCatalog = async (data) => {
+	try {
+		return await http.post('chat/deleteCatalog', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const removeChatFromCatalog = async (data) => {
+	try {
+		return await http.post('chat/removeChatFromCatalog', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const changeCatalogName = async (data) => {
+	try {
+		return await http.post('chat/updateNameCatalog', data);
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const getCustomersContests = async (data) => {
+	try {
+		return await http.get('contests/customers', {
 			params: {
 				status: data.contestStatus,
 				limit: data.limit,
 				offset: data.offset
 			},
-		}
-	);
+		});
+	} catch (error) {
+		throw error;
+	}
+};
 
-export const getActiveContests = ({
+export const getActiveContests = async ({
 	offset,
 	limit,
 	typeIndex,
@@ -49,20 +204,26 @@ export const getActiveContests = ({
 	industry,
 	awardSort,
 	ownEntries,
-}) =>
-	http.post('contests/all', {
+}) => {
+	try {
+		return await http.post('contests/all', {
+			offset,
+			limit,
+			typeIndex,
+			contestId,
+			industry,
+			awardSort,
+			ownEntries,
+		});
+	} catch (error) {
+		throw error;
+	}
+};
 
-		offset,
-		limit,
-		typeIndex,
-		contestId,
-		industry,
-		awardSort,
-		ownEntries,
-
-
-	});
-
-export const getContestById = (contestId) => {
-	return http.get(`contests/${contestId}`);
-}
+export const getContestById = async (contestId) => {
+	try {
+		return await http.get(`contests/${contestId}`);
+	} catch (error) {
+		throw error;
+	}
+};
