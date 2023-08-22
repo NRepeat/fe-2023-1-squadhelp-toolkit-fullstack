@@ -17,7 +17,7 @@ export const loginRequest = async (data) => {
 
 export const getUser = async () => {
 	try {
-		return await http.post('/getUser');
+		return await http.get('/getUser');
 	} catch (error) {
 		throw error;
 	}
@@ -72,7 +72,7 @@ export const changeMark = async (data) => {
 
 export const getPreviewChat = async () => {
 	try {
-		return await http.post('chat/getPreview');
+		return await http.get('chat/getPreview');
 	} catch (error) {
 		throw error;
 	}
@@ -207,6 +207,7 @@ export const getActiveContests = async ({
 }) => {
 	try {
 		return await http.post('contests/all', {
+
 			offset,
 			limit,
 			typeIndex,
@@ -214,6 +215,7 @@ export const getActiveContests = async ({
 			industry,
 			awardSort,
 			ownEntries,
+
 		});
 	} catch (error) {
 		throw error;

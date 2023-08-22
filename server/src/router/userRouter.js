@@ -16,7 +16,7 @@ userValidationRouter.post(
     userController.login,
 );
 
-userValidationRouter.post(
+userValidationRouter.get(
     '/getUser',
     checkToken.checkAuth,
 );

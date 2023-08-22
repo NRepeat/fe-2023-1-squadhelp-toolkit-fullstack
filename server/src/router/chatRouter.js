@@ -10,7 +10,7 @@ chatRouter.post(
   chatController.getChat,
 );
 
-chatRouter.post(
+chatRouter.get(
   '/getPreview',
   chatController.getPreview,
 );
