@@ -1,6 +1,6 @@
 import http from '../interceptor';
 
-export const allTransactions = (data)=>(http.get('allTransactions'))
+export const allTransactions = (data) => (http.get('allTransactions'))
 
 
 
@@ -11,7 +11,7 @@ export const updateContest = (data) => http.put(`contests/${data.get('contestId'
 export const setNewOffer = data => http.post('setNewOffer', data);
 export const setOfferStatus = data => http.post('setOfferStatus', data);
 export const downloadContestFile = data =>
-  http.get(`downloadFile/${data.fileName}`);
+	http.get(`downloadFile/${data.fileName}`);
 export const payMent = data => http.post('pay', data.formData);
 export const changeMark = data => http.post('changeMark', data);
 export const getPreviewChat = () => http.post('getPreview');
@@ -27,40 +27,40 @@ export const addChatToCatalog = data => http.post('addNewChatToCatalog', data);
 export const createCatalog = data => http.post('createCatalog', data);
 export const deleteCatalog = data => http.post('deleteCatalog', data);
 export const removeChatFromCatalog = data =>
-  http.post('removeChatFromCatalog', data);
+	http.post('removeChatFromCatalog', data);
 export const changeCatalogName = data => http.post('updateNameCatalog', data);
 export const getCustomersContests = data =>
-  http.get(
-    'contests/customers',
-    {
-      params: {
-        status: data.contestStatus,
-        limit: data.limit,
-        offset: data.offset
-      },
-    }
-  );
+	http.get(
+		'contests/customers',
+		{
+			params: {
+				status: data.contestStatus,
+				limit: data.limit,
+				offset: data.offset
+			},
+		}
+	);
 
 export const getActiveContests = ({
-  offset,
-  limit,
-  typeIndex,
-  contestId,
-  industry,
-  awardSort,
-  ownEntries,
+	offset,
+	limit,
+	typeIndex,
+	contestId,
+	industry,
+	awardSort,
+	ownEntries,
 }) =>
-  http.get('contests/all', {
-    params: {
-      offset,
-      limit,
-      typeIndex,
-      contestId,
-      industry,
-      awardSort,
-      ownEntries,
-    }
-  });
+	http.get('contests/all', {
+		params: {
+			offset,
+			limit,
+			typeIndex,
+			contestId,
+			industry,
+			awardSort,
+			ownEntries,
+		}
+	});
 
-export const getContestById = ({ contestId }) =>
-  http.get(`contests/${contestId}`,);
+export const getContestById = (contestId) => {
+return http.get(`contests/${contestId}`); }
