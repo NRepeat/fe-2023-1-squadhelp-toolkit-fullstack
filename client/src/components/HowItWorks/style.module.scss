@@ -1,0 +1,162 @@
+$main-blue-color: #537df7;
+$text-color: #7a838e;
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.HDSWContainer {
+  margin-top: 60px;
+  // width: 1400px;
+  .HDSWBanerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .BanerHDSW {
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 100px;
+
+      .spanHDSW {
+        background-color: #edf2fe;
+        font-weight: 400;
+        font-size: 0.7rem;
+        color: $main-blue-color;
+        border-radius: 6rem;
+        padding: 0.4375rem 0.9375rem;
+        text-align: center;
+        margin-left: 5px;
+      }
+
+      .h1HDSW {
+        font-weight: 600;
+        font-size: 2.6rem;
+      }
+
+      .pHDSW {
+        font-size: 1.1rem;
+        color: $text-color;
+        line-height: 1.6rem;
+      }
+
+      .phoneImhHDSW {
+        display: block;
+      }
+
+      .buttonHDSW {
+        background-color: $main-blue-color;
+        border-radius: 6rem;
+        padding: 0.4375rem 0.9375rem;
+        border: none;
+        color: white;
+        transition: all 0.2s;
+      }
+
+      .buttonHDSW:hover {
+        transform: translateY(-2px);
+        box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
+        -webkit-box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
+        -moz-box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
+      }
+
+      .imgWrapperHDSW {
+      }
+    }
+  }
+}
+.WTUSContainer {
+  // width: 1400px;
+}
+.cardWrapperWTUS {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+  .cardWTUS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 64px 16px 64px 16px;
+    text-align: center;
+    border: 0.5px solid #e7eaf3;
+    border-radius: 0.3125rem;
+    line-height: 1.4rem;
+
+    min-width: 250px;
+    max-width: 400px;
+    .Img {
+      width: 82px;
+      height: 72px;
+    }
+    .h2 {
+      font-weight: bold;
+    }
+    .p {
+      color: $text-color;
+    }
+    .button {
+      border: none;
+      border-radius: 5px;
+      min-height: 50px;
+      color: white;
+      padding: 16px;
+      background-color: $main-blue-color;
+			transition: all 0.2s;
+    }
+    .button:hover {
+			transform: translateY(-2px);
+			box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
+			-webkit-box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
+			-moz-box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
+ 
+    }
+  }
+}
+
+// @media (min-width: 1995px) {
+//   .mainContainer {
+//     margin-left: 25%;
+//     margin-right: 25%;
+//   }
+// }
+
+// @media (max-width: 1532px) {
+//   .mainContainer {
+//     margin-left: 10%;
+//     margin-right: 10%;
+//     .HDSWContainer {
+//       width: 1200px;
+//     }
+//   }
+// }
+// @media (max-width: 1200px) {
+//   .mainContainer {
+//     margin-left: 5%;
+//     margin-right: 5%;
+//     .HDSWContainer {
+//       width: 1000px;
+//     }
+//   }
+// }
+
+// @media (max-width: 995px) {
+//   .mainContainer {
+//     .HDSWContainer {
+//       width: 100%;
+//     }
+//     .phoneImhHDSW {
+//       display: none;
+//     }
+//   }
+// }
