@@ -19,9 +19,9 @@ AgencyImg.defaultProps = {
 export default function WaysToUse() {
   return (
     <div className={styles.WTUSContainer}>
-      <span>Our Services</span>
-      <h1>3 Ways To Use Squadhelp</h1>
-      <p>
+      <span className={styles.WTUSspan}>Our Services</span>
+      <h1 className={styles.WTUSh1}>3 Ways To Use Squadhelp</h1>
+      <p className={styles.WTUSp}>
         Squadhelp offers 3 ways to get you a perfect name for your business.
       </p>
       <div className={styles.cardWrapperWTUS}>

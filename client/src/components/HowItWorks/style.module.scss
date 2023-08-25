@@ -10,7 +10,7 @@ $text-color: #7a838e;
 }
 .HDSWContainer {
   margin-top: 60px;
-  // width: 1400px;
+  width: 1400px;
   .HDSWBanerWrapper {
     display: flex;
     flex-direction: row;
@@ -73,57 +73,142 @@ $text-color: #7a838e;
   }
 }
 .WTUSContainer {
-  // width: 1400px;
-}
-.cardWrapperWTUS {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
   gap: 20px;
-  width: 100%;
-  justify-content: space-between;
-  .cardWTUS {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 15px;
-    padding: 64px 16px 64px 16px;
+  padding-top: 60px;
+  .WTUSspan {
+    background-color: #edf2fe;
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: $main-blue-color;
+    border-radius: 6rem;
+    padding: 0.4375rem 0.9375rem;
     text-align: center;
-    border: 0.5px solid #e7eaf3;
-    border-radius: 0.3125rem;
-    line-height: 1.4rem;
+    margin-left: 5px;
+  }
+  .WTUSh1 {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  .WTUSp {
+    color: $text-color;
+    padding-bottom: 60px;
+  }
+  .cardWrapperWTUS {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 1400px;
+    justify-content: space-between;
+    .cardWTUS {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 15px;
+      padding: 64px 16px 64px 16px;
+      text-align: center;
+      border: 0.5px solid #e7eaf3;
+      border-radius: 0.3125rem;
+      line-height: 1.4rem;
 
-    min-width: 250px;
-    max-width: 400px;
-    .Img {
-      width: 82px;
-      height: 72px;
-    }
-    .h2 {
-      font-weight: bold;
-    }
-    .p {
-      color: $text-color;
-    }
-    .button {
-      border: none;
-      border-radius: 5px;
-      min-height: 50px;
-      color: white;
-      padding: 16px;
-      background-color: $main-blue-color;
-			transition: all 0.2s;
-    }
-    .button:hover {
-			transform: translateY(-2px);
-			box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
-			-webkit-box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
-			-moz-box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
- 
+      min-width: 250px;
+      max-width: 400px;
+      .Img {
+        width: 82px;
+        height: 72px;
+      }
+      .h2 {
+        font-weight: bold;
+      }
+      .p {
+        color: $text-color;
+      }
+      .button {
+        border: none;
+        border-radius: 5px;
+        min-height: 50px;
+        color: white;
+        padding: 16px;
+        background-color: $main-blue-color;
+        transition: all 0.2s;
+      }
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
+        -webkit-box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
+        -moz-box-shadow: 1px 5px 24px -2px rgba(155, 157, 255, 0.82);
+      }
     }
   }
 }
+.CubockImgHDNCW {
+  margin-top: 150px;
+}
+.CubockImgHDNCW::before{
+	content: "";
+	position: absolute;
+	top: 0px;
+	width: 1000px;
+	z-index: 1;
+	height: 12px;
+	background-color: #537df7;
+}
+.HDNCWcontainer {
+	position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  .HDNCWh1 {
+    font-weight: bold;
+    font-size: 2rem;
+    padding-bottom: 20px;
+  }
+  .HDNCWwrapper {
+    width: 1400px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .HDNCWimg {
+  }
+  .HDNCWenum {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .HDNCWspan {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 15px;
+      min-height: 60px;
+
+      p:nth-child(1) {
+        color: #537df7;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+      p:nth-child(2) {
+        color: $text-color;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+      }
+      border-radius: 5px;
+      border: 0.5px solid #e7eaf3;
+      width: 500px;
+      padding: 32px;
+    }
+  }
+}
 // @media (min-width: 1995px) {
 //   .mainContainer {
 //     margin-left: 25%;
