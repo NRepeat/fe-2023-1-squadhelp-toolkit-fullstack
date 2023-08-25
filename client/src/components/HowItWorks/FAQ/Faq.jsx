@@ -1,20 +1,14 @@
-import React from 'react'
-import LaunchingAContest from './LaunchingAContest'
-import BuyingFromMarketplace from './BuyingFromMarketplace'
-import ManagedContests from './ManagedContests'
-import ForCreatives from './ForCreatives'
-import MiniMaap from './MiniMaap'
-
+import React from 'react';
+import LaunchingAContest from './LaunchingAContest';
+import MiniMaap from './MiniMaap';
+import styles from '../style.module.scss';
 function Faq() {
-	return (
-		<>
-		<MiniMaap/>
-		<LaunchingAContest/>
-		<BuyingFromMarketplace/>
-		<ManagedContests/>
-		<ForCreatives/>
-		</>
-		)
+  return (
+    <div className={styles.FaQcontainer}>
+      <MiniMaap />
+      <LaunchingAContest />
+    </div>
+  );
 }
 
-export default Faq
+export default Faq;

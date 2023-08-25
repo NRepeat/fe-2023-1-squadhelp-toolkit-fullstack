@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from '../style.module.scss';
 
-const data = [
+const launchingAContestsdata = [
   {
     question: 'How long does it take to start receiving submissions?',
     answer:
@@ -15,7 +15,7 @@ const data = [
   {
     question: 'How long does it take to start receiving submissions?',
     answer:
-      'For Naming contests, you will start receiving your submissions within few minutes of launching your contest. Since our creatives are located across the globe, you can expect to receive submissions 24 X 7 throughout the duration of the brainstorming phase.',
+      'For Naming contests, you will start receiving your submissions within few minutes of launching your contest. Since our creatives are located across the globe, you can expect to receive submissions 24 X 7 throughout the duration of the brainstorming phase.ontest. Since our creatives are located across the globe, you can expect to receive submissions 24 X 7 throughout the duration of the brainstorming phase.ontest. Since our creatives are located across the globe, you can expect to receive submissions 24 X 7 throughout the duration of the brainstorming phase.',
   },
   {
     question: 'How long does it take to start receiving submissions?',
@@ -23,12 +23,9 @@ const data = [
       'For Naming contests, you will start receiving your submissions within few minutes of launching your contest. Since our creatives are located across the globe, you can expect to receive submissions 24 X 7 throughout the duration of the brainstorming phase.',
   },
 ];
-
-export default function LaunchingAContest() {
+function MapedList({ data, contentRef }) {
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
-  const contentRef = useRef(null);
-
   const handleClick = (index) => {
     if (!isAnimating) {
       setIsAnimating(true);
@@ -38,19 +35,14 @@ export default function LaunchingAContest() {
       } else {
         setExpandedIndex(index);
       }
-
       requestAnimationFrame(() => {
         setIsAnimating(false);
       });
     }
   };
-  useEffect(() => {
-    if (contentRef.current) {
-      contentRef.current.style.maxHeight = expandedIndex !== null ? `${contentRef.current.scrollHeight}px` : '0';
-    }
-  }, [expandedIndex]);
   return (
-    <div className={styles.FaQwrapperr}>
+    <div className={styles.pading}>
+      {' '}
       {data.map((item, index) => (
         <span
           key={index}
@@ -60,7 +52,6 @@ export default function LaunchingAContest() {
           onClick={() => handleClick(index)}
         >
           <p className={styles.question}> {item.question}</p>
-
           <p
             ref={contentRef}
             className={`${styles.answer} ${
@@ -69,7 +60,7 @@ export default function LaunchingAContest() {
             style={{
               maxHeight:
                 expandedIndex === index
-                  ? `${contentRef.current.scrollHeight}px`
+                  ? `${contentRef.current.scrollHeight+260}px`
                   : '0',
             }}
           >
@@ -77,6 +68,43 @@ export default function LaunchingAContest() {
           </p>
         </span>
       ))}
+    </div>
+  );
+}
+function LaunchingAContestsList({ data, contentRef }) {
+  return <MapedList data={data} contentRef={contentRef} />;
+}
+function BuyingFromMarketplaceList({ data, contentRef }) {
+  return <MapedList data={data} contentRef={contentRef} />;
+}
+function ManagedContestsList({ data, contentRef }) {
+  return <MapedList data={data} contentRef={contentRef} />;
+}
+function ForCreativesList({ data, contentRef }) {
+  return <MapedList  data={data} contentRef={contentRef} />;
+}
+export default function LaunchingAContest() {
+  const contentRef = useRef(null);
+  return (
+    <div className={styles.FaQwrapperr}>
+      <p  id="Launching A Contest"className={styles.p}>Launching A Contest</p>
+      <LaunchingAContestsList
+			
+        data={launchingAContestsdata}
+        contentRef={contentRef}
+      />
+      <p id="Buying From Marketplace" className={styles.p}>Buying From Marketplace</p>
+      <BuyingFromMarketplaceList
+        data={launchingAContestsdata}
+        contentRef={contentRef}
+      />
+      <p id="Managed Contests" className={styles.p}>Managed Contests</p>
+      <ManagedContestsList
+        data={launchingAContestsdata}
+        contentRef={contentRef}
+      />
+      <p id="For Creatives" className={styles.p}>For Creatives</p>
+      <ForCreativesList  data={launchingAContestsdata} contentRef={contentRef} />
     </div>
   );
 }
