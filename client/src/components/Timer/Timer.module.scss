@@ -1,0 +1,75 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 1.2rem;
+    input {
+      text-align: center;
+      height: 30px;
+      font-size: 1.2rem;
+    }
+  }
+  h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: #54618a;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  button {
+    display: flex;
+    align-self: center;
+    border: 2px solid #71cfcf;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    color: #71cfcf;
+    border-radius: 5px;
+  }
+}
+
+.eventItem {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+	justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+  background-color: rgba(220, 220, 220, 0.485);
+  border-radius: 5px;
+	-webkit-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.07);
+	-moz-box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.07);
+	box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.07);
+}
+.listWrapper {
+	position: relative;
+  display: flex;
+  flex-direction: column;
+	min-width: 500px;
+	max-height: 500px;
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+  gap: 10px;
+}
+
+.eventProgress{
+	position:absolute;
+  bottom: 20px;
+  left: 0px;
+  height: 30px;
+  background-color: #3498db; /* Колір прогресу */
+	width: 0px; /* Початкова ширина на повну ширину */
+	opacity: 0.1;
+  transition: width 1s linear;
+}
