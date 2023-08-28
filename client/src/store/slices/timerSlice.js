@@ -16,7 +16,8 @@ const timerSlice = createSlice({
 			// Logic to update event details
 		},
 		deleteEvent: (state, action) => {
-			// Logic to delete an event
+			const eventId = action.payload; // Отримуємо переданий ідентифікатор
+      state.events = state.events.filter(event => event.id !== eventId);
 		},
 	},
 })

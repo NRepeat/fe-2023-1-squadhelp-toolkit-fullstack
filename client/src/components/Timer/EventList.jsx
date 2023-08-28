@@ -17,8 +17,8 @@ function EventList() {
     <>
      
       <div className={styles.listWrapper}>
-        {sortedEvents.map((event) => (
-          <EventItem key={event.id} event={event} />
+        {sortedEvents.map((event,id) => (
+          <EventItem key={id} id={id}event={event} />
         ))}
       </div>
     </>

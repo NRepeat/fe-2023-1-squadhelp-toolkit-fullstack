@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addEvent } from '../../store/slices/timerSlice';
 import styles from './Timer.module.scss';
+import { v4 as uuidv4 } from 'uuid';
 function EventForm() {
   const dispatch = useDispatch();
   const [eventName, setEventName] = useState('');
@@ -11,12 +12,14 @@ function EventForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newEvent = {
+			id: uuidv4(),
       name: eventName,
       date: eventDate,
       time: eventTime,
     };
 
     dispatch(addEvent(newEvent));
+
   };
 
   return (

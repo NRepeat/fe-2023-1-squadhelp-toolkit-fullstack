@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Timer.module.scss';
-function EventItem({ event }) {
+import { useDispatch } from 'react-redux';
+import { deleteEvent } from '../../store/slices/timerSlice';
+function EventItem({ event,id }) {
+  console.log("🚀 ~ file: EventItem.jsx:6 ~ EventItem ~ event:", id)
+  const dispatch = useDispatch();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(event));
-  const [ initialTimeLeft, setinitialTimeLeft ] = useState([]);
+  const [initialTimeLeft, setinitialTimeLeft] = useState([]);
   useEffect(() => {
     const eventDate = new Date(`${event.date} ${event.time}`);
     const currentTime = new Date();
@@ -22,7 +26,10 @@ function EventItem({ event }) {
   useEffect(() => {
     setinitialTimeLeft(calculateTimeLeft(event));
   }, []);
-  console.log("🚀 ~ file: EventItem.jsx:5 ~ EventItem ~ timeLeft:", initialTimeLeft)
+
+  const handleDelete = (e) => {
+		dispatch(deleteEvent(event.id));
+  };
 
   function calculateTimeLeft(event) {
     const eventDate = new Date(`${event.date} ${event.time}`);
@@ -70,6 +77,7 @@ function EventItem({ event }) {
     <>
       {' '}
       <div
+        onClick={handleDelete}
         className={`${styles.eventItem} ${
           isEventSoon ? 'event-item-soon' : ''
         }`}
@@ -79,9 +87,8 @@ function EventItem({ event }) {
           {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
           {timeLeft.seconds}s
         </p>
-				<div className={styles.eventProgress} style={progressStyle}></div>
+        <div className={styles.eventProgress} style={progressStyle}></div>
       </div>
-    
     </>
   );
 }
