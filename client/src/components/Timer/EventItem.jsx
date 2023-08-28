@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Timer.module.scss';
 function EventItem({ event }) {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(event));
-
+  const [ initialTimeLeft, setinitialTimeLeft ] = useState([]);
   useEffect(() => {
     const eventDate = new Date(`${event.date} ${event.time}`);
     const currentTime = new Date();
@@ -19,6 +19,10 @@ function EventItem({ event }) {
       clearInterval(timer);
     };
   }, [event]);
+  useEffect(() => {
+    setinitialTimeLeft(calculateTimeLeft(event));
+  }, []);
+  console.log("🚀 ~ file: EventItem.jsx:5 ~ EventItem ~ timeLeft:", initialTimeLeft)
 
   function calculateTimeLeft(event) {
     const eventDate = new Date(`${event.date} ${event.time}`);
@@ -43,16 +47,25 @@ function EventItem({ event }) {
 
   const isEventSoon =
     timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes < 10;
-		const progressPercentage =
-		((timeLeft.days * 24 * 60 * 60 +
-			timeLeft.hours * 60 * 60 +
-			timeLeft.minutes * 60 +
-			timeLeft.seconds) *
-		(24 * 60 * 60)/1000000) ;
+
+  const totalSeconds =
+    initialTimeLeft.days * 24 * 60 * 60 +
+    initialTimeLeft.hours * 60 * 60 +
+    initialTimeLeft.minutes * 60 +
+    initialTimeLeft.seconds;
+
+  const remainingSeconds =
+    timeLeft.days * 24 * 60 * 60 +
+    timeLeft.hours * 60 * 60 +
+    timeLeft.minutes * 60 +
+    timeLeft.seconds;
+
+  const progress = ((totalSeconds - remainingSeconds) / totalSeconds) * 100;
 
   const progressStyle = {
-    width: `${100-progressPercentage}%`,
+    width: `${progress}%`,
   };
+
   return (
     <>
       {' '}
@@ -66,8 +79,9 @@ function EventItem({ event }) {
           {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
           {timeLeft.seconds}s
         </p>
+				<div className={styles.eventProgress} style={progressStyle}></div>
       </div>
-      <div className={styles.eventProgress} style={progressStyle}></div>
+    
     </>
   );
 }
