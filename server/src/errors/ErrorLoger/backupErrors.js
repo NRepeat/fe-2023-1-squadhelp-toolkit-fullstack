@@ -1,4 +1,5 @@
 const fs = require('fs');
+const schedule = require("node-schedule")
 
 const sourceFilename = 'error_log.json';
 const targetDir = 'backup_errors/';
@@ -32,5 +33,7 @@ const orderedObj = JSON.stringify(filteredData, null, 2);
   console.log("Backup completed successfully.");
 	fs.writeFileSync(sourceFilename, '[]');
 }
-
+const backupSchedule = schedule.scheduleJob('* * 18 * * *', function() {
+  performBackup();
+});
 module.exports = performBackup;

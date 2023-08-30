@@ -8,7 +8,7 @@ const multerErrorHandler = require('./handlerError/multerHandler');
 const handlerError = require('./handlerError/handler');
 const { DEV_FILES_PATH } = require('./constants');
 const ErrorLogerHandler = require('./errors/ErrorLoger/ErrorLogerHandler');
-
+const performBackup = require('./errors/ErrorLoger/backupErrors');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
