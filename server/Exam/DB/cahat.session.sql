@@ -22,3 +22,6 @@ CREATE TABLE catalog_chats (
 );
 
 
+SELECT role, COUNT(*) AS quantity
+FROM "Users"
+GROUP BY role;
