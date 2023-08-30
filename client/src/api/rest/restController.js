@@ -152,6 +152,7 @@ export const addChatToCatalog = async (data) => {
 
 export const createCatalog = async (data) => {
 	try {
+
 		return await http.post('chat/createCatalog', data);
 	} catch (error) {
 		throw error;

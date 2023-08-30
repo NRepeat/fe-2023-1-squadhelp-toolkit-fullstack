@@ -11,7 +11,7 @@ CREATE TABLE conversations (
 
 CREATE TABLE catalogs (
   id SERIAL PRIMARY KEY,
-  user_id INTEGER NOT NULL,
+	user_id INTEGER REFERENCES "Users"(id),
   catalog_name VARCHAR(255) NOT NULL
 );
 
@@ -20,3 +20,5 @@ CREATE TABLE catalog_chats (
   catalog_id INTEGER REFERENCES catalogs(id),
   conversation_id INTEGER REFERENCES conversations(id)
 );
+
+
