@@ -86,7 +86,7 @@ class App extends Component {
           />
           <Route exact path='/account' component={PrivateHoc(UserProfile)} />
           <Route exact path='/timerPage' component={PrivateHoc(TimerPage)} />
-          <Route exact path='/howItWorksPage' component={PrivateHoc()} />
+          <Route exact path='/howItWorksPage' component={PrivateHoc(HowItWorksPage)} />
           <Route component={NotFound} />
         </Switch>
         <ChatContainer />
