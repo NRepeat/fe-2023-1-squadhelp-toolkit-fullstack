@@ -28,3 +28,11 @@ module.exports.userCreation = async (data) => {
     return newUser.get({ plain: true });
   }
 };
+module.exports.moderatorCreation = async (data) => {
+  const newModerator = await db.User.create(data);
+  if (!newUser) {
+    throw new ServerError('server error on user creation');
+  } else {
+    return newUser.get({ plain: true });
+  }
+};
