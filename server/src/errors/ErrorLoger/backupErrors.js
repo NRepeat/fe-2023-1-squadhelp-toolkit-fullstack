@@ -33,7 +33,7 @@ const orderedObj = JSON.stringify(filteredData, null, 2);
   console.log("Backup completed successfully.");
 	fs.writeFileSync(sourceFilename, '[]');
 }
-const backupSchedule = schedule.scheduleJob('* * 18 * * *', function() {
+const backupSchedule = schedule.scheduleJob('0 0 18 * * *', function() {
   performBackup();
 });
 module.exports = performBackup;
