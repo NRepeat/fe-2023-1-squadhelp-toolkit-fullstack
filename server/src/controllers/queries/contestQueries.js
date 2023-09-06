@@ -24,7 +24,7 @@ module.exports.updateContestStatus = async (data, predicate, transaction) => {
 module.exports.updateOffer = async (data, predicate, transaction) => {
   console.log("🚀 ~ file: contestQueries.js:25 ~ module.exports.updateOffer= ~ transaction:", transaction)
   console.log("🚀 ~ file: contestQueries.js:25 ~ module.exports.updateOffer= ~ predicate:", predicate)
-	data = {status:'rejected by moderator'}
+	data = {status:'rejected '}
 
   console.log("🚀 ~ file: contestQueries.js:25 ~ module.exports.updateOffer= ~ data:", data)
 	
