@@ -1,1 +1,944 @@
-[]
+[
+  {
+    "message": "Cannot read properties of undefined (reading 'role')",
+    "time": 1693937771518,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'role')",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:62:20)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at /server/node_modules/express/lib/router/index.js:635:15",
+      "    at next (/server/node_modules/express/lib/router/index.js:260:14)",
+      "    at Function.handle (/server/node_modules/express/lib/router/index.js:174:3)",
+      "    at router (/server/node_modules/express/lib/router/index.js:47:12)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at Function.handle (/server/node_modules/express/lib/router/index.js:174:3)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'role')",
+    "time": 1693937779345,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'role')",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:62:20)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at /server/node_modules/express/lib/router/index.js:635:15",
+      "    at next (/server/node_modules/express/lib/router/index.js:260:14)",
+      "    at Function.handle (/server/node_modules/express/lib/router/index.js:174:3)",
+      "    at router (/server/node_modules/express/lib/router/index.js:47:12)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at Function.handle (/server/node_modules/express/lib/router/index.js:174:3)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694005835707,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694005835711,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694005835714,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694005929326,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694005929330,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694005929331,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694005937452,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694006124756,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "user with this data didn`t exist",
+    "time": 1694006130341,
+    "code": 404,
+    "stackTrace": [
+      "UserNotFoundError: user with this data didn`t exist",
+      "    at _callee2$ (/server/src/controllers/queries/userQueries.js:17:11)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/queries/userQueries.js:15:103)",
+      "    at _next (/server/src/controllers/queries/userQueries.js:17:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694006295200,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "user with this data didn`t exist",
+    "time": 1694006309957,
+    "code": 404,
+    "stackTrace": [
+      "UserNotFoundError: user with this data didn`t exist",
+      "    at _callee2$ (/server/src/controllers/queries/userQueries.js:17:11)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/queries/userQueries.js:15:103)",
+      "    at _next (/server/src/controllers/queries/userQueries.js:17:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "user with this data didn`t exist",
+    "time": 1694006311995,
+    "code": 404,
+    "stackTrace": [
+      "UserNotFoundError: user with this data didn`t exist",
+      "    at _callee2$ (/server/src/controllers/queries/userQueries.js:17:11)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/queries/userQueries.js:15:103)",
+      "    at _next (/server/src/controllers/queries/userQueries.js:17:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694006441843,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "not enough rights",
+    "time": 1694007404342,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: not enough rights",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:39:26)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "not enough rights",
+    "time": 1694007407037,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: not enough rights",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:39:26)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694007409022,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694007450078,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694007587038,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694009658184,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: Error: WHERE parameter \"id\" has invalid \"undefined\" value",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:35:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _throw (/server/src/middlewares/basicMiddlewares.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694009670882,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: Error: WHERE parameter \"id\" has invalid \"undefined\" value",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:35:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _throw (/server/src/middlewares/basicMiddlewares.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694009698253,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: Error: WHERE parameter \"id\" has invalid \"undefined\" value",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:35:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _throw (/server/src/middlewares/basicMiddlewares.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694009748437,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: TypeError: \"offerId\" is read-only",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:36:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:7:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:9:194)",
+      "    at /server/src/middlewares/basicMiddlewares.js:9:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/basicMiddlewares.js:9:97",
+      "    at /server/src/middlewares/basicMiddlewares.js:17:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at /server/node_modules/express/lib/router/index.js:635:15"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694009830958,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: Error: WHERE parameter \"id\" has invalid \"undefined\" value",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:35:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _throw (/server/src/middlewares/basicMiddlewares.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694009835905,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: Error: WHERE parameter \"id\" has invalid \"undefined\" value",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:35:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _throw (/server/src/middlewares/basicMiddlewares.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694009874862,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: Error: WHERE parameter \"id\" has invalid \"undefined\" value",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:36:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _throw (/server/src/middlewares/basicMiddlewares.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694009898709,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: Error: WHERE parameter \"id\" has invalid \"undefined\" value",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:37:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _throw (/server/src/middlewares/basicMiddlewares.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694010021162,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:34:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694010047151,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:33:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694010086320,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:34:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694010117826,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:34:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694010148100,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:34:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694010209288,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:34:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694012021331,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: ReferenceError: offer is not defined",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:55:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694012024143,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: ReferenceError: offer is not defined",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:55:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694012061355,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: ReferenceError: offer is not defined",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:56:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694012096615,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:53:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694012152567,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:53:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694012193986,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:53:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694012215189,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:53:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694012243660,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:53:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694012304511,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:53:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694012313195,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:53:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694012347228,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: ReferenceError: Offer is not defined",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:56:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": {},
+    "time": 1694012364994,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: ReferenceError: Offer is not defined",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:56:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694012398888,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:53:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Offer is not approved by moderator",
+    "time": 1694012414269,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: Offer is not approved by moderator",
+      "    at _callee$ (/server/src/middlewares/basicMiddlewares.js:53:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "server error",
+    "time": 1694012679558,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: server error",
+      "    at _callee2$ (/server/src/controllers/contestController.js:104:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/contestController.js:5:103)",
+      "    at _next (/server/src/controllers/contestController.js:7:194)",
+      "    at /server/src/controllers/contestController.js:7:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/contestController.js:7:97",
+      "    at /server/src/controllers/contestController.js:38:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at _callee2$ (/server/src/middlewares/basicMiddlewares.js:80:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)"
+    ]
+  },
+  {
+    "message": "server error",
+    "time": 1694012682551,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: server error",
+      "    at _callee2$ (/server/src/controllers/contestController.js:104:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/contestController.js:5:103)",
+      "    at _next (/server/src/controllers/contestController.js:7:194)",
+      "    at /server/src/controllers/contestController.js:7:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/contestController.js:7:97",
+      "    at /server/src/controllers/contestController.js:38:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at _callee2$ (/server/src/middlewares/basicMiddlewares.js:80:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)"
+    ]
+  },
+  {
+    "message": "server error",
+    "time": 1694012727130,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: server error",
+      "    at _callee2$ (/server/src/controllers/contestController.js:103:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/contestController.js:5:103)",
+      "    at _throw (/server/src/controllers/contestController.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "server error",
+    "time": 1694012752828,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: server error",
+      "    at _callee2$ (/server/src/controllers/contestController.js:103:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/contestController.js:5:103)",
+      "    at _throw (/server/src/controllers/contestController.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  }
+]

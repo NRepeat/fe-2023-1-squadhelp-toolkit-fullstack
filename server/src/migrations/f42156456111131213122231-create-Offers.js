@@ -37,8 +37,8 @@ module.exports = {
         allowNull: true,
       },
       status: {
-        type: Sequelize.STRING,
-        allowNull: true,
+				type: Sequelize.ENUM('pending', 'verified','rejected by moderator'),
+        allowNull: false,
         defaultValue: 'pending',
       },
     });

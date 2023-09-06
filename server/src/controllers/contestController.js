@@ -36,7 +36,6 @@ module.exports.dataForContest = async (req, res, next) => {
 };
 
 module.exports.getContestById = async (req, res, next) => {
-  const { params: { contestId } } = req;
   try {
     const { params: { contestId } } = req;
     let contestInfo = await db.Contest.findOne({
@@ -60,9 +59,7 @@ module.exports.getContestById = async (req, res, next) => {
         {
           model: db.Offer,
           required: false,
-          where: req.tokenData.role === CONSTANTS.CREATOR
-            ? { userId: req.tokenData.userId }
-            : {},
+          where:{  status: 'verified'} ,
           attributes: { exclude: ['userId', 'contestId'] },
           include: [
             {

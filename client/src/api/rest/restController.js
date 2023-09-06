@@ -230,3 +230,13 @@ export const getContestById = async (contestId) => {
 		throw error;
 	}
 };
+
+
+export const getModerator = async ()=>{
+	try {
+		const offerId = 1
+		return await http.get(`/moder/moderator/${offerId}`)
+	} catch (error) {
+		throw(error)
+	}
+}

@@ -20,6 +20,7 @@ import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
 import HowItWorksPage from './pages/HowItWorksPage/HowItWorksPage';
 import TimerPage from './pages/TimerPage/TimerPage';
+import ModeratorPage from './pages/moderatorPage/ModeratorPage';
 
 class App extends Component {
   render () {
@@ -87,6 +88,7 @@ class App extends Component {
           <Route exact path='/account' component={PrivateHoc(UserProfile)} />
           <Route exact path='/timerPage' component={PrivateHoc(TimerPage)} />
           <Route exact path='/howItWorksPage' component={PrivateHoc(HowItWorksPage)} />
+          <Route exact path='/moderatorPage' component={PrivateHoc(ModeratorPage)} />
           <Route component={NotFound} />
         </Switch>
         <ChatContainer />
