@@ -59,8 +59,10 @@ module.exports.onlyForCustomer = (req, res, next) => {
 	}
 };
 module.exports.onlyForModerator = (req, res, next) => {
-	if (req.tokenData.role === CONSTANTS.CREATOR && req.tokenData.role === CONSTANTS.CUSTOMER) {
-		return next(new RightsError('this page only for customers'));
+	console.log("🚀 ~ file: basicMiddlewares.js:62 ~ req:", req.tokenData.role)
+
+	if (req.tokenData.role === CONSTANTS.CREATOR || req.tokenData.role === CONSTANTS.CUSTOMER) {
+		return next(new RightsError('this page only for moderator'));
 	} else {
 		next();
 	}

@@ -10,6 +10,6 @@ const basicMiddlewares = require('../middlewares/basicMiddlewares');
 router.use("/",userRouter)
 router.use('/contests', checkToken.checkToken, contestRouter);
 router.use('/chat', checkToken.checkToken, chatRouter);
-router.use('/moder' ,moderatorRouter)
+router.use('/moderator',checkToken.checkToken,basicMiddlewares.onlyForModerator ,moderatorRouter)
 
 module.exports = router;

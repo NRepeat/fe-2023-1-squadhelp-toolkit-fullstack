@@ -11,20 +11,22 @@ import contestUpdationReducer from './slices/contestUpdationSlice';
 import chatReducer from './slices/chatSlice';
 import userProfileReducer from './slices/userProfileSlice';
 import timerReducer from './slices/timerSlice';
+import offerReducer from './slices/offerSlice';
 
 const rootReducer = combineReducers({
-  userStore: userReducer,
-  auth: authReducer,
-  dataForContest: dataForContestReducer,
-  payment: paymentReducer,
-  contestByIdStore: contestByIdReducer,
-  contestsList: contestsReducer,
-  contestCreationStore: contestCreationReducer,
-  bundleStore: bundleReducer,
-  contestUpdationStore: contestUpdationReducer,
-  chatStore: chatReducer,
-  userProfile: userProfileReducer,
-	timer:timerReducer
+	userStore: userReducer,
+	auth: authReducer,
+	dataForContest: dataForContestReducer,
+	payment: paymentReducer,
+	contestByIdStore: contestByIdReducer,
+	contestsList: contestsReducer,
+	contestCreationStore: contestCreationReducer,
+	bundleStore: bundleReducer,
+	contestUpdationStore: contestUpdationReducer,
+	chatStore: chatReducer,
+	userProfile: userProfileReducer,
+	timer: timerReducer,
+	offer: offerReducer
 });
 
 export default rootReducer;

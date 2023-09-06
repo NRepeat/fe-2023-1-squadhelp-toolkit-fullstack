@@ -260,7 +260,15 @@ class Header extends React.Component {
                 </li>
               </ul>
             </div>
-            {this.props.data && this.props.data.role !== CONSTANTS.CREATOR && (
+						{this.props.data && this.props.data.role == CONSTANTS.MODERATOR  && (
+              <div
+                className={styles.startContestBtn}
+                onClick={this.startContests}
+              >
+                MODERATOR DASHBOARD
+              </div>
+            )}
+            {this.props.data && this.props.data.role == CONSTANTS.CUSTOMER  && (
               <div
                 className={styles.startContestBtn}
                 onClick={this.startContests}
