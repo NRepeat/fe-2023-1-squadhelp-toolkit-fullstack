@@ -1,1 +1,170 @@
-[]
+[
+  {
+    "message": "column \"status\" is of type \"enum_Offers_status\" but expression is of type text",
+    "time": 1694031897039,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"status\" is of type \"enum_Offers_status\" but expression is of type text",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694031988258,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032042802,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032108813,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032140030,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032192838,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032225359,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032256245,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032290562,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032306950,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032486548,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+    "time": 1694032674586,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input value for enum \"enum_Offers_status\": \"rejected\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  }
+]
