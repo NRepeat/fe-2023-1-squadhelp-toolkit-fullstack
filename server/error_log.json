@@ -940,5 +940,65 @@
       "    at _throw (/server/src/controllers/contestController.js:7:291)",
       "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
     ]
+  },
+  {
+    "message": "server error",
+    "time": 1694013464766,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: server error",
+      "    at _callee2$ (/server/src/controllers/contestController.js:100:8)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/contestController.js:5:103)",
+      "    at _throw (/server/src/controllers/contestController.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "server error",
+    "time": 1694013472226,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: server error",
+      "    at _callee2$ (/server/src/controllers/contestController.js:100:8)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/contestController.js:5:103)",
+      "    at _throw (/server/src/controllers/contestController.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "server error",
+    "time": 1694013560487,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: server error",
+      "    at _callee2$ (/server/src/controllers/contestController.js:100:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/contestController.js:5:103)",
+      "    at _throw (/server/src/controllers/contestController.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "server error",
+    "time": 1694013563230,
+    "code": 500,
+    "stackTrace": [
+      "ServerError: server error",
+      "    at _callee2$ (/server/src/controllers/contestController.js:100:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/contestController.js:5:103)",
+      "    at _throw (/server/src/controllers/contestController.js:7:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
   }
 ]
