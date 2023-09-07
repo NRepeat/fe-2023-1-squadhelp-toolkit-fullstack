@@ -6,6 +6,7 @@ export default {
   CREATOR: 'creator',
 	MODERATOR:'moderator',
   CONTEST_STATUS_ACTIVE: 'active',
+  CONTEST_STATUS_VERIFIED: 'verified',
   CONTEST_STATUS_FINISHED: 'finished',
   CONTEST_STATUS_PENDING: 'pending',
   NAME_CONTEST: 'name',
