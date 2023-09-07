@@ -31,7 +31,7 @@ const Home = (props) => {
     CONSTANTS.HEADER_ANIMATION_TEXT[
       index % CONSTANTS.HEADER_ANIMATION_TEXT.length
     ];
-  if (data === null || data.role === CONSTANTS.MODERATOR) {
+  if (data !== null  && data.role === CONSTANTS.MODERATOR ) {
     return (
       <>
         <Header />

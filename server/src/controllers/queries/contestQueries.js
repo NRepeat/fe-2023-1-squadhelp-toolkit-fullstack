@@ -22,20 +22,11 @@ module.exports.updateContestStatus = async (data, predicate, transaction) => {
 };
 
 module.exports.updateOffer = async (data, predicate, transaction) => {
-  console.log("🚀 ~ file: contestQueries.js:25 ~ module.exports.updateOffer= ~ transaction:", transaction)
-  console.log("🚀 ~ file: contestQueries.js:25 ~ module.exports.updateOffer= ~ predicate:", predicate)
-	data = {status:'rejected '}
-
-  console.log("🚀 ~ file: contestQueries.js:25 ~ module.exports.updateOffer= ~ data:", data)
-	
   const [updatedCount, [updatedOffer]] = await db.Offer.update(data,
     { where: predicate, returning: true, transaction });
-  console.log("🚀 ~ file: contestQueries.js:28 ~ module.exports.updateOffer= ~ updatedOffer:", updatedOffer)
   if (updatedCount !== 1) {
     throw new ServerError('cannot update offer!');
   } else {
-    console.log("🚀 ~ file: contestQueries.js:35 ~ module.exports.updateOffer= ~ updatedOffer.dataValues:", updatedOffer.dataValues)
-
     return updatedOffer.dataValues;
   }
 };

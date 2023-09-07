@@ -21,10 +21,8 @@ const OFFERS_SLICE_NAME = 'getOffers';
 export const getOffers = decorateAsyncThunk({
 	key: `${OFFERS_SLICE_NAME}`,
 	thunk: async payload => {
-		console.log("🚀 ~ file: offerSlice.js:24 ~ payload:", payload)
 		const { data } = await restController.getModerator(payload);
-		// const { Offers } = data;
-		// delete data.Offers;
+
 		return {  data };
 	},
 });

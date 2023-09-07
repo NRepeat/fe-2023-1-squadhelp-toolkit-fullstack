@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const { SALT_ROUNDS, CUSTOMER, CREATOR ,} = require('../constants');
+const { SALT_ROUNDS, CUSTOMER, CREATOR ,MODERATOR} = require('../constants');
 
 
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
 				displayName: 'Moderator',
 				password: bcrypt.hashSync('moderator@gmail.com', SALT_ROUNDS),
 				email: 'moderator@gmail.com',
-				role: CREATOR,
+				role: MODERATOR,
 			},
 		], {});
 	},
