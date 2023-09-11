@@ -46,14 +46,12 @@ export const changeOferrStatus = decorateAsyncThunk({
 	thunk: async payload => {
 		console.log("🚀 ~ file: offerSlice.js:47 ~ payload:", payload)
 		const { data } = await restController.changeVarifiedOfeertStatus(payload);
-		console.log("🚀 ~ file: offerSlice.js:48 ~ data:", data)
 		return data;
 	},
 })
 export const setOfferStatus = decorateAsyncThunk({
 	key: `${OFFERS_SLICE_NAME}/setOfferStatus`,
 	thunk: async payload => {
-		console.log("🚀 ~ file: offerSlice.js:56 ~ payload:", payload)
 		const { data } = await restController.setOfferStatus(payload);
 		return data;
 	},

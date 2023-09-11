@@ -61,7 +61,7 @@ module.exports.getOffers = async (req, res, next) => {
 
 		res.send(contestInfo);
 	} catch (e) {
-		next(new ServerError());
+		next(e);
 	}
 };
 
