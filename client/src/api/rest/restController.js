@@ -235,16 +235,14 @@ export const getContestById = async (contestId) => {
 export const getModerator = async (offerId) => {
 
 	try {
-		console.log("🚀 ~ file: restController.js:236 ~ getModerator ~ offerId):", offerId)
-
 		return await http.get(`/moderator/allOffers`)
 	} catch (error) {
 		throw (error)
 	}
 }
-export const setVarifiedOfeertStatus = async(data)=>{
+export const changeVarifiedOfeertStatus = async(data)=>{
 	try {
-		return await http.post('moderator/setOfferStatus', data);
+		return await http.put('moderator/updateOfferStatus', data);
 	} catch (error) {
 		throw error;
 	}

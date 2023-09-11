@@ -151,7 +151,6 @@ module.exports.setNewOffer = async (req, res, next) => {
 const rejectOffer = async (offerId, creatorId, contestId) => {
   const rejectedOffer = await contestQueries.updateOffer(
     { status: CONSTANTS.OFFER_STATUS_REJECTED }, { id: offerId });
-  console.log("🚀 ~ file: contestController.js:155 ~ rejectOffer ~ rejectedOffer:", rejectedOffer)
   controller.getNotificationController().emitChangeOfferStatus(creatorId,
     'Someone of yours offers was rejected', contestId);
   return rejectedOffer;
@@ -201,7 +200,6 @@ module.exports.setOfferStatus = async (req, res, next) => {
     try {
       const offer = await rejectOffer(req.body.offerId, req.body.creatorId,
         req.body.contestId);
-      console.log("🚀 ~ file: contestController.js:205 ~ module.exports.setOfferStatus= ~ offer :", offer )
       res.send(offer);
     } catch (err) {
       next(err);

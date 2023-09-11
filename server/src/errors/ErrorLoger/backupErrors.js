@@ -6,7 +6,7 @@ const targetDir = 'backup_errors/';
 
 function performBackup() {
   const currentDate = new Date();
-  const targetFilename = `${targetDir}${currentDate.getTime()}_log.json`;
+  const targetFilename = `${targetDir}${currentDate}_log.json`;
   let logarr = [];
 
   try {

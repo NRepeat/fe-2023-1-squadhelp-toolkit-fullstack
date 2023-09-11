@@ -26,7 +26,7 @@ module.exports.test = async (req, res, next) => {
 
 module.exports.getOffers = async (req, res, next) => {
 	try {
-		const  contestInfo = await db.Contest.findAll({
+		const contestInfo = await db.Contest.findAll({
 			order: [
 				[db.Offer, 'id', 'asc'],
 			],
@@ -65,8 +65,36 @@ module.exports.getOffers = async (req, res, next) => {
 	}
 };
 
-module.exports.setOfferStatus = async (req, res, next) => {
-  if(req.status = 'verified'){
-		
+module.exports.updateOfferStatus = async (req, res, next) => {
+	console.log("🚀 ~ file: moderatorController.js:69 ~ module.exports.updateOfferStatus= ~ req:", req.body.status)
+	try {
+		if (req.body.status === 'verified') { // Use '===' for comparison, not '='
+			const [updatedCount, [updatedOffer]] = await db.Offer.update(
+				{ status: req.body.status }, // Update the status field
+				{ where: { id: req.body.id }, returning: true }
+			);
+
+			if (updatedCount !== 1) {
+				throw new ServerError('Cannot update offer');
+			}
+
+			return res.json(updatedOffer); // Return the updated offer data
+		} else if (req.body.status === 'rejected') {
+			const [updatedCount, [updatedOffer]] = await db.Offer.update(
+				{ status: req.body.status }, // Update the status field
+				{ where: { id: req.body.id }, returning: true }
+			);
+
+			if (updatedCount !== 1) {
+				throw new ServerError('Cannot update offer');
+			}
+			return res.json(updatedOffer);
+		}
+		else {
+			return res.status(400).json({ error: 'Invalid status' });
+		}
+	} catch (error) {
+		console.error('Error updating offer:', error);
+		return res.status(500).json({ error: 'Internal Server Error' });
 	}
 };

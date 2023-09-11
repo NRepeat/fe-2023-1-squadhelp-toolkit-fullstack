@@ -12,6 +12,7 @@ moderatorRouter.get(
 	moderatorController.getOffers,
 )
 moderatorRouter.put(
-	'/setOfferStatus'
+	'/updateOfferStatus',
+	moderatorController.updateOfferStatus
 )
 module.exports = moderatorRouter 
