@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { changeOferrStatus, getOffers } from '../../store/slices/offerSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import constants from '../../constants';
 import ContestCard from './contestCard';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 export default function ModeratorPage(props) {
   const dispatch = useDispatch();
@@ -14,7 +16,7 @@ export default function ModeratorPage(props) {
   });
   const [loadingError, setLoadingError] = useState(null);
   const [rerenderFlag, setRerenderFlag] = useState(false);
-  const [activeTab, setActiveTab] = useState('ACTIVEcontest'); // Добавлено состояние для активной вкладки
+  const [activeTab, setActiveTab] = useState('ACTIVEcontest');
 
   const fetchOffers = async () => {
     try {
@@ -69,7 +71,7 @@ export default function ModeratorPage(props) {
     return categorizedContests;
   }
 
-  // Функция для изменения активной вкладки
+
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
@@ -77,8 +79,6 @@ export default function ModeratorPage(props) {
   return (
     <>
       <h1>Contest Data</h1>
-
-      {/* Вкладки */}
       <div className="tab-container">
         <button
           className={`tab-button ${
@@ -110,7 +110,6 @@ export default function ModeratorPage(props) {
         <div>{loadingError}</div>
       ) : (
         <div>
-          {/* Условный рендеринг карточек на основе активной вкладки */}
           {activeTab === 'ACTIVEcontest' && (
             <ContestCard
               contestData={categorizedContestsData.ACTIVEcontest}
@@ -134,6 +133,7 @@ export default function ModeratorPage(props) {
           )}
         </div>
       )}
+			<Footer/>
     </>
   );
 }

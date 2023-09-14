@@ -31,6 +31,20 @@ module.exports.canGetContest = async (req, res, next) => {
 						[db.Sequelize.Op.or]: [
 							CONSTANTS.CONTEST_STATUS_ACTIVE,
 							CONSTANTS.CONTEST_STATUS_FINISHED,
+							CONSTANTS.CONTEST_STATUS_PENDING
+						],
+					},
+				},
+			});
+		}else if(req.tokenData.role === CONSTANTS.MODERATOR){
+			result = await db.Contest.findOne({
+				where: {
+					id: contestId,
+					status: {
+						[db.Sequelize.Op.or]: [
+							CONSTANTS.CONTEST_STATUS_ACTIVE,
+							CONSTANTS.CONTEST_STATUS_FINISHED,
+							CONSTANTS.CONTEST_STATUS_PENDING
 						],
 					},
 				},

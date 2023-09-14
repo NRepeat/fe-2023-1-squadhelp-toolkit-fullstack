@@ -31,18 +31,12 @@ const Home = (props) => {
     CONSTANTS.HEADER_ANIMATION_TEXT[
       index % CONSTANTS.HEADER_ANIMATION_TEXT.length
     ];
-  if (data !== null  && data.role === CONSTANTS.MODERATOR ) {
+  if (data !== null && data.role === CONSTANTS.MODERATOR) {
     return (
       <>
         <Header />
-        {isFetching ? (
-          <Spinner />
-        ) : (
-          <>
-					<ModeratorPage	/>
-            <Footer />
-          </>
-        )}
+
+        {isFetching ? <Spinner /> : <ModeratorPage />}
       </>
     );
   }
@@ -282,7 +276,6 @@ const Home = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log('🚀 ~ file: Home.jsx:272 ~ mapStateToProps ~ state:', state);
   const { isFetching, data } = state.userStore;
   return { isFetching, data };
 };

@@ -1,7 +1,7 @@
 [
   {
     "message": "need token",
-    "time": 1694459074407,
+    "time": 1694705183677,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -25,7 +25,7 @@
   },
   {
     "message": "need token",
-    "time": 1694459104785,
+    "time": 1694705737711,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -49,7 +49,7 @@
   },
   {
     "message": "need token",
-    "time": 1694459117985,
+    "time": 1694705737717,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -73,7 +73,7 @@
   },
   {
     "message": "need token",
-    "time": 1694459123263,
+    "time": 1694705960907,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -97,7 +97,7 @@
   },
   {
     "message": "need token",
-    "time": 1694459123267,
+    "time": 1694706056412,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -121,7 +121,7 @@
   },
   {
     "message": "need token",
-    "time": 1694459135030,
+    "time": 1694706056416,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -145,7 +145,7 @@
   },
   {
     "message": "need token",
-    "time": 1694459135035,
+    "time": 1694706147887,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -169,7 +169,178 @@
   },
   {
     "message": "need token",
-    "time": 1694459150484,
+    "time": 1694706147891,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694707275614,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694707320714,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694707322315,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694707323943,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694707325536,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694707327267,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694707328883,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694707423591,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -193,7 +364,7 @@
   },
   {
     "message": "need token",
-    "time": 1694459150488,
+    "time": 1694707430813,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -217,7 +388,7 @@
   },
   {
     "message": "need token",
-    "time": 1694459158175,
+    "time": 1694707430818,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -241,7 +412,7 @@
   },
   {
     "message": "need token",
-    "time": 1694459158178,
+    "time": 1694707535510,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -265,7 +436,7 @@
   },
   {
     "message": "need token",
-    "time": 1694465909952,
+    "time": 1694707891285,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -289,7 +460,472 @@
   },
   {
     "message": "need token",
-    "time": 1694465909957,
+    "time": 1694707891289,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708037608,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708039432,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708041200,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708043054,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708045553,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708047214,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708048896,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708050439,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708051957,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708053468,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708054976,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708056387,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708057848,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708059362,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708061441,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:65:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708168554,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:77:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708170349,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:77:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708172193,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:77:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708173902,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:77:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708175564,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:77:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "this page only for moderator",
+    "time": 1694708177360,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: this page only for moderator",
+      "    at module.exports.onlyForModerator (/server/src/middlewares/basicMiddlewares.js:77:15)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at trim_prefix (/server/node_modules/express/lib/router/index.js:317:13)",
+      "    at /server/node_modules/express/lib/router/index.js:284:7",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)",
+      "    at next (/server/node_modules/express/lib/router/index.js:275:10)",
+      "    at _callee2$ (/server/src/middlewares/checkToken.js:37:5)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694709316086,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -313,7 +949,61 @@
   },
   {
     "message": "need token",
-    "time": 1694465909960,
+    "time": 1694709362608,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "not enough rights",
+    "time": 1694709453032,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: not enough rights",
+      "    at _callee3$ (/server/src/middlewares/basicMiddlewares.js:119:16)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "not enough rights",
+    "time": 1694709464126,
+    "code": 423,
+    "stackTrace": [
+      "RightsError: not enough rights",
+      "    at _callee3$ (/server/src/middlewares/basicMiddlewares.js:119:16)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/basicMiddlewares.js:5:103)",
+      "    at _next (/server/src/middlewares/basicMiddlewares.js:7:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1694709896812,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -337,31 +1027,7 @@
   },
   {
     "message": "need token",
-    "time": 1694465922789,
-    "code": 408,
-    "stackTrace": [
-      "TokenError: need token",
-      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
-      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
-      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
-      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
-      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
-      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
-      "    at /server/src/middlewares/checkToken.js:5:364",
-      "    at new Promise (<anonymous>)",
-      "    at /server/src/middlewares/checkToken.js:5:97",
-      "    at /server/src/middlewares/checkToken.js:5:1",
-      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
-      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
-      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
-      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
-      "    at /server/node_modules/express/lib/router/index.js:281:22",
-      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
-    ]
-  },
-  {
-    "message": "need token",
-    "time": 1694465922793,
+    "time": 1694709931580,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",

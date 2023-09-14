@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function ContestCard({ contestData, onVerify, onReject }) {
-  console.log("🚀 ~ file: contestCard.jsx:4 ~ ContestCard ~ contestData:", contestData);
+  const [visibleOffers, setVisibleOffers] = useState([]);
+
+  const toggleOfferVisibility = (offerId) => {
+    if (visibleOffers.includes(offerId)) {
+      setVisibleOffers(visibleOffers.filter((id) => id !== offerId));
+    } else {
+      setVisibleOffers([...visibleOffers, offerId]);
+    }
+  };
 
   const mapedContestData = (contestData) => {
     return (
@@ -14,24 +22,43 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
             <p>Status: {offer.status}</p>
             <p>Prize: {offer.prize}</p>
             <div>
-              Offer
-              {offer.Offers.map((o) => (
-                <div key={o.id}>
-                  <p>Offer ID: {o.id}</p>
-                  <p>Offer message: {o.text}</p>
-                  <p>Status: {o.status}</p>
-                  <p>User Display Name: {o.User.displayName}</p>
-                  <p>User Email: {o.User.email}</p>
-                  <p>User First Name: {o.User.firstName}</p>
-                  <p>User Last Name: {o.User.lastName}</p>
-                  <p>User Rating: {o.User.rating}</p>
+              <div>
+                <button onClick={() => toggleOfferVisibility(offer.id)}>
+                  {visibleOffers.includes(offer.id)
+                    ? 'Hide Offers'
+                    : 'Show Offers'}
+                </button>
+                {visibleOffers.includes(offer.id) && (
                   <div>
-                    {/* Включите кнопки Verify и Reject */}
-                    <button onClick={() => onVerify(o.id)}>Verify</button>
-                    <button onClick={() => onReject(o.id)}>Reject</button>
+                    {' '}
+                    {offer.Offers.map((o) => (
+                      <div key={o.id}>
+                        <p>Offer ID: {o.id}</p>
+                        <p>Offer message: {o.text}</p>
+                        <p>Status: {o.status}</p>
+                        <p>User Display Name: {o.User.displayName}</p>
+                        <p>User Email: {o.User.email}</p>
+                        <p>User First Name: {o.User.firstName}</p>
+                        <p>User Last Name: {o.User.lastName}</p>
+                        <p>User Rating: {o.User.rating}</p>
+                        <div>
+                          {offer.status === 'active' &&
+                            o.status === 'pending' && (
+                              <>
+                                <button onClick={() => onVerify(o.id)}>
+                                  Verify
+                                </button>
+                                <button onClick={() => onReject(o.id)}>
+                                  Reject
+                                </button>
+                              </>
+                            )}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              ))}
+                )}
+              </div>
             </div>
           </div>
         ))}
@@ -39,9 +66,5 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
     );
   };
 
-  return (
-    <div>
-      {mapedContestData(contestData)}
-    </div>
-  );
+  return <div>{mapedContestData(contestData)}</div>;
 }

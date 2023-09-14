@@ -66,7 +66,7 @@ class ContestPage extends React.Component {
     const userId = this.props.userStore.data.id;
     const contestStatus = this.props.contestByIdStore.contestData.status;
     return (
-      contestCreatorId === userId 
+      contestCreatorId === userId && contestStatus ==="active" && offerStatus === 'verified'
     );
   };
 

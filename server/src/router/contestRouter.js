@@ -22,7 +22,7 @@ contestRouter.put(
 
 contestRouter.get(
   '/:contestId',
-  // basicMiddlewares.canGetContest,
+  basicMiddlewares.canGetContest,
   contestController.getContestById,
 );
 contestRouter.post(
