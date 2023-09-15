@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import style from './ModeratorPage.module.scss';
+import constants from '../../constants';
 export default function ContestCard({ contestData, onVerify, onReject }) {
   const [visibleOffers, setVisibleOffers] = useState([]);
 
@@ -36,6 +37,12 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
                           <p>Offer ID: {o.id}</p>
                           <p>Offer message: {o.text}</p>
                           <p>Status: {o.status}</p>
+                          {
+                            <img
+                              src={`${constants.publicContestsURL}${o.fileName}`}
+                              alt="user"
+                            />
+                          }
                           <p>User Display Name: {o.User.displayName}</p>
                           <p>User Email: {o.User.email}</p>
                           <p>User First Name: {o.User.firstName}</p>
