@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import style from './ModeratorPage.module.scss';
 export default function ContestCard({ contestData, onVerify, onReject }) {
   const [visibleOffers, setVisibleOffers] = useState([]);
 

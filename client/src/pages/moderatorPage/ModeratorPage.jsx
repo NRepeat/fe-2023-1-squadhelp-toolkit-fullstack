@@ -5,7 +5,7 @@ import constants from '../../constants';
 import ContestCard from './contestCard';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import style from './ModeratorPage.module.scss';
+// import style from './ModeratorPage.module.scss';
 
 export default function ModeratorPage(props) {
   const dispatch = useDispatch();
@@ -91,10 +91,10 @@ export default function ModeratorPage(props) {
 
   return (
     <>
-      <div className={style.moderatorContainer}>
-        <div className={style.moderatorWrapper}>
+      <div>
+        <div >
           <h1>Contest Data</h1>
-          <div className={style['tab-container']}>
+          <div className={['tab-container']}>
             <button
               className={`tab-button ${
                 activeTab === 'ACTIVEcontest' ? 'active' : ''
@@ -125,8 +125,8 @@ export default function ModeratorPage(props) {
             <div>{loadingError}</div>
           ) : (
             <>
-              <div className={style.contestContainer}>
-                <div className={style.contest}>
+              <div >
+                <div>
                   {activeTab === 'ACTIVEcontest' && (
                     <ContestCard
                       contestData={currentContestData}
@@ -135,7 +135,7 @@ export default function ModeratorPage(props) {
                     />
                   )}
                 </div>
-                <div className={style.contest}>
+                <div >
                   {activeTab === 'PENDINGcontest' && (
                     <ContestCard
                       contestData={currentContestData}
@@ -144,7 +144,7 @@ export default function ModeratorPage(props) {
                     />
                   )}
                 </div>
-                <div className={style.contest}>
+                <div>
                   {activeTab === 'FINISHEDcontest' && (
                     <ContestCard
                       contestData={currentContestData}
