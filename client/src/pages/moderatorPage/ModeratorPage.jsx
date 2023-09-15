@@ -5,6 +5,7 @@ import constants from '../../constants';
 import ContestCard from './contestCard';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import style from './ModeratorPage.module.scss';
 
 export default function ModeratorPage(props) {
   const dispatch = useDispatch();
@@ -17,12 +18,13 @@ export default function ModeratorPage(props) {
   const [loadingError, setLoadingError] = useState(null);
   const [rerenderFlag, setRerenderFlag] = useState(false);
   const [activeTab, setActiveTab] = useState('ACTIVEcontest');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   const fetchOffers = async () => {
     try {
       const response = await dispatch(getOffers());
       const offers = response.payload.data;
-
       setContestData(offers);
     } catch (error) {
       console.error('Error fetching offers:', error);
@@ -71,69 +73,115 @@ export default function ModeratorPage(props) {
     return categorizedContests;
   }
 
-
   const handleTabChange = (tab) => {
     setActiveTab(tab);
+    setCurrentPage(1); // При зміні вкладки скидаємо поточну сторінку на першу
   };
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentContestData = categorizedContestsData[activeTab].slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   return (
     <>
-      <h1>Contest Data</h1>
-      <div className="tab-container">
-        <button
-          className={`tab-button ${
-            activeTab === 'ACTIVEcontest' ? 'active' : ''
-          }`}
-          onClick={() => handleTabChange('ACTIVEcontest')}
-        >
-          Active
-        </button>
-        <button
-          className={`tab-button ${
-            activeTab === 'PENDINGcontest' ? 'active' : ''
-          }`}
-          onClick={() => handleTabChange('PENDINGcontest')}
-        >
-          Pending
-        </button>
-        <button
-          className={`tab-button ${
-            activeTab === 'FINISHEDcontest' ? 'active' : ''
-          }`}
-          onClick={() => handleTabChange('FINISHEDcontest')}
-        >
-          Finished
-        </button>
-      </div>
+      <div className={style.moderatorContainer}>
+        <div className={style.moderatorWrapper}>
+          <h1>Contest Data</h1>
+          <div className={style['tab-container']}>
+            <button
+              className={`tab-button ${
+                activeTab === 'ACTIVEcontest' ? 'active' : ''
+              }`}
+              onClick={() => handleTabChange('ACTIVEcontest')}
+            >
+              Active
+            </button>
+            <button
+              className={`tab-button ${
+                activeTab === 'PENDINGcontest' ? 'active' : ''
+              }`}
+              onClick={() => handleTabChange('PENDINGcontest')}
+            >
+              Pending
+            </button>
+            <button
+              className={`tab-button ${
+                activeTab === 'FINISHEDcontest' ? 'active' : ''
+              }`}
+              onClick={() => handleTabChange('FINISHEDcontest')}
+            >
+              Finished
+            </button>
+          </div>
 
-      {loadingError ? (
-        <div>{loadingError}</div>
-      ) : (
-        <div>
-          {activeTab === 'ACTIVEcontest' && (
-            <ContestCard
-              contestData={categorizedContestsData.ACTIVEcontest}
-              onVerify={handleVerify}
-              onReject={handleReject}
-            />
-          )}
-          {activeTab === 'PENDINGcontest' && (
-            <ContestCard
-              contestData={categorizedContestsData.PENDINGcontest}
-              onVerify={handleVerify}
-              onReject={handleReject}
-            />
-          )}
-          {activeTab === 'FINISHEDcontest' && (
-            <ContestCard
-              contestData={categorizedContestsData.FINISHEDcontest}
-              onVerify={handleVerify}
-              onReject={handleReject}
-            />
+          {loadingError ? (
+            <div>{loadingError}</div>
+          ) : (
+            <>
+              <div className={style.contestContainer}>
+                <div className={style.contest}>
+                  {activeTab === 'ACTIVEcontest' && (
+                    <ContestCard
+                      contestData={currentContestData}
+                      onVerify={handleVerify}
+                      onReject={handleReject}
+                    />
+                  )}
+                </div>
+                <div className={style.contest}>
+                  {activeTab === 'PENDINGcontest' && (
+                    <ContestCard
+                      contestData={currentContestData}
+                      onVerify={handleVerify}
+                      onReject={handleReject}
+                    />
+                  )}
+                </div>
+                <div className={style.contest}>
+                  {activeTab === 'FINISHEDcontest' && (
+                    <ContestCard
+                      contestData={currentContestData}
+                      onVerify={handleVerify}
+                      onReject={handleReject}
+                    />
+                  )}
+                </div>
+              </div>
+
+              <ul className="pagination">
+                {Array.from({
+                  length: Math.ceil(
+                    categorizedContestsData[activeTab].length /
+                      itemsPerPage
+                  ),
+                }).map((_, index) => (
+                  <li
+                    key={index}
+                    className={`page-item ${
+                      index + 1 === currentPage ? 'active' : ''
+                    }`}
+                  >
+                    <button
+                      onClick={() => paginate(index + 1)}
+                      className="page-link"
+                    >
+                      {index + 1}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </>
           )}
         </div>
-      )}
-			<Footer/>
+      </div>
+      <Footer />
     </>
   );
 }
