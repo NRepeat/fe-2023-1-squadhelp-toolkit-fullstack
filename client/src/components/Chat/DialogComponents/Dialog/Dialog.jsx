@@ -38,8 +38,10 @@ class Dialog extends React.Component {
   renderMainDialog = () => {
     const messagesArray = [];
     const { messages, userId } = this.props;
+    console.log("🚀 ~ file: Dialog.jsx:41 ~ Dialog ~ userId:", userId)
     let currentTime = moment();
     messages.forEach((message, i) => {
+
       if (!currentTime.isSame(message.createdAt, 'date')) {
         messagesArray.push(
           <div key={message.createdAt} className={styles.date}>
@@ -52,7 +54,7 @@ class Dialog extends React.Component {
         <div
           key={i}
           className={className(
-            userId === message.sender ? styles.ownMessage : styles.message
+            userId === message.userId ? styles.ownMessage : styles.message
           )}
         >
           <span>{message.body}</span>
@@ -81,6 +83,7 @@ class Dialog extends React.Component {
 
   render() {
     const { chatData, userId } = this.props;
+    console.log("🚀 ~ file: Dialog.jsx:84 ~ Dialog ~ render ~ chatData:", chatData)
     return (
       <>
         <ChatHeader userId={userId} />
