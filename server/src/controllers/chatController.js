@@ -59,6 +59,8 @@ module.exports.addMessage = async (req, res, next) => {
         },
       },
     });
+		console.log("🚀 ~ file: chatController.js:64 ~ module.exports.addMessage= ~  message:",  message)
+
     res.send({
       message,
       preview: Object.assign(preview, { interlocutor: req.body.interlocutor }),

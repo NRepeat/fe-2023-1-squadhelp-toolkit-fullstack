@@ -74,5 +74,6 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
     );
   };
 
+
   return <div>{mapedContestData(contestData)}</div>;
 }

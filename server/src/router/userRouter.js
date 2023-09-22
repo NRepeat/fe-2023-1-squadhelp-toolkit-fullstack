@@ -32,7 +32,7 @@ userValidationRouter.post(
   basicMiddlewares.onlyForCustomer,
   upload.uploadContestFiles,
   basicMiddlewares.parseBody,
-  validators.validateContestCreation,
+  // validators.validateContestCreation,
   userController.payment,
 );
 
