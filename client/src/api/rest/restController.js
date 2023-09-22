@@ -112,6 +112,8 @@ export const updateUser = async (data) => {
 
 export const newMessage = async (data) => {
 	try {
+		console.log("🚀 ~ file: restController.js:114 ~ newMessage ~ data:", data)
+
 		return await http.post('chat/newMessage', data);
 	} catch (error) {
 		throw error;
@@ -240,7 +242,7 @@ export const getModerator = async (offerId) => {
 		throw (error)
 	}
 }
-export const changeVarifiedOfeertStatus = async(data)=>{
+export const changeVarifiedOfeertStatus = async (data) => {
 	try {
 		return await http.put('moderator/updateOfferStatus', data);
 	} catch (error) {

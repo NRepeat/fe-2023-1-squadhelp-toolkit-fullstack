@@ -15,14 +15,6 @@ const CONSTANTS = require('../constants');
 
 
 
-module.exports.test = async (req, res, next) => {
-
-	try {
-		res.send({ data: 'dasdsd' })
-	} catch (err) {
-		next(new TokenError());
-	}
-};
 
 module.exports.getOffers = async (req, res, next) => {
 	try {
@@ -66,11 +58,10 @@ module.exports.getOffers = async (req, res, next) => {
 };
 
 module.exports.updateOfferStatus = async (req, res, next) => {
-	console.log("🚀 ~ file: moderatorController.js:69 ~ module.exports.updateOfferStatus= ~ req:", req.body.status)
 	try {
-		if (req.body.status === 'verified') { // Use '===' for comparison, not '='
+		if (req.body.status === 'verified') { 
 			const [updatedCount, [updatedOffer]] = await db.Offer.update(
-				{ status: req.body.status }, // Update the status field
+				{ status: req.body.status }, 
 				{ where: { id: req.body.id }, returning: true }
 			);
 
@@ -78,10 +69,10 @@ module.exports.updateOfferStatus = async (req, res, next) => {
 				throw new ServerError('Cannot update offer');
 			}
 
-			return res.json(updatedOffer); // Return the updated offer data
+			return res.json(updatedOffer);
 		} else if (req.body.status === 'rejected') {
 			const [updatedCount, [updatedOffer]] = await db.Offer.update(
-				{ status: req.body.status }, // Update the status field
+				{ status: req.body.status }, 
 				{ where: { id: req.body.id }, returning: true }
 			);
 

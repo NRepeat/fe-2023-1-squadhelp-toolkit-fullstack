@@ -2,13 +2,13 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('conversations', {
+    await queryInterface.createTable('Conversations', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      created_at: {
+      createdAt: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('NOW()'),
       },
@@ -16,11 +16,11 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.INTEGER),
         allowNull: false,
       },
-      black_list: {
+      blackList: {
         type: Sequelize.ARRAY(Sequelize.BOOLEAN),
         allowNull: false,
       },
-      favorite_list: {
+      favoriteList: {
         type: Sequelize.ARRAY(Sequelize.BOOLEAN),
         allowNull: false,
       },
@@ -28,6 +28,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('conversations');
+    await queryInterface.dropTable('Conversations');
   },
 };

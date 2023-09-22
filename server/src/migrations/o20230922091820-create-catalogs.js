@@ -2,20 +2,20 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('catalogs', {
+    await queryInterface.createTable('Catalogs', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      user_id: {
+      userId: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Users', // Make sure 'Users' matches your actual Users table name
           key: 'id',
         },
       },
-      catalog_name: {
+      catalogName: {
         type: Sequelize.STRING(255),
         allowNull: false,
       },
@@ -23,6 +23,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('catalogs');
+    await queryInterface.dropTable('Catalogs');
   },
 };
