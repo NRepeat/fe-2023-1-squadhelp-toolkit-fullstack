@@ -76,6 +76,7 @@ const getDialogMessagesExtraReducers = createExtraReducers({
 export const sendMessage = decorateAsyncThunk({
   key: `${CHAT_SLICE_NAME}/sendMessage`,
   thunk: async payload => {
+    console.log("🚀 ~ file: chatSlice.js:79 ~ payload:", payload)
     const { data } = await restController.newMessage(payload);
     return data;
   },

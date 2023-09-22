@@ -10,6 +10,7 @@ class ChatController extends WebSocket{
 
   onSubscribeChat (socket) {
     socket.on('subscribeChat', (id) => {
+      console.log("🚀 ~ file: ChatController.js:13 ~ ChatController ~ socket.on ~ id:", id)
       socket.join(id);
     });
   }

@@ -10,7 +10,6 @@ module.exports.addMessage = async (req, res, next) => {
 	const participants = [req.tokenData.userId, req.body.recipient];
 	participants.sort(
 		(participant1, participant2) => participant1 - participant2);
-	console.log("🚀 ~ file: chatController.js:11 ~ module.exports.addMessage= ~ participants:", participants)
 
 	try {
 		// const newConversation = await Conversation.findOneAndUpdate({
@@ -31,61 +30,56 @@ module.exports.addMessage = async (req, res, next) => {
 				favoriteList: [false, false],
 			},
 		});
-		console.log("🚀 ~ file: chatController.js:27 ~ module.exports.addMessage= ~ created:", created)
 
-		console.log("🚀 ~ file: chatController.js:32 ~ module.exports.addMessage= ~ newConversation:", newConversation)
-		console.log("🚀 ~ file: chatController.js:24 ~ module.exports.addMessage= ~ newConversation :", newConversation)
 		// const message = new Message({
 		// 	sender: req.tokenData.userId,
 		// 	body: req.body.messageBody,
 		// 	conversation: newConversation._id,
 		// });
 
-		console.log("🚀 ~ file: chatController.js:32 ~ module.exports.addMessage= ~ 	req.tokenData.userId:", req.tokenData.userId)
 		const message = await db.Message.create({
 			userId: req.tokenData.userId,
 			body: req.body.messageBody,
 			conversationId:newConversation.id,
 		});
-		console.log("🚀 ~ file: chatController.js:64 ~ module.exports.addMessage= ~  message:", message)
 
 		// await message.save();
-		// message._doc.participants = participants;
-		// const interlocutorId = participants.filter(
-		// 	(participant) => participant !== req.tokenData.userId)[0];
-		// const preview = {
-		// 	_id: newConversation._id,
-		// 	sender: req.tokenData.userId,
-		// 	text: req.body.messageBody,
-		// 	createAt: message.createdAt,
-		// 	participants,
-		// 	blackList: newConversation.blackList,
-		// 	favoriteList: newConversation.favoriteList,
-		// };
-		// controller.getChatController().emitNewMessage(interlocutorId, {
-		// 	message,
-		// 	preview: {
-		// 		_id: newConversation._id,
-		// 		sender: req.tokenData.userId,
-		// 		text: req.body.messageBody,
-		// 		createAt: message.createdAt,
-		// 		participants,
-		// 		blackList: newConversation.blackList,
-		// 		favoriteList: newConversation.favoriteList,
-		// 		interlocutor: {
-		// 			id: req.tokenData.userId,
-		// 			firstName: req.tokenData.firstName,
-		// 			lastName: req.tokenData.lastName,
-		// 			displayName: req.tokenData.displayName,
-		// 			avatar: req.tokenData.avatar,
-		// 			email: req.tokenData.email,
-		// 		},
-		// 	},
-		// });
+		message.participants = participants;
+		const interlocutorId = participants.filter(
+			(participant) => participant !== req.tokenData.userId)[0];
+		const preview = {
+			id: newConversation.id,
+			sender: req.tokenData.userId,
+			text: req.body.messageBody,
+			createAt: message.createdAt,
+			participants,
+			blackList: newConversation.blackList,
+			favoriteList: newConversation.favoriteList,
+		};
+		controller.getChatController().emitNewMessage(interlocutorId, {
+			message,
+			preview: {
+				_id: newConversation._id,
+				sender: req.tokenData.userId,
+				text: req.body.messageBody,
+				createAt: message.createdAt,
+				participants,
+				blackList: newConversation.blackList,
+				favoriteList: newConversation.favoriteList,
+				interlocutor: {
+					id: req.tokenData.userId,
+					firstName: req.tokenData.firstName,
+					lastName: req.tokenData.lastName,
+					displayName: req.tokenData.displayName,
+					avatar: req.tokenData.avatar,
+					email: req.tokenData.email,
+				},
+			},
+		});
 
 		res.send({
 			message,
-			// preview: Object.assign(preview, { interlocutor: req.body.interlocutor }),
+			preview: Object.assign(preview, { interlocutor: req.body.interlocutor }),
 		});
 	} catch (err) {
 		next(err);

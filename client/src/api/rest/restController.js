@@ -112,7 +112,6 @@ export const updateUser = async (data) => {
 
 export const newMessage = async (data) => {
 	try {
-		console.log("🚀 ~ file: restController.js:114 ~ newMessage ~ data:", data)
 
 		return await http.post('chat/newMessage', data);
 	} catch (error) {
