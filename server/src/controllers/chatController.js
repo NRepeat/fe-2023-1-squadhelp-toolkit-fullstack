@@ -6,6 +6,7 @@ const userQueries = require('./queries/userQueries');
 const controller = require('../socketInit');
 const _ = require('lodash');
 const { Op } = require('sequelize')
+
 module.exports.addMessage = async (req, res, next) => {
 	const participants = [req.tokenData.userId, req.body.recipient];
 	participants.sort(
@@ -23,7 +24,7 @@ module.exports.addMessage = async (req, res, next) => {
 		const message = await db.Message.create({
 			userId: req.tokenData.userId,
 			body: req.body.messageBody,
-			conversationId:newConversation.id,
+			conversationId: newConversation.id,
 		});
 
 		message.participants = participants;
@@ -69,121 +70,145 @@ module.exports.addMessage = async (req, res, next) => {
 };
 
 module.exports.getChat = async (req, res, next) => {
-  const participants = [req.tokenData.userId, req.body.interlocutorId];
-  participants.sort((participant1, participant2) => participant1 - participant2);
+	const participants = [req.tokenData.userId, req.body.interlocutorId];
+	participants.sort((participant1, participant2) => participant1 - participant2);
 
-  try {
-    // Find the conversation based on participants
-    const conversation = await db.Conversation.findOne({
-      where: {
-        participants: {
-          [Op.contains]: participants, // Check if participants array contains both IDs
-        },
-      },
-    });
-
-    if (!conversation) {
-      // Handle the case when the conversation doesn't exist
-      return res.status(404).send({ message: 'Conversation not found' });
-    }
-
-    // Find all messages associated with the conversation
-    const messages = await db.Message.findAll({
-      where: {
-        conversationId: conversation.id,
-      },
-      order: [['createdAt', 'ASC']], // Sort messages by createdAt in ascending order
-      attributes: ['id', 'userId', 'body', 'conversationId', 'createdAt', 'updatedAt'], // Include only specific attributes
-    });
-
-    // Find the interlocutor user
-    const interlocutor = await db.User.findByPk(req.body.interlocutorId);
-
-    if (!interlocutor) {
-      // Handle the case when the interlocutor user doesn't exist
-      return res.status(404).send({ message: 'Interlocutor not found' });
-    }
-
-    // Send the response with messages and interlocutor information
-    res.send({
-      messages,
-      interlocutor: {
-        firstName: interlocutor.firstName,
-        lastName: interlocutor.lastName,
-        displayName: interlocutor.displayName,
-        id: interlocutor.id,
-        avatar: interlocutor.avatar,
-      },
-    });
-  } catch (err) {
-    next(err);
-  }
-};
-module.exports.getPreview = async (req, res, next) => {
 	try {
-		const conversations = await Message.aggregate([
-			{
-				$lookup: {
-					from: 'conversations',
-					localField: 'conversation',
-					foreignField: '_id',
-					as: 'conversationData',
-				},
-			},
-			{
-				$unwind: '$conversationData',
-			},
-			{
-				$match: {
-					'conversationData.participants': req.tokenData.userId,
-				},
-			},
-			{
-				$sort: {
-					createdAt: -1,
-				},
-			},
-			{
-				$group: {
-					_id: '$conversationData._id',
-					sender: { $first: '$sender' },
-					text: { $first: '$body' },
-					createAt: { $first: '$createdAt' },
-					participants: { $first: '$conversationData.participants' },
-					blackList: { $first: '$conversationData.blackList' },
-					favoriteList: { $first: '$conversationData.favoriteList' },
-				},
-			},
-		]);
-		const interlocutors = [];
-		conversations.forEach(conversation => {
-			interlocutors.push(conversation.participants.find(
-				(participant) => participant !== req.tokenData.userId));
-		});
-		const senders = await db.User.findAll({
+		const conversation = await db.Conversation.findOne({
 			where: {
-				id: interlocutors,
+				participants: {
+					[Op.contains]: participants, 
+				},
 			},
-			attributes: ['id', 'firstName', 'lastName', 'displayName', 'avatar'],
 		});
-		conversations.forEach((conversation) => {
-			senders.forEach(sender => {
-				if (conversation.participants.includes(sender.dataValues.id)) {
-					conversation.interlocutor = {
-						id: sender.dataValues.id,
-						firstName: sender.dataValues.firstName,
-						lastName: sender.dataValues.lastName,
-						displayName: sender.dataValues.displayName,
-						avatar: sender.dataValues.avatar,
-					};
-				}
-			});
+
+		if (!conversation) {
+			return res.status(404).send({ message: 'Conversation not found' });
+		}
+
+
+		const messages = await db.Message.findAll({
+			where: {
+				conversationId: conversation.id,
+			},
+			order: [['createdAt', 'ASC']], 
+			attributes: ['id', 'userId', 'body', 'conversationId', 'createdAt', 'updatedAt'],
 		});
-		res.send(conversations);
+
+		const interlocutor = await db.User.findByPk(req.body.interlocutorId);
+
+		if (!interlocutor) {
+			return res.status(404).send({ message: 'Interlocutor not found' });
+		}
+
+		res.send({
+			messages,
+			interlocutor: {
+				firstName: interlocutor.firstName,
+				lastName: interlocutor.lastName,
+				displayName: interlocutor.displayName,
+				id: interlocutor.id,
+				avatar: interlocutor.avatar,
+			},
+		});
 	} catch (err) {
 		next(err);
 	}
 };
+module.exports.getPreview = async (req, res, next) => {
+  try {
+  
+    async function findLastMessageInConversation(conversationId) {
+      try {
+        const lastMessage = await db.Message.findOne({
+          where: {
+            conversationId: conversationId,
+          },
+          order: [['createdAt', 'DESC']], 
+        });
+
+        return lastMessage;
+      } catch (err) {
+        throw err;
+      }
+    }
+
+    const conversations = await db.Message.findAll({
+      attributes: ['conversationId'], 
+      where: {
+        '$conversationData.participants$': {
+          [db.Sequelize.Op.contains]: [req.tokenData.userId],
+        },
+      },
+      include: [
+        {
+          model: db.Conversation,
+          as: 'conversationData',
+          attributes: ['id', 'participants', 'blackList', 'favoriteList'],
+        },
+      ],
+
+      group: [
+        'conversationId',
+        'conversationData.id',
+        'conversationData.participants',
+        'conversationData.blackList',
+        'conversationData.favoriteList',
+      ],
+    });
+
+    const formattedConversations = await Promise.all(conversations.map(async conversation => {
+
+      const lastMessage = await findLastMessageInConversation(conversation.conversationId);
+    
+
+      return {
+        _id: conversation.conversationId,
+        sender: conversation.conversationData.id,
+        text: lastMessage ? lastMessage.body : '',
+        createAt: lastMessage ? lastMessage.createdAt : null,
+        participants: conversation.conversationData.participants,
+        blackList: conversation.conversationData.blackList,
+        favoriteList: conversation.conversationData.favoriteList,
+      };
+    }));
+
+    const interlocutors = [];
+    formattedConversations.forEach(conversation => {
+      interlocutors.push(conversation.participants.find(
+        participant => participant !== req.tokenData.userId
+      ));
+    });
+
+    const senders = await db.User.findAll({
+      where: {
+        id: interlocutors,
+      },
+      attributes: ['id', 'firstName', 'lastName', 'displayName', 'avatar'],
+    });
+
+    formattedConversations.forEach(conversation => {
+      senders.forEach(sender => {
+
+        if (conversation.participants.includes(sender.dataValues.id)) {
+          conversation.interlocutor = {
+            id: sender.id,
+            firstName: sender.firstName,
+            lastName: sender.lastName,
+            displayName: sender.displayName,
+            avatar: sender.avatar,
+          };
+        }
+      });
+    });
+
+    res.send(conversations);	
+  } catch (err) {
+    next(err);
+  }
+};
+
+
 
 module.exports.blackList = async (req, res, next) => {
 	const predicate = 'blackList.' +

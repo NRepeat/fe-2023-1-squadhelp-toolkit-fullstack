@@ -501,5 +501,198 @@
       "    at /server/node_modules/express/lib/router/index.js:281:22",
       "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
     ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695567508803,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695567511379,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'participants')",
+    "time": 1695576281403,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'participants')",
+      "    at forEach (/server/src/controllers/chatController.js:190:56)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:189:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'participants')",
+    "time": 1695576284153,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'participants')",
+      "    at forEach (/server/src/controllers/chatController.js:190:56)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:189:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "time": 1695576331562,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'find')",
+      "    at forEach (/server/src/controllers/chatController.js:190:62)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:189:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "time": 1695576348257,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'find')",
+      "    at forEach (/server/src/controllers/chatController.js:190:62)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:189:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'includes')",
+    "time": 1695576467069,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'includes')",
+      "    at forEach (/server/src/controllers/chatController.js:207:49)",
+      "    at Array.forEach (<anonymous>)",
+      "    at forEach (/server/src/controllers/chatController.js:206:15)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:205:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'includes')",
+    "time": 1695576547001,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'includes')",
+      "    at forEach (/server/src/controllers/chatController.js:209:49)",
+      "    at Array.forEach (<anonymous>)",
+      "    at forEach (/server/src/controllers/chatController.js:206:15)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:205:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'includes')",
+    "time": 1695576670342,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'includes')",
+      "    at forEach (/server/src/controllers/chatController.js:209:49)",
+      "    at Array.forEach (<anonymous>)",
+      "    at forEach (/server/src/controllers/chatController.js:206:15)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:205:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'includes')",
+    "time": 1695576697476,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'includes')",
+      "    at forEach (/server/src/controllers/chatController.js:209:49)",
+      "    at Array.forEach (<anonymous>)",
+      "    at forEach (/server/src/controllers/chatController.js:206:15)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:205:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'includes')",
+    "time": 1695576722459,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'includes')",
+      "    at forEach (/server/src/controllers/chatController.js:209:49)",
+      "    at Array.forEach (<anonymous>)",
+      "    at forEach (/server/src/controllers/chatController.js:206:15)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:205:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
   }
 ]

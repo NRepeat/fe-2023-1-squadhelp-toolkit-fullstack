@@ -15,6 +15,7 @@ const DialogBox = props => {
     chatMode,
     interlocutor,
   } = props;
+    console.log("🚀 ~ file: DialogBox.jsx:18 ~ DialogBox ~ chatPreview:", chatPreview)
   const {
     favoriteList,
     participants,
@@ -23,7 +24,10 @@ const DialogBox = props => {
     text,
     createAt,
   } = chatPreview;
+  console.log("🚀 ~ file: DialogBox.jsx:27 ~ DialogBox ~ favoriteList:", chatPreview)
+
   const isFavorite = favoriteList[participants.indexOf(userId)];
+  console.log("🚀 ~ file: DialogBox.jsx:27 ~ DialogBox ~ isFavorite:", isFavorite)
   const isBlocked = blackList[participants.indexOf(userId)];
   return (
     <div
