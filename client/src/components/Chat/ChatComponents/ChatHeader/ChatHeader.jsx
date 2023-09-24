@@ -29,7 +29,6 @@ const ChatHeader = (props) => {
     const { participants, blackList } = chatData;
     return blackList[participants.indexOf(userId)];
   };
-
   const { avatar, firstName } = props.interlocutor;
   const { backToDialogList, chatData, userId } = props;
   return (
@@ -95,6 +94,7 @@ const ChatHeader = (props) => {
 };
 
 const mapStateToProps = (state) => {
+  console.log("🚀 ~ file: ChatHeader.jsx:98 ~ mapStateToProps ~ state:", state)
   const { interlocutor, chatData } = state.chatStore;
   return { interlocutor, chatData };
 };

@@ -31,9 +31,9 @@ class Dialog extends React.Component {
       '🚀 ~ file: Dialog.jsx:28 ~ Dialog ~ componentWillReceiveProps ~ this.props:',
       this.props
     );
-
-    if (nextProps.interlocutor.id !== this.props.interlocutor.id)
-      this.props.getDialog({ interlocutorId: nextProps.interlocutor.id });
+    if (nextProps.interlocutor !== null)
+      if (nextProps.interlocutor.id !== this.props.interlocutor.id)
+        this.props.getDialog({ interlocutorId: nextProps.interlocutor.id });
   }
 
   componentWillUnmount() {
