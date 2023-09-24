@@ -29,10 +29,12 @@ module.exports = (sequelize) => {
 			blackList: {
 				type: DataTypes.ARRAY(DataTypes.BOOLEAN),
 				allowNull: false,
+				defaultValue: [], 
 			},
 			favoriteList: {
 				type: DataTypes.ARRAY(DataTypes.BOOLEAN),
 				allowNull: false,
+				defaultValue: [], 
 			},
 		},
 		{

@@ -24,6 +24,7 @@ const DialogBox = props => {
     text,
     createAt,
   } = chatPreview;
+  console.log("🚀 ~ file: DialogBox.jsx:28 ~ DialogBox ~ 	participants.indexOf(userId):", 	participants.indexOf(userId))
   const isFavorite = favoriteList[participants.indexOf(userId)];
   const isBlocked = blackList[participants.indexOf(userId)];
   return (

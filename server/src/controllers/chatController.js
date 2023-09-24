@@ -69,34 +69,39 @@ module.exports.addMessage = async (req, res, next) => {
 	}
 };
 
+
 module.exports.getChat = async (req, res, next) => {
 	const participants = [req.tokenData.userId, req.body.interlocutorId];
 	participants.sort((participant1, participant2) => participant1 - participant2);
 
 	try {
-		const conversation = await db.Conversation.findOne({
-			where: {
-				participants: {
-					[Op.contains]: participants,
-				},
+		// Find or create a conversation with the specified participants
+		const [newConversation, created] = await db.Conversation.findOrCreate({
+			where: { participants },
+			defaults: {
+				participants,
+				blackList: [false, false],
+				favoriteList: [false, false],
 			},
 		});
+		console.log("🚀 ~ file: chatController.js:87 ~ module.exports.getChat= ~ newConversation:", newConversation.id)
 
-		if (!conversation) {
-			return res.status(404).send({ message: 'Conversation not found' });
-		}
+		// If the conversation was not found or created, return a 404 response
 
 
+		// Find all messages in the conversation
 		const messages = await db.Message.findAll({
 			where: {
-				conversationId: conversation.id,
+				conversationId: newConversation.id,
 			},
 			order: [['createdAt', 'ASC']],
 			attributes: ['id', 'userId', 'body', 'conversationId', 'createdAt', 'updatedAt'],
 		});
 
+		// Find the interlocutor
 		const interlocutor = await db.User.findByPk(req.body.interlocutorId);
 
+		// If the interlocutor was not found, return a 404 response
 		if (!interlocutor) {
 			return res.status(404).send({ message: 'Interlocutor not found' });
 		}
@@ -115,6 +120,7 @@ module.exports.getChat = async (req, res, next) => {
 		next(err);
 	}
 };
+
 module.exports.getPreview = async (req, res, next) => {
 	try {
 
@@ -227,30 +233,47 @@ module.exports.blackList = async (req, res, next) => {
 
 
 module.exports.favoriteChat = async (req, res, next) => {
-  try {
-    const predicate = 'favoriteList.' + req.body.participants.indexOf(req.tokenData.userId);
-    const [updatedCount, updatedChats] = await db.Conversation.update(
-      {
-        [predicate]: req.body.favoriteFlag,
-      },
-      {
-        where: {
-          participants: req.body.participants,
-        },
-        returning: true, // Return the updated records
-      }
-    );
-		console.log("🚀 ~ file: chatController.js:237 ~ module.exports.favoriteChat= ~ updatedChats:", updatedChats)
+	try {
+		const favoriteListValue = req.body.favoriteFlag ? req.tokenData.userId : req.tokenData.userId;
+		const usrInArr = req.body.participants.indexOf(favoriteListValue)
+		const list = await db.Conversation.findAll({
+			where: {
+				participants: req.body.participants,
+			},
+			attributes: ["favoriteList"],
+		});
+		let [tf] = list.map((obj) => {
+			return obj.dataValues.favoriteList.map((bool) => { return bool })
+		})
 
-    if (updatedCount > 0 && updatedChats.length > 0) {
-      // Assuming there might be multiple updated chats, we send the first one as the response
-      res.send(updatedChats[0]);
-    } else {
-      res.status(404).send('Conversation not found');
-    }
-  } catch (err) {
-    next(err);
-  }
+
+		if (usrInArr === 0) {
+			tf[0] = req.body.favoriteFlag;
+		}
+		else if (usrInArr === 1) {
+			tf[1] = req.body.favoriteFlag;
+		}
+
+		const [updatedCount, updatedChats] = await db.Conversation.update(
+			{
+				favoriteList: [tf[0], tf[1]],
+			},
+			{
+				where: {
+					participants: req.body.participants,
+				},
+				returning: true,
+			}
+		);
+
+		if (updatedCount > 0 && updatedChats.length > 0) {
+			res.send(updatedChats[0]);
+		} else {
+			res.status(404).send('Conversation not found');
+		}
+	} catch (err) {
+		next(err);
+	}
 };
 
 module.exports.createCatalog = async (req, res, next) => {

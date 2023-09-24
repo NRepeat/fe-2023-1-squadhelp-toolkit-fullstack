@@ -94,7 +94,7 @@ const ChatHeader = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log("🚀 ~ file: ChatHeader.jsx:98 ~ mapStateToProps ~ state:", state)
+  console.log("🚀 ~ file: ChatHeader.jsx:98 ~ mapStateToProps ~ state:",state.chatStore)
   const { interlocutor, chatData } = state.chatStore;
   return { interlocutor, chatData };
 };

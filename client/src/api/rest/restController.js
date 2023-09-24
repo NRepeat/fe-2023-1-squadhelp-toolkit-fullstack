@@ -122,6 +122,7 @@ export const newMessage = async (data) => {
 };
 
 export const changeChatFavorite = async (data) => {
+	console.log("🚀 ~ file: restController.js:125 ~ changeChatFavorite ~ data):", data)
 	try {
 		return await http.post('chat/favorite', data);
 	} catch (error) {
