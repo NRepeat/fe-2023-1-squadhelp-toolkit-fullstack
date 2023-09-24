@@ -694,5 +694,29 @@
       "    at _next (/server/src/controllers/chatController.js:19:194)",
       "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
     ]
+  },
+  {
+    "message": "Catalog validation failed: chats.0: Cast to [ObjectId] failed for value \"[1]\" (type string) at path \"chats.0\"",
+    "time": 1695579012701,
+    "code": 500,
+    "stackTrace": [
+      "ValidationError: Catalog validation failed: chats.0: Cast to [ObjectId] failed for value \"[1]\" (type string) at path \"chats.0\"",
+      "    at model.Document.invalidate (/server/node_modules/mongoose/lib/document.js:2729:32)",
+      "    at model.$set (/server/node_modules/mongoose/lib/document.js:1318:12)",
+      "    at model.$set (/server/node_modules/mongoose/lib/document.js:1022:16)",
+      "    at model.Document (/server/node_modules/mongoose/lib/document.js:147:12)",
+      "    at model.Model (/server/node_modules/mongoose/lib/model.js:105:12)",
+      "    at new model (/server/node_modules/mongoose/lib/model.js:4706:15)",
+      "    at _callee8$ (/server/src/controllers/chatController.js:244:18)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:243:1"
+    ]
   }
 ]

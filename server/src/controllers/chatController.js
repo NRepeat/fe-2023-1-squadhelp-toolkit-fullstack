@@ -163,7 +163,7 @@ module.exports.getPreview = async (req, res, next) => {
     
 
       return {
-        _id: conversation.conversationId,
+        id: conversation.conversationId,
         sender: conversation.conversationData.id,
         text: lastMessage ? lastMessage.body : '',
         createAt: lastMessage ? lastMessage.createdAt : null,
@@ -201,8 +201,7 @@ module.exports.getPreview = async (req, res, next) => {
         }
       });
     });
-
-    res.send(conversations);	
+    res.send(formattedConversations);	
   } catch (err) {
     next(err);
   }
