@@ -51,6 +51,10 @@ const DialogList = (props) => {
       removeChat,
       interlocutor,
     } = props;
+    console.log(
+      '🚀 ~ file: DialogList.jsx:54 ~ renderPreview ~ preview:',
+      preview
+    );
     preview.forEach((chatPreview, index) => {
       const dialogNode = (
         <DialogBox

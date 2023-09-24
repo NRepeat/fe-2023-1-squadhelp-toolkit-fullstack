@@ -80,7 +80,9 @@ export const getPreviewChat = async () => {
 
 export const getDialog = async (data) => {
 	try {
-		return await http.post('chat/getChat', data);
+		 const a = await http.post('chat/getChat', data);
+		 console.log("🚀 ~ file: restController.js:84 ~ getDialog ~ a:", a)
+		 return a 
 	} catch (error) {
 		throw error;
 	}

@@ -100,5 +100,406 @@
       "    at /server/node_modules/express/lib/router/index.js:281:22",
       "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
     ]
+  },
+  {
+    "message": "token error",
+    "time": 1695500414006,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: token error",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:24:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _throw (/server/src/middlewares/checkToken.js:5:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Op is not defined",
+    "time": 1695549558185,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: Op is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:81:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:71:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "Op is not defined",
+    "time": 1695549630800,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: Op is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:81:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:71:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "Op is not defined",
+    "time": 1695549656678,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: Op is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:81:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:71:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "Op is not defined",
+    "time": 1695550283585,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: Op is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:81:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:71:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "Op is not defined",
+    "time": 1695550326262,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: Op is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:81:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:71:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "Op is not defined",
+    "time": 1695550512420,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: Op is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:80:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:71:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "Op is not defined",
+    "time": 1695550564719,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: Op is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:80:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:71:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "Op is not defined",
+    "time": 1695550575136,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: Op is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:80:12)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:71:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "column \"_id\" does not exist",
+    "time": 1695550645628,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"_id\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "column \"_id\" does not exist",
+    "time": 1695551377316,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"_id\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "column \"_id\" does not exist",
+    "time": 1695551457047,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"_id\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "column \"_id\" does not exist",
+    "time": 1695551986461,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"_id\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "column \"_id\" does not exist",
+    "time": 1695552001085,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"_id\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "column \"_id\" does not exist",
+    "time": 1695552037306,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"_id\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "column \"sender\" does not exist",
+    "time": 1695552092461,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"sender\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695552390017,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695552390023,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695552759207,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695552759212,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
   }
 ]

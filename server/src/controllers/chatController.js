@@ -5,23 +5,13 @@ const db = require('../models');
 const userQueries = require('./queries/userQueries');
 const controller = require('../socketInit');
 const _ = require('lodash');
-
+const { Op } = require('sequelize')
 module.exports.addMessage = async (req, res, next) => {
 	const participants = [req.tokenData.userId, req.body.recipient];
 	participants.sort(
 		(participant1, participant2) => participant1 - participant2);
 
 	try {
-		// const newConversation = await Conversation.findOneAndUpdate({
-		// 	participants,
-		// },
-		// 	{ participants, blackList: [false, false], favoriteList: [false, false] },
-		// 	{
-		// 		upsert: true,
-		// 		new: true,
-		// 		setDefaultsOnInsert: true,
-		// 		useFindAndModify: false,
-		// 	});
 		const [newConversation, created] = await db.Conversation.findOrCreate({
 			where: { participants },
 			defaults: {
@@ -30,20 +20,12 @@ module.exports.addMessage = async (req, res, next) => {
 				favoriteList: [false, false],
 			},
 		});
-
-		// const message = new Message({
-		// 	sender: req.tokenData.userId,
-		// 	body: req.body.messageBody,
-		// 	conversation: newConversation._id,
-		// });
-
 		const message = await db.Message.create({
 			userId: req.tokenData.userId,
 			body: req.body.messageBody,
 			conversationId:newConversation.id,
 		});
 
-		// await message.save();
 		message.participants = participants;
 		const interlocutorId = participants.filter(
 			(participant) => participant !== req.tokenData.userId)[0];
@@ -87,50 +69,56 @@ module.exports.addMessage = async (req, res, next) => {
 };
 
 module.exports.getChat = async (req, res, next) => {
-	const participants = [req.tokenData.userId, req.body.interlocutorId];
-	participants.sort(
-		(participant1, participant2) => participant1 - participant2);
-	try {
-		const messages = await Message.aggregate([
-			{
-				$lookup: {
-					from: 'conversations',
-					localField: 'conversation',
-					foreignField: '_id',
-					as: 'conversationData',
-				},
-			},
-			{ $match: { 'conversationData.participants': participants } },
-			{ $sort: { createdAt: 1 } },
-			{
-				$project: {
-					'_id': 1,
-					'sender': 1,
-					'body': 1,
-					'conversation': 1,
-					'createdAt': 1,
-					'updatedAt': 1,
-				},
-			},
-		]);
+  const participants = [req.tokenData.userId, req.body.interlocutorId];
+  participants.sort((participant1, participant2) => participant1 - participant2);
 
-		const interlocutor = await userQueries.findUser(
-			{ id: req.body.interlocutorId });
-		res.send({
-			messages,
-			interlocutor: {
-				firstName: interlocutor.firstName,
-				lastName: interlocutor.lastName,
-				displayName: interlocutor.displayName,
-				id: interlocutor.id,
-				avatar: interlocutor.avatar,
-			},
-		});
-	} catch (err) {
-		next(err);
-	}
+  try {
+    // Find the conversation based on participants
+    const conversation = await db.Conversation.findOne({
+      where: {
+        participants: {
+          [Op.contains]: participants, // Check if participants array contains both IDs
+        },
+      },
+    });
+
+    if (!conversation) {
+      // Handle the case when the conversation doesn't exist
+      return res.status(404).send({ message: 'Conversation not found' });
+    }
+
+    // Find all messages associated with the conversation
+    const messages = await db.Message.findAll({
+      where: {
+        conversationId: conversation.id,
+      },
+      order: [['createdAt', 'ASC']], // Sort messages by createdAt in ascending order
+      attributes: ['id', 'userId', 'body', 'conversationId', 'createdAt', 'updatedAt'], // Include only specific attributes
+    });
+
+    // Find the interlocutor user
+    const interlocutor = await db.User.findByPk(req.body.interlocutorId);
+
+    if (!interlocutor) {
+      // Handle the case when the interlocutor user doesn't exist
+      return res.status(404).send({ message: 'Interlocutor not found' });
+    }
+
+    // Send the response with messages and interlocutor information
+    res.send({
+      messages,
+      interlocutor: {
+        firstName: interlocutor.firstName,
+        lastName: interlocutor.lastName,
+        displayName: interlocutor.displayName,
+        id: interlocutor.id,
+        avatar: interlocutor.avatar,
+      },
+    });
+  } catch (err) {
+    next(err);
+  }
 };
-
 module.exports.getPreview = async (req, res, next) => {
 	try {
 		const conversations = await Message.aggregate([
