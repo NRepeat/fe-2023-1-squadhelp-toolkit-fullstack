@@ -1,0 +1,177 @@
+[
+  {
+    "message": "notNull Violation: Conversation.blackList cannot be null,\nnotNull Violation: Conversation.favoriteList cannot be null",
+    "code": 500,
+    "time": 1695582816714
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695582928224
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695583075203
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695583085481
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695583120441
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695583299007
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695583333242
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695583350981
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695583375647
+  },
+  {
+    "message": "conversation is not defined",
+    "code": 500,
+    "time": 1695583438066
+  },
+  {
+    "message": "conversation is not defined",
+    "code": 500,
+    "time": 1695583484347
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695583749072
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695583758927
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695584067237
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695584157789
+  },
+  {
+    "message": "favoriteList is not defined",
+    "code": 500,
+    "time": 1695584366690
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695584388414
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695584444645
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695584499030
+  },
+  {
+    "message": "Missing where attribute in the options parameter",
+    "code": "ERR_ASSERTION",
+    "time": 1695584569304
+  },
+  {
+    "message": "sequelize is not defined",
+    "code": 500,
+    "time": 1695585155511
+  },
+  {
+    "message": "invalid input syntax for type boolean: \"{\"val\":\"favoriteList[2]\"}\"",
+    "code": 500,
+    "time": 1695585170548
+  },
+  {
+    "message": "column \"favoritelist\" does not exist",
+    "code": 500,
+    "time": 1695585277067
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695585593589
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695585619957
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695586088196
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695586117328
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695586221723
+  },
+  {
+    "message": "participants is not defined",
+    "code": 500,
+    "time": 1695589535883
+  },
+  {
+    "message": "dataValues is not defined",
+    "code": 500,
+    "time": 1695589648582
+  },
+  {
+    "message": "malformed array literal: \"{{\"false\",\"false\"},\"true\"}\"",
+    "code": 500,
+    "time": 1695590289521
+  },
+  {
+    "message": "tf2 is not defined",
+    "code": 500,
+    "time": 1695590314879
+  },
+  {
+    "message": "tf2 is not defined",
+    "code": 500,
+    "time": 1695590326840
+  },
+  {
+    "message": "Catalog validation failed: chats.0: Cast to [ObjectId] failed for value \"[3]\" (type string) at path \"chats.0\"",
+    "code": 500,
+    "time": 1695590374828
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695666090155
+  }
+]
