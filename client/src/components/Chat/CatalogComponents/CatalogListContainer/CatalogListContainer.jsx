@@ -29,12 +29,12 @@ class CatalogListContainer extends React.Component {
         }
       }	
     }
-   
 
     return dialogsInCatalog;
   };
 
   render() {
+		
     const { catalogList, isShowChatsInCatalog } = this.props.chatStore;
     const { id } = this.props.userStore.data;
     return (
