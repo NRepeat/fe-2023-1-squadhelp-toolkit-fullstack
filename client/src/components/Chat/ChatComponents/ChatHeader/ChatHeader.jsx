@@ -27,6 +27,11 @@ const ChatHeader = (props) => {
 
   const isBlocked = (chatData, userId) => {
     const { participants, blackList } = chatData;
+    console.log(
+      '🚀 ~ file: ChatHeader.jsx:31 ~ isBlocked ~ blackList[participants.indexOf(userId):',
+      blackList[participants.indexOf(userId)]
+    );
+
     return blackList[participants.indexOf(userId)];
   };
   const { avatar, firstName } = props.interlocutor;
@@ -94,7 +99,6 @@ const ChatHeader = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log("🚀 ~ file: ChatHeader.jsx:98 ~ mapStateToProps ~ state:",state.chatStore)
   const { interlocutor, chatData } = state.chatStore;
   return { interlocutor, chatData };
 };

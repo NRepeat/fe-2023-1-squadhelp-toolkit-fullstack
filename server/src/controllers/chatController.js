@@ -84,7 +84,6 @@ module.exports.getChat = async (req, res, next) => {
 				favoriteList: [false, false],
 			},
 		});
-		console.log("🚀 ~ file: chatController.js:87 ~ module.exports.getChat= ~ newConversation:", newConversation.id)
 
 		// If the conversation was not found or created, return a 404 response
 
@@ -123,7 +122,6 @@ module.exports.getChat = async (req, res, next) => {
 
 module.exports.getPreview = async (req, res, next) => {
 	try {
-
 		async function findLastMessageInConversation(conversationId) {
 			try {
 				const lastMessage = await db.Message.findOne({
@@ -137,8 +135,8 @@ module.exports.getPreview = async (req, res, next) => {
 			} catch (err) {
 				throw err;
 			}
-		}
 
+		}
 		const conversations = await db.Message.findAll({
 			attributes: ['conversationId'],
 			where: {
@@ -214,23 +212,59 @@ module.exports.getPreview = async (req, res, next) => {
 };
 
 
-
 module.exports.blackList = async (req, res, next) => {
-	const predicate = 'blackList.' +
-		req.body.participants.indexOf(req.tokenData.userId);
+
 	try {
-		const chat = await Conversation.findOneAndUpdate(
-			{ participants: req.body.participants },
-			{ $set: { [predicate]: req.body.blackListFlag } }, { new: true });
-		res.send(chat);
-		const interlocutorId = req.body.participants.filter(
-			(participant) => participant !== req.tokenData.userId)[0];
-		controller.getChatController().emitChangeBlockStatus(interlocutorId, chat);
+
+		console.log("🚀 ~ file: chatController.js:220 ~ module.exports.blackList= ~ req.body.blackListFlag:", req.body.blackListFlag)
+		const usrInArr = req.body.participants.indexOf(req.tokenData.userId)
+		console.log("🚀 ~ file: chatController.js:226 ~ module.exports.blackList= ~ usrInArr :", usrInArr)
+		const list = await db.Conversation.findAll({
+			where: {
+				participants: req.body.participants,
+			},
+			attributes: ["blackList"],
+		});
+		let [tf] = list.map((obj) => {
+			return obj.dataValues.blackList.map((bool) => { return bool })
+		})
+
+
+		if (usrInArr === 0) {
+			tf[0] = req.body.blackListFlag;
+		}
+		else if (usrInArr === 1) {
+			tf[1] = req.body.blackListFlag;
+		}
+		const [updatedCount, updatedChats] = await db.Conversation.update(
+			{
+				blackList: [tf[0], tf[1]],
+			},
+			{
+				where: {
+					participants: req.body.participants,
+				},
+				returning: true,
+			}
+		);
+		console.log("🚀 ~ file: chatController.js:247 ~ module.exports.blackList= ~ updatedChats:", updatedChats.map((obj) => {
+			return obj.dataValues.blackList.map((bool) => { return bool })
+		}))
+
+		res.send(updatedChats);
+
+		// const interlocutorId = req.body.participants.find(
+		// 	(participant) => participant !== req.tokenData.userId
+		// );
+
+		// controller.getChatController().emitChangeBlockStatus(interlocutorId, updatedChats);
+
+
 	} catch (err) {
-		res.send(err);
+		console.error(err);
+		res.status(500).send('Произошла ошибка при обновлении');
 	}
 };
-
 
 module.exports.favoriteChat = async (req, res, next) => {
 	try {

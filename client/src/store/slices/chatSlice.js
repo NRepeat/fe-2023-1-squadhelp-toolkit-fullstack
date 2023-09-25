@@ -34,6 +34,7 @@ export const getPreviewChat = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/getPreviewChat`,
 	thunk: async () => {
 		const { data } = await restController.getPreviewChat();
+		console.log("🚀 ~ file: chatSlice.js:37 ~ thunk: ~ data:", data)
 		return data;
 	},
 });
@@ -143,6 +144,7 @@ export const changeChatBlock = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/changeChatBlock`,
 	thunk: async payload => {
 		const { data } = await restController.changeChatBlock(payload);
+		console.log("🚀 ~ file: chatSlice.js:147 ~ data :", data )
 		return data;
 	},
 });

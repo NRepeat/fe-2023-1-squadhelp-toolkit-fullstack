@@ -47,7 +47,6 @@ class Dialog extends React.Component {
   renderMainDialog = () => {
     const messagesArray = [];
     const { messages, userId } = this.props;
-    console.log('🚀 ~ file: Dialog.jsx:41 ~ Dialog ~ userId:', userId);
     let currentTime = moment();
     messages.forEach((message, i) => {
       if (!currentTime.isSame(message.createdAt, 'date')) {
