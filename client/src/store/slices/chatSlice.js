@@ -55,7 +55,6 @@ export const getDialogMessages = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/getDialogMessages`,
 	thunk: async payload => {
 		const { data } = await restController.getDialog(payload);
-		console.log("🚀 ~ file: chatSlice.js:58 ~ data :", data)
 		return data;
 	},
 });
