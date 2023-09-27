@@ -35,6 +35,7 @@ export const getPreviewChat = decorateAsyncThunk({
 	thunk: async () => {
 		const { data } = await restController.getPreviewChat();
 		console.log("🚀 ~ file: chatSlice.js:37 ~ thunk: ~ data:", data)
+		console.log("🚀 ~ file: chatSlice.js:37 ~ thunk: ~ data:", data)
 		return data;
 	},
 });

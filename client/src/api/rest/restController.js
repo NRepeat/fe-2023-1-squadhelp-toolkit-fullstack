@@ -130,7 +130,8 @@ export const changeChatFavorite = async (data) => {
 
 export const changeChatBlock = async (data) => {
 	try {
-		return await http.post('chat/blackList', data);
+		const datas = await http.post('chat/blackList', data);
+		return datas
 	} catch (error) {
 		throw error;
 	}

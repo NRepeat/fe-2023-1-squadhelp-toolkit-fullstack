@@ -112,7 +112,6 @@ module.exports.getChat = async (req, res, next) => {
 
 module.exports.getPreview = async (req, res, next) => {
 	try {
-
 		async function findLastMessageInConversation(conversationId) {
 			try {
 				const lastMessage = await db.Message.findOne({
@@ -126,8 +125,8 @@ module.exports.getPreview = async (req, res, next) => {
 			} catch (err) {
 				throw err;
 			}
-		}
 
+		}
 		const conversations = await db.Message.findAll({
 			attributes: ['conversationId'],
 			where: {
@@ -258,7 +257,6 @@ module.exports.blackList = async (req, res, next) => {
 		res.status(500).send(err);
 	}
 };
-
 
 module.exports.favoriteChat = async (req, res, next) => {
 	try {
