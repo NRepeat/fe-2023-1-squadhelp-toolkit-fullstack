@@ -5,16 +5,33 @@ import DialogList from '../DialogList/DialogList';
 
 class DialogListContainer extends React.Component {
   componentDidMount() {
-    this.props.getChatPreview();
+    // this.props.getChatPreview();
   }
 
   render() {
     const { messagesPreview, userId } = this.props;
-    return <DialogList preview={messagesPreview} userId={userId} getChatPreview={this.props.getChatPreview} />;
+    console.log(
+      '🚀 ~ file: DialogListContainer.jsx:13 ~ DialogListContainer ~ render ~ messagesPreview:',
+      messagesPreview
+    );
+    return (
+      <DialogList
+        preview={messagesPreview}
+        userId={userId}
+        getChatPreview={this.props.getChatPreview}
+      />
+    );
   }
 }
 
-const mapStateToProps = (state) => state.chatStore;
+const mapStateToProps = (state) => {
+  console.log(
+    '🚀 ~ file: DialogListContainer.jsx:19 ~ state.chatStore:',
+    state.chatStore
+  );
+
+  return state.chatStore;
+};
 
 const mapDispatchToProps = (dispatch) => ({
   getChatPreview: () => dispatch(getPreviewChat()),

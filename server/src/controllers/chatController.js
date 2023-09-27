@@ -1,11 +1,6 @@
-const Conversation = require('../models/mongoModels/conversation');
-const Message = require('../models/mongoModels/Message');
 const Catalog = require('../models/mongoModels/Catalog');
 const db = require('../models');
-const userQueries = require('./queries/userQueries');
 const controller = require('../socketInit');
-const _ = require('lodash');
-const { Op } = require('sequelize')
 
 module.exports.addMessage = async (req, res, next) => {
 	const participants = [req.tokenData.userId, req.body.recipient];
@@ -42,7 +37,7 @@ module.exports.addMessage = async (req, res, next) => {
 		controller.getChatController().emitNewMessage(interlocutorId, {
 			message,
 			preview: {
-				_id: newConversation._id,
+				id: newConversation.id,
 				sender: req.tokenData.userId,
 				text: req.body.messageBody,
 				createAt: message.createdAt,
@@ -75,7 +70,6 @@ module.exports.getChat = async (req, res, next) => {
 	participants.sort((participant1, participant2) => participant1 - participant2);
 
 	try {
-		// Find or create a conversation with the specified participants
 		const [newConversation, created] = await db.Conversation.findOrCreate({
 			where: { participants },
 			defaults: {
@@ -85,10 +79,8 @@ module.exports.getChat = async (req, res, next) => {
 			},
 		});
 
-		// If the conversation was not found or created, return a 404 response
 
 
-		// Find all messages in the conversation
 		const messages = await db.Message.findAll({
 			where: {
 				conversationId: newConversation.id,
@@ -97,10 +89,8 @@ module.exports.getChat = async (req, res, next) => {
 			attributes: ['id', 'userId', 'body', 'conversationId', 'createdAt', 'updatedAt'],
 		});
 
-		// Find the interlocutor
 		const interlocutor = await db.User.findByPk(req.body.interlocutorId);
 
-		// If the interlocutor was not found, return a 404 response
 		if (!interlocutor) {
 			return res.status(404).send({ message: 'Interlocutor not found' });
 		}
@@ -169,7 +159,6 @@ module.exports.getPreview = async (req, res, next) => {
 
 			return {
 				id: conversation.conversationId,
-				sender: conversation.conversationData.id,
 				text: lastMessage ? lastMessage.body : '',
 				createAt: lastMessage ? lastMessage.createdAt : null,
 				participants: conversation.conversationData.participants,
@@ -196,6 +185,7 @@ module.exports.getPreview = async (req, res, next) => {
 			senders.forEach(sender => {
 
 				if (conversation.participants.includes(sender.dataValues.id)) {
+					conversation.sender =  sender.id
 					conversation.interlocutor = {
 						id: sender.id,
 						firstName: sender.firstName,
@@ -206,7 +196,8 @@ module.exports.getPreview = async (req, res, next) => {
 				}
 			});
 		});
-		console.log("🚀 ~ file: chatController.js:209 ~ module.exports.getPreview= ~ formattedConversations:", formattedConversations)
+		
+		console.log("🚀 ~ file: chatController.js:198 ~ module.exports.getPreview= ~ formattedConversations:", formattedConversations)
 		res.send(formattedConversations);
 	} catch (err) {
 		next(err);

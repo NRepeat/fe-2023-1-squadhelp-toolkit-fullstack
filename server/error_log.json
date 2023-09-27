@@ -756,5 +756,73 @@
       "    at _next (/server/src/controllers/chatController.js:19:194)",
       "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
     ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "time": 1695849675080,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'find')",
+      "    at forEach (/server/src/controllers/chatController.js:159:31)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:157:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "time": 1695849680917,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'find')",
+      "    at forEach (/server/src/controllers/chatController.js:159:31)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:157:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "time": 1695849754392,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'find')",
+      "    at forEach (/server/src/controllers/chatController.js:159:35)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:157:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "time": 1695849759317,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'find')",
+      "    at forEach (/server/src/controllers/chatController.js:159:35)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:157:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
   }
 ]
