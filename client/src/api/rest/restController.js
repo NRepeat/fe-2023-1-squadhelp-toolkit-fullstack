@@ -81,7 +81,6 @@ export const getPreviewChat = async () => {
 export const getDialog = async (data) => {
 	try {
 		 const a = await http.post('chat/getChat', data);
-		 console.log("🚀 ~ file: restController.js:84 ~ getDialog ~ a:", a)
 		 return a 
 	} catch (error) {
 		throw error;
@@ -122,7 +121,6 @@ export const newMessage = async (data) => {
 };
 
 export const changeChatFavorite = async (data) => {
-	console.log("🚀 ~ file: restController.js:125 ~ changeChatFavorite ~ data):", data)
 	try {
 		return await http.post('chat/favorite', data);
 	} catch (error) {

@@ -25,7 +25,6 @@ class ChatSocket extends WebSocket {
 
 	onNewMessage = () => {
 		this.socket.on('newMessage', data => {
-			console.log("🚀 ~ file: ChatSocket.js:28 ~ ChatSocket ~ data:", data)
 			this.dispatch(addMessage(data.message));
 		});
 	};

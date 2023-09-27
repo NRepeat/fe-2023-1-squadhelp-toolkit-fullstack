@@ -44,7 +44,6 @@ const getOffersReducers = createExtraReducers({
 export const changeOferrStatus = decorateAsyncThunk({
 	key: `${OFFERS_SLICE_NAME}/changeOferrStatus`,
 	thunk: async payload => {
-		console.log("🚀 ~ file: offerSlice.js:47 ~ payload:", payload)
 		const { data } = await restController.changeVarifiedOfeertStatus(payload);
 		return data;
 	},

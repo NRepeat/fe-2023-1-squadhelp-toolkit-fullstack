@@ -5,12 +5,12 @@ import DialogList from '../DialogList/DialogList';
 
 class DialogListContainer extends React.Component {
   componentDidMount() {
-    // this.props.getChatPreview();
+    this.props.getChatPreview();
   }
 
   render() {
     const { messagesPreview, userId } = this.props;
-    return <DialogList preview={messagesPreview} userId={userId} />;
+    return <DialogList preview={messagesPreview} userId={userId} getChatPreview={this.props.getChatPreview} />;
   }
 }
 

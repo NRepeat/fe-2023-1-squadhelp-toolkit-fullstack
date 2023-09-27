@@ -3,7 +3,6 @@ import styles from './Timer.module.scss';
 import { useDispatch } from 'react-redux';
 import { deleteEvent } from '../../store/slices/timerSlice';
 function EventItem({ event,id }) {
-  console.log("🚀 ~ file: EventItem.jsx:6 ~ EventItem ~ event:", id)
   const dispatch = useDispatch();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(event));
   const [initialTimeLeft, setinitialTimeLeft] = useState([]);

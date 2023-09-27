@@ -23,14 +23,6 @@ class Dialog extends React.Component {
   };
 
   componentWillReceiveProps(nextProps, nextContext) {
-    console.log(
-      '🚀 ~ file: Dialog.jsx:26 ~ Dialog ~ componentWillReceiveProps ~ nextProps:',
-      nextProps
-    );
-    console.log(
-      '🚀 ~ file: Dialog.jsx:28 ~ Dialog ~ componentWillReceiveProps ~ this.props:',
-      this.props
-    );
     if (nextProps.interlocutor !== null)
       if (nextProps.interlocutor.id !== this.props.interlocutor.id)
         this.props.getDialog({ interlocutorId: nextProps.interlocutor.id });
@@ -47,7 +39,6 @@ class Dialog extends React.Component {
   renderMainDialog = () => {
     const messagesArray = [];
     const { messages, userId } = this.props;
-    console.log('🚀 ~ file: Dialog.jsx:41 ~ Dialog ~ userId:', userId);
     let currentTime = moment();
     messages.forEach((message, i) => {
       if (!currentTime.isSame(message.createdAt, 'date')) {
@@ -91,10 +82,7 @@ class Dialog extends React.Component {
 
   render() {
     const { chatData, userId } = this.props;
-    console.log(
-      '🚀 ~ file: Dialog.jsx:84 ~ Dialog ~ render ~ chatData:',
-      chatData
-    );
+  
     return (
       <>
         <ChatHeader userId={userId} />

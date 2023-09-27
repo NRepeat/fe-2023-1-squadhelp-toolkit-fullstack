@@ -13,11 +13,13 @@ import styles from './DialogList.module.sass';
 
 const DialogList = (props) => {
   const changeFavorite = (data, event) => {
+    props.getChatPreview();
     props.changeChatFavorite(data);
     event.stopPropagation();
   };
 
   const changeBlackList = (data, event) => {
+    props.getChatPreview();
     props.changeChatBlock(data);
     event.stopPropagation();
   };
@@ -51,13 +53,11 @@ const DialogList = (props) => {
       removeChat,
       interlocutor,
     } = props;
-    console.log(
-      '🚀 ~ file: DialogList.jsx:54 ~ renderPreview ~ preview:',
-      preview
-    );
+
     preview.forEach((chatPreview, index) => {
       const dialogNode = (
         <DialogBox
+          getChatPreview={props.getChatPreview}
           interlocutor={chatPreview.interlocutor}
           chatPreview={chatPreview}
           userId={userId}
