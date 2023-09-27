@@ -1,11 +1,297 @@
 [
   {
-    "message": "lastMessage is not defined",
-    "time": 1695669640846,
+    "message": "notNull Violation: Conversation.blackList cannot be null,\nnotNull Violation: Conversation.favoriteList cannot be null",
+    "time": 1695582816714,
     "code": 500,
     "stackTrace": [
-      "ReferenceError: lastMessage is not defined",
-      "    at _callee5$ (/server/src/controllers/chatController.js:142:98)",
+      "SequelizeValidationError: notNull Violation: Conversation.blackList cannot be null,",
+      "notNull Violation: Conversation.favoriteList cannot be null",
+      "    at InstanceValidator._validate (/server/node_modules/sequelize/lib/instance-validator.js:78:13)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at InstanceValidator._validateAndRunHooks (/server/node_modules/sequelize/lib/instance-validator.js:111:7)",
+      "    at InstanceValidator.validate (/server/node_modules/sequelize/lib/instance-validator.js:93:12)",
+      "    at Conversation.save (/server/node_modules/sequelize/lib/model.js:3877:7)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)",
+      "    at Function.findOrCreate (/server/node_modules/sequelize/lib/model.js:2319:25)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695582928224,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._stringify (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:475:29)",
+      "    at ARRAY.stringify (/server/node_modules/sequelize/lib/data-types.js:24:19)",
+      "    at PostgresQueryGenerator.escape (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:985:30)",
+      "    at PostgresQueryGenerator.insertQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:173:30)",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:744:37)",
+      "    at Conversation.save (/server/node_modules/sequelize/lib/model.js:3954:79)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)",
+      "    at Function.findOrCreate (/server/node_modules/sequelize/lib/model.js:2319:25)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695583075203,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._stringify (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:475:29)",
+      "    at ARRAY.stringify (/server/node_modules/sequelize/lib/data-types.js:24:19)",
+      "    at PostgresQueryGenerator.escape (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:985:30)",
+      "    at PostgresQueryGenerator.insertQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:173:30)",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:744:37)",
+      "    at Conversation.save (/server/node_modules/sequelize/lib/model.js:3954:79)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)",
+      "    at Function.findOrCreate (/server/node_modules/sequelize/lib/model.js:2319:25)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695583085481,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._stringify (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:475:29)",
+      "    at ARRAY.stringify (/server/node_modules/sequelize/lib/data-types.js:24:19)",
+      "    at PostgresQueryGenerator.escape (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:985:30)",
+      "    at PostgresQueryGenerator.insertQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:173:30)",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:744:37)",
+      "    at Conversation.save (/server/node_modules/sequelize/lib/model.js:3954:79)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)",
+      "    at Function.findOrCreate (/server/node_modules/sequelize/lib/model.js:2319:25)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695583120441,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._stringify (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:475:29)",
+      "    at ARRAY.stringify (/server/node_modules/sequelize/lib/data-types.js:24:19)",
+      "    at PostgresQueryGenerator.escape (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:985:30)",
+      "    at PostgresQueryGenerator.insertQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:173:30)",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:744:37)",
+      "    at Conversation.save (/server/node_modules/sequelize/lib/model.js:3954:79)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)",
+      "    at Function.findOrCreate (/server/node_modules/sequelize/lib/model.js:2319:25)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695583299007,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._stringify (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:475:29)",
+      "    at ARRAY.stringify (/server/node_modules/sequelize/lib/data-types.js:24:19)",
+      "    at PostgresQueryGenerator.escape (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:985:30)",
+      "    at PostgresQueryGenerator.insertQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:173:30)",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:744:37)",
+      "    at Conversation.save (/server/node_modules/sequelize/lib/model.js:3954:79)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)",
+      "    at Function.findOrCreate (/server/node_modules/sequelize/lib/model.js:2319:25)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695583333242,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._stringify (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:475:29)",
+      "    at ARRAY.stringify (/server/node_modules/sequelize/lib/data-types.js:24:19)",
+      "    at PostgresQueryGenerator.escape (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:985:30)",
+      "    at PostgresQueryGenerator.insertQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:173:30)",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:744:37)",
+      "    at Conversation.save (/server/node_modules/sequelize/lib/model.js:3954:79)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)",
+      "    at Function.findOrCreate (/server/node_modules/sequelize/lib/model.js:2319:25)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695583350981,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._stringify (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:475:29)",
+      "    at ARRAY.stringify (/server/node_modules/sequelize/lib/data-types.js:24:19)",
+      "    at PostgresQueryGenerator.escape (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:985:30)",
+      "    at PostgresQueryGenerator.insertQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:173:30)",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:744:37)",
+      "    at Conversation.save (/server/node_modules/sequelize/lib/model.js:3954:79)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)",
+      "    at Function.findOrCreate (/server/node_modules/sequelize/lib/model.js:2319:25)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695583375647,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._stringify (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:475:29)",
+      "    at ARRAY.stringify (/server/node_modules/sequelize/lib/data-types.js:24:19)",
+      "    at PostgresQueryGenerator.escape (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:985:30)",
+      "    at PostgresQueryGenerator.insertQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:173:30)",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:744:37)",
+      "    at Conversation.save (/server/node_modules/sequelize/lib/model.js:3954:79)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)",
+      "    at Function.findOrCreate (/server/node_modules/sequelize/lib/model.js:2319:25)"
+    ]
+  },
+  {
+    "message": "conversation is not defined",
+    "time": 1695583438066,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: conversation is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:95:21)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "conversation is not defined",
+    "time": 1695583484347,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: conversation is not defined",
+      "    at _callee2$ (/server/src/controllers/chatController.js:95:21)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695583749072,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695583758927,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695584067237,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695584157789,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "favoriteList is not defined",
+    "time": 1695584366690,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: favoriteList is not defined",
+      "    at _callee7$ (/server/src/controllers/chatController.js:241:6)",
       "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
       "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
       "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
@@ -14,7 +300,7 @@
       "    at /server/src/controllers/chatController.js:19:364",
       "    at new Promise (<anonymous>)",
       "    at /server/src/controllers/chatController.js:19:97",
-      "    at /server/src/controllers/chatController.js:125:1",
+      "    at /server/src/controllers/chatController.js:235:1",
       "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
       "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
       "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
@@ -24,8 +310,317 @@
     ]
   },
   {
+    "message": "values.map is not a function",
+    "time": 1695584388414,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._bindParam (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:494:35)",
+      "    at ARRAY.bindParam (/server/node_modules/sequelize/lib/data-types.js:30:19)",
+      "    at PostgresQueryGenerator.format (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1019:29)",
+      "    at PostgresQueryGenerator.updateQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:398:58)",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:876:37)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:54)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695584444645,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._bindParam (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:494:35)",
+      "    at ARRAY.bindParam (/server/node_modules/sequelize/lib/data-types.js:30:19)",
+      "    at PostgresQueryGenerator.format (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1019:29)",
+      "    at PostgresQueryGenerator.updateQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:398:58)",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:876:37)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:54)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695584499030,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "Missing where attribute in the options parameter",
+    "time": 1695584569304,
+    "code": "ERR_ASSERTION",
+    "stackTrace": [
+      "AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter",
+      "    at Function._optionsMustContainWhere (/server/node_modules/sequelize/lib/model.js:3383:5)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3026:10)",
+      "    at _callee7$ (/server/src/controllers/chatController.js:239:62)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:235:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)"
+    ]
+  },
+  {
+    "message": "sequelize is not defined",
+    "time": 1695585155511,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: sequelize is not defined",
+      "    at _callee7$ (/server/src/controllers/chatController.js:241:43)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:235:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "invalid input syntax for type boolean: \"{\"val\":\"favoriteList[2]\"}\"",
+    "time": 1695585170548,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: invalid input syntax for type boolean: \"{\"val\":\"favoriteList[2]\"}\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "column \"favoritelist\" does not exist",
+    "time": 1695585277067,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"favoritelist\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695585593589,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._bindParam (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:494:35)",
+      "    at ARRAY.bindParam (/server/node_modules/sequelize/lib/data-types.js:30:19)",
+      "    at PostgresQueryGenerator.format (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1019:29)",
+      "    at PostgresQueryGenerator.updateQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:398:58)",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:876:37)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:54)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695585619957,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._bindParam (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:494:35)",
+      "    at ARRAY.bindParam (/server/node_modules/sequelize/lib/data-types.js:30:19)",
+      "    at PostgresQueryGenerator.format (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1019:29)",
+      "    at PostgresQueryGenerator.updateQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:398:58)",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:876:37)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:54)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695586088196,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._bindParam (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:494:35)",
+      "    at ARRAY.bindParam (/server/node_modules/sequelize/lib/data-types.js:30:19)",
+      "    at PostgresQueryGenerator.format (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1019:29)",
+      "    at PostgresQueryGenerator.updateQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:398:58)",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:876:37)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:54)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695586117328,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._bindParam (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:494:35)",
+      "    at ARRAY.bindParam (/server/node_modules/sequelize/lib/data-types.js:30:19)",
+      "    at PostgresQueryGenerator.format (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1019:29)",
+      "    at PostgresQueryGenerator.updateQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:398:58)",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:876:37)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:54)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "values.map is not a function",
+    "time": 1695586221723,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: values.map is not a function",
+      "    at ARRAY._value (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:460:19)",
+      "    at ARRAY._bindParam (/server/node_modules/sequelize/lib/dialects/postgres/data-types.js:494:35)",
+      "    at ARRAY.bindParam (/server/node_modules/sequelize/lib/data-types.js:30:19)",
+      "    at PostgresQueryGenerator.format (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1019:29)",
+      "    at PostgresQueryGenerator.updateQuery (/server/node_modules/sequelize/lib/dialects/abstract/query-generator.js:398:58)",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:876:37)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:54)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "participants is not defined",
+    "time": 1695589535883,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: participants is not defined",
+      "    at _callee7$ (/server/src/controllers/chatController.js:247:19)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:235:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "dataValues is not defined",
+    "time": 1695589648582,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: dataValues is not defined",
+      "    at _callee7$ (/server/src/controllers/chatController.js:251:95)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "malformed array literal: \"{{\"false\",\"false\"},\"true\"}\"",
+    "time": 1695590289521,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: malformed array literal: \"{{\"false\",\"false\"},\"true\"}\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.bulkUpdate (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:882:12)",
+      "    at Function.update (/server/node_modules/sequelize/lib/model.js:3175:28)"
+    ]
+  },
+  {
+    "message": "tf2 is not defined",
+    "time": 1695590314879,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: tf2 is not defined",
+      "    at _callee7$ (/server/src/controllers/chatController.js:254:67)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "tf2 is not defined",
+    "time": 1695590326840,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: tf2 is not defined",
+      "    at _callee7$ (/server/src/controllers/chatController.js:262:7)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Catalog validation failed: chats.0: Cast to [ObjectId] failed for value \"[3]\" (type string) at path \"chats.0\"",
+    "time": 1695590374828,
+    "code": 500,
+    "stackTrace": [
+      "ValidationError: Catalog validation failed: chats.0: Cast to [ObjectId] failed for value \"[3]\" (type string) at path \"chats.0\"",
+      "    at model.Document.invalidate (/server/node_modules/mongoose/lib/document.js:2729:32)",
+      "    at model.$set (/server/node_modules/mongoose/lib/document.js:1318:12)",
+      "    at model.$set (/server/node_modules/mongoose/lib/document.js:1022:16)",
+      "    at model.Document (/server/node_modules/mongoose/lib/document.js:147:12)",
+      "    at model.Model (/server/node_modules/mongoose/lib/model.js:105:12)",
+      "    at new model (/server/node_modules/mongoose/lib/model.js:4706:15)",
+      "    at _callee8$ (/server/src/controllers/chatController.js:291:18)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:290:1"
+    ]
+  },
+  {
     "message": "need token",
-    "time": 1695671264592,
+    "time": 1695829741958,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -49,7 +644,7 @@
   },
   {
     "message": "need token",
-    "time": 1695671264597,
+    "time": 1695829838614,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -69,6 +664,97 @@
       "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
       "    at /server/node_modules/express/lib/router/index.js:281:22",
       "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695829840465,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695829840470,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695829842158,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'includes')",
+    "time": 1695840421493,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'includes')",
+      "    at forEach (/server/src/controllers/chatController.js:198:35)",
+      "    at Array.forEach (<anonymous>)",
+      "    at forEach (/server/src/controllers/chatController.js:196:12)",
+      "    at Array.forEach (<anonymous>)",
+      "    at _callee5$ (/server/src/controllers/chatController.js:195:28)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
     ]
   }
 ]
