@@ -56,7 +56,6 @@ const DialogList = (props) => {
     } = props;
 
     preview.forEach((chatPreview, index) => {
-      console.log("🚀 ~ file: DialogList.jsx:58 ~ preview.forEach ~ chatPreview:", chatPreview)
       const dialogNode = (
         <DialogBox
           getChatPreview={props.getChatPreview}

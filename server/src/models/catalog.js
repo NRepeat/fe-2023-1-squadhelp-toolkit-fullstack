@@ -3,9 +3,10 @@ const { Model, DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
 	class Catalog extends Model {
 		static associate({ User, CatalogChat }) {
+			Catalog.hasMany(CatalogChat, { foreignKey: 'catalogId', sourceKey: 'id' })
 			Catalog.belongsTo(User,
 				{ foreignKey: 'userId', sourceKey: 'id' });
-			Catalog.hasMany(CatalogChat, { foreignKey: 'userId', sourceKey: 'id' })
+			
 		}
 	}
 

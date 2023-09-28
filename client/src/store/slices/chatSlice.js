@@ -34,8 +34,6 @@ export const getPreviewChat = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/getPreviewChat`,
 	thunk: async () => {
 		const { data } = await restController.getPreviewChat();
-		console.log("🚀 ~ file: chatSlice.js:37 ~ thunk: ~ data:", data)
-		console.log("🚀 ~ file: chatSlice.js:37 ~ thunk: ~ data:", data)
 		return data;
 	},
 });
@@ -78,7 +76,6 @@ const getDialogMessagesExtraReducers = createExtraReducers({
 export const sendMessage = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/sendMessage`,
 	thunk: async payload => {
-		console.log("🚀 ~ file: chatSlice.js:79 ~ payload:", payload)
 		const { data } = await restController.newMessage(payload);
 		return data;
 	},
@@ -88,7 +85,6 @@ const sendMessageExtraReducers = createExtraReducers({
 	thunk: sendMessage,
 	fulfilledReducer: (state, { payload }) => {
 		const { messagesPreview } = state;
-		console.log("🚀 ~ file: chatSlice.js:91 ~  messagesPreview :",  messagesPreview )
 		let isNew = true;
 		messagesPreview.forEach(preview => {
 			if (isEqual(preview.sender, payload.message.userId)) {
@@ -146,7 +142,6 @@ export const changeChatBlock = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/changeChatBlock`,
 	thunk: async payload => {
 		const { data } = await restController.changeChatBlock(payload);
-		console.log("🚀 ~ file: chatSlice.js:147 ~ data :", data)
 		return data;
 	},
 });
@@ -172,6 +167,7 @@ export const getCatalogList = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/getCatalogList`,
 	thunk: async payload => {
 		const { data } = await restController.getCatalogList(payload);
+		console.log("🚀 ~ file: chatSlice.js:175 ~ data :", data )
 		return data;
 	},
 });
@@ -218,6 +214,7 @@ export const createCatalog = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/createCatalog`,
 	thunk: async payload => {
 		const { data } = await restController.createCatalog(payload);
+		console.log("🚀 ~ file: chatSlice.js:222 ~ data add:", data)
 		return data;
 	},
 });

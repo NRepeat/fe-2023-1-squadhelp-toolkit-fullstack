@@ -826,5 +826,572 @@
       "    at /server/node_modules/express/lib/router/index.js:281:22",
       "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
     ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695918958722,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695918961888,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695918964360,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695918964365,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695918967908,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695919124893,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695919128018,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "missing FROM-clause entry for table \"conversationData\"",
+    "time": 1695919237829,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: missing FROM-clause entry for table \"conversationData\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "missing FROM-clause entry for table \"conversationData\"",
+    "time": 1695919249112,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: missing FROM-clause entry for table \"conversationData\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "missing FROM-clause entry for table \"conversationData\"",
+    "time": 1695919306103,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: missing FROM-clause entry for table \"conversationData\"",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.select (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:953:12)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1753:21)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'participants')",
+    "time": 1695919341213,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'participants')",
+      "    at _callee4$ (/server/src/controllers/chatController.js:156:49)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'participants')",
+    "time": 1695919344250,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'participants')",
+      "    at _callee4$ (/server/src/controllers/chatController.js:156:49)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'participants')",
+    "time": 1695919345987,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'participants')",
+      "    at _callee4$ (/server/src/controllers/chatController.js:156:49)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695919378288,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "time": 1695919405287,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeEagerLoadingError: Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+      "    at Function._getIncludedAssociation (/server/node_modules/sequelize/lib/model.js:719:15)",
+      "    at Function._validateIncludedElement (/server/node_modules/sequelize/lib/model.js:614:53)",
+      "    at /server/node_modules/sequelize/lib/model.js:509:37",
+      "    at Array.map (<anonymous>)",
+      "    at Function._validateIncludedElements (/server/node_modules/sequelize/lib/model.js:504:39)",
+      "    at Function.findAll (/server/node_modules/sequelize/lib/model.js:1723:12)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695919890195,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "catalog is not defined",
+    "time": 1695920038474,
+    "code": 500,
+    "stackTrace": [
+      "ReferenceError: catalog is not defined",
+      "    at _callee8$ (/server/src/controllers/chatController.js:316:14)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:306:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695920057459,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695920150333,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695920270213,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695920386639,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695920506056,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695920649438,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695923152307,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695923167804,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695923188043,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695923212870,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "time": 1695923250087,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeDatabaseError: column \"userId\" does not exist",
+      "    at Query.formatError (/server/node_modules/sequelize/lib/dialects/postgres/query.js:386:16)",
+      "    at Query.run (/server/node_modules/sequelize/lib/dialects/postgres/query.js:87:18)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at /server/node_modules/sequelize/lib/sequelize.js:619:16",
+      "    at PostgresQueryInterface.insert (/server/node_modules/sequelize/lib/dialects/abstract/query-interface.js:749:21)",
+      "    at CatalogChat.save (/server/node_modules/sequelize/lib/model.js:3954:35)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "token error",
+    "time": 1695923570289,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: token error",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:24:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _throw (/server/src/middlewares/checkToken.js:5:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "token error",
+    "time": 1695923571887,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: token error",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:24:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _throw (/server/src/middlewares/checkToken.js:5:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "token error",
+    "time": 1695923573553,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: token error",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:24:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _throw (/server/src/middlewares/checkToken.js:5:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "token error",
+    "time": 1695923577018,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: token error",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:24:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _throw (/server/src/middlewares/checkToken.js:5:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "token error",
+    "time": 1695923578842,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: token error",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:24:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _throw (/server/src/middlewares/checkToken.js:5:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot set headers after they are sent to the client",
+    "time": 1695923640551,
+    "code": "ERR_HTTP_HEADERS_SENT",
+    "stackTrace": [
+      "Error: Cannot set headers after they are sent to the client",
+      "    at new NodeError (node:internal/errors:372:5)",
+      "    at ServerResponse.setHeader (node:_http_outgoing:576:11)",
+      "    at ServerResponse.header (/server/node_modules/express/lib/response.js:771:10)",
+      "    at ServerResponse.send (/server/node_modules/express/lib/response.js:170:12)",
+      "    at ServerResponse.json (/server/node_modules/express/lib/response.js:267:15)",
+      "    at ServerResponse.send (/server/node_modules/express/lib/response.js:158:21)",
+      "    at _callee8$ (/server/src/controllers/chatController.js:323:7)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot set headers after they are sent to the client",
+    "time": 1695923678442,
+    "code": "ERR_HTTP_HEADERS_SENT",
+    "stackTrace": [
+      "Error: Cannot set headers after they are sent to the client",
+      "    at new NodeError (node:internal/errors:372:5)",
+      "    at ServerResponse.setHeader (node:_http_outgoing:576:11)",
+      "    at ServerResponse.header (/server/node_modules/express/lib/response.js:771:10)",
+      "    at ServerResponse.send (/server/node_modules/express/lib/response.js:170:12)",
+      "    at ServerResponse.json (/server/node_modules/express/lib/response.js:267:15)",
+      "    at ServerResponse.send (/server/node_modules/express/lib/response.js:158:21)",
+      "    at _callee8$ (/server/src/controllers/chatController.js:323:7)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'destroy')",
+    "time": 1695924365590,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'destroy')",
+      "    at _callee12$ (/server/src/controllers/chatController.js:379:44)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:377:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
   }
 ]

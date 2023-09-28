@@ -1,31 +1,34 @@
 'use strict';
 
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('CatalogChats', {
-      id: {
-        type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-      catalogId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Catalogs',
-          key: 'id',
-        },
-      },
-      conversationId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Conversations',
-          key: 'id',
-        },
-      },
-    });
-  },
+	up: async (queryInterface, Sequelize) => {
+		await queryInterface.createTable('CatalogChats', {
+			id: {
+				type: Sequelize.INTEGER,
+				primaryKey: true,
+				autoIncrement: true,
+			},
+			catalogId: {
+				type: Sequelize.INTEGER,
+				references: {
+					model: 'Catalogs',
+					key: 'id',
+				},
+			},
+			conversationId: {
+				type: Sequelize.INTEGER,
+				references: {
+					model: 'Conversations',
+					key: 'id',
+				},
+			},
+			userId: {
+				type: Sequelize.INTEGER,
+			},
+		});
+	},
 
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('CatalogChats');
-  },
+	down: async (queryInterface, Sequelize) => {
+		await queryInterface.dropTable('CatalogChats');
+	},
 };

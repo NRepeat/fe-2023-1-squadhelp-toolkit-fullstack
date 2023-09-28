@@ -8,6 +8,7 @@ module.exports = (sequelize) => {
 				foreignKey: 'conversationId',
 				as: 'conversationData', 
 			});
+			
 		}
 	}
 

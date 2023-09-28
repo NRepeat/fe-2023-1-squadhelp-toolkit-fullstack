@@ -1,6 +1,7 @@
 const Catalog = require('../models/mongoModels/Catalog');
 const db = require('../models');
 const controller = require('../socketInit');
+const conversation = require('../models/conversation');
 
 module.exports.addMessage = async (req, res, next) => {
 	const participants = [req.tokenData.userId, req.body.recipient];
@@ -184,7 +185,7 @@ module.exports.getPreview = async (req, res, next) => {
 			senders.forEach(sender => {
 
 				if (conversation.participants.includes(sender.dataValues.id)) {
-					conversation.sender =  sender.id
+					conversation.sender = sender.id
 					conversation.interlocutor = {
 						id: sender.id,
 						firstName: sender.firstName,
@@ -195,12 +196,12 @@ module.exports.getPreview = async (req, res, next) => {
 				}
 			});
 		});
-		
+
 		res.send(formattedConversations);
 	} catch (err) {
 		next(err);
 	}
-};	
+};
 
 
 
@@ -303,95 +304,103 @@ module.exports.favoriteChat = async (req, res, next) => {
 
 
 module.exports.createCatalog = async (req, res, next) => {
-  try {
-		console.log("🚀 ~ file: chatController.js:310 ~ module.exports.createCatalog= ~ req.body.catalogName:", req.body.catalogName)
+	try {
 
-    const catalog = await db.Catalog.create({
-      userId: req.tokenData.userId,
-      catalogName: req.body.catalogName,
-    });
-    console.log("🚀 ~ file: chatController.js:311 ~ module.exports.createCatalog= ~ catalog:", catalog)
-    res.send(catalog);
-  } catch (err) {
-    next(err);
-  }
+		const catalog = await db.Catalog.create({
+			userId: req.tokenData.userId,
+			catalogName: req.body.catalogName,
+
+		});
+
+
+
+
+		const catalogToChat = await db.CatalogChat.create({
+			catalogId: catalog.dataValues.id,
+			conversationId: req.body.chatId,
+			userId: req.tokenData.userId,
+		})
+
+		res.send({catalog,catalogToChat});
+	} catch (err) {
+		next(err);
+	}
 };
 
 module.exports.updateNameCatalog = async (req, res, next) => {
-  try {
-    const updatedCatalog = await db.Catalog.update(
-      { catalogName: req.body.catalogName },
-      {
-        where: {
-          id: req.body.catalogId,
-          userId: req.tokenData.userId,
-        },
-        returning: true,
-      }
-    );
-    const catalog = updatedCatalog[1][0]; // Get the updated catalog
-    res.send(catalog);
-  } catch (err) {
-    next(err);
-  }
+	try {
+		const updatedCatalog = await db.Catalog.update(
+			{ catalogName: req.body.catalogName },
+			{
+				where: {
+					id: req.body.catalogId,
+					userId: req.tokenData.userId,
+				},
+				returning: true,
+			}
+		);
+		const catalog = updatedCatalog[1][0];
+		res.send(catalog);
+	} catch (err) {
+		next(err);
+	}
 };
 
 module.exports.addNewChatToCatalog = async (req, res, next) => {
-  try {
-    const catalog = await db.Catalog.findByPk(req.body.catalogId);
-    if (!catalog) {
-      return res.status(404).send('Catalog not found');
-    }
+	try {
+		const catalog = await db.Catalog.findByPk(req.body.catalogId);
+		if (!catalog) {
+			return res.status(404).send('Catalog not found');
+		}
 
-    await catalog.addChat(req.body.chatId);
-    res.send(catalog);
-  } catch (err) {
-    next(err);
-  }
+		await catalog.addChat(req.body.chatId);
+		res.send(catalog);
+	} catch (err) {
+		next(err);
+	}
 };
 
 module.exports.removeChatFromCatalog = async (req, res, next) => {
-  try {
-    const catalog = await db.Catalog.findByPk(req.body.catalogId);
-    if (!catalog) {
-      return res.status(404).send('Catalog not found');
-    }
+	try {
+		const catalog = await db.Catalog.findByPk(req.body.catalogId);
+		if (!catalog) {
+			return res.status(404).send('Catalog not found');
+		}
 
-    await catalog.removeChat(req.body.chatId);
-    res.send(catalog);
-  } catch (err) {
-    next(err);
-  }
+		await catalog.removeChat(req.body.chatId);
+		res.send(catalog);
+	} catch (err) {
+		next(err);
+	}
 };
 
 module.exports.deleteCatalog = async (req, res, next) => {
-  try {
-    const deletedCatalog = await db.Catalogs.destroy({
-      where: {
-        id: req.body.catalogId,
-        userId: req.tokenData.userId,
-      },
-    });
-    if (deletedCatalog === 0) {
-      return res.status(404).send('Catalog not found');
-    }
-    res.end();
-  } catch (err) {
-    next(err);
-  }
+	try {
+		const deletedCatalog = await db.Catalogs.destroy({
+			where: {
+				id: req.body.catalogId,
+				userId: req.tokenData.userId,
+			},
+		});
+		if (deletedCatalog === 0) {
+			return res.status(404).send('Catalog not found');
+		}
+		res.end();
+	} catch (err) {
+		next(err);
+	}
 };
 
 module.exports.getCatalogs = async (req, res, next) => {
-  try {
-    const catalogs = await db.Catalog.findAll({
-      where: {
-        userId: req.tokenData.userId,
-      },
-      attributes: ['id', 'catalogName'],
-    });
-    console.log("🚀 ~ file: chatController.js:392 ~ module.exports.getCatalogs= ~ catalogs:", catalogs)
-    res.send(catalogs);
-  } catch (err) {
-    next(err);
-  }
+	try {
+		const catalogs = await db.Catalog.findAll({
+			where: {
+				userId: req.tokenData.userId,
+			},
+			attributes: ['id', 'catalogName'],
+		});
+		res.send(catalogs);
+	} catch (err) {
+		next(err);
+	}
 };
