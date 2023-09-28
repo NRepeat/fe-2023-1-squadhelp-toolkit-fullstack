@@ -20,18 +20,22 @@ const AddToCatalog = (props) => {
     const { catalogList } = props;
     const valueArray = [];
     catalogList.forEach((catalog) => {
-
-      valueArray.push(catalog.id,catalog.userId);
+			
+      valueArray.push(catalog.id);
+      valueArray.push(catalog.userId);
     });
+    console.log("🚀 ~ file: AddToCatalog.jsx:22 ~ getValueArray ~ valueArray:", valueArray)
+
     return valueArray;
   };
 
   const click = (values) => {
+    console.log("🚀 ~ file: AddToCatalog.jsx:32 ~ click ~ values:", values[0])
     const { addChatId } = props;
     props.addChatToCatalog({
       chatId: addChatId,
-      catalogId: values.catalogId,
-      userId: values.userId,
+      catalogId: values[2],
+      userId: values[1],
     });
   };
 

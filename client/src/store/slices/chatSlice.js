@@ -24,6 +24,7 @@ const initialState = {
 	isShow: false,
 	chatMode: CONSTANTS.NORMAL_PREVIEW_CHAT_MODE,
 	catalogList: [],
+	catalogToChats: [],
 	isRenameCatalog: false,
 	isShowChatsInCatalog: false,
 	catalogCreationMode: CONSTANTS.ADD_CHAT_TO_OLD_CATALOG,
@@ -167,7 +168,7 @@ export const getCatalogList = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/getCatalogList`,
 	thunk: async payload => {
 		const { data } = await restController.getCatalogList(payload);
-		console.log("🚀 ~ file: chatSlice.js:175 ~ data :", data )
+
 		return data;
 	},
 });
@@ -175,8 +176,23 @@ export const getCatalogList = decorateAsyncThunk({
 const getCatalogListExtraReducers = createExtraReducers({
 	thunk: getCatalogList,
 	fulfilledReducer: (state, { payload }) => {
+		state.catalogToChats = [...payload]
+		const mapDat = payload.map((dat) => dat.Catalog)
+		const uniqueCatalogIds = new Set();
+
+		const uniqueCatalogs = mapDat.filter((item) => {
+			const catalogId = item.id;
+
+			if (!uniqueCatalogIds.has(catalogId)) {
+				uniqueCatalogIds.add(catalogId);
+				return true;
+			}
+
+			return false;
+		});
 		state.isFetching = false;
-		state.catalogList = [...payload];
+
+		state.catalogList = [...uniqueCatalogs];
 	},
 	rejectedReducer,
 });

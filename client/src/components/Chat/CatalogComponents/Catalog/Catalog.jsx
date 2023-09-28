@@ -9,7 +9,7 @@ const Catalog = (props) => {
   return (
     <div
       className={styles.catalogContainer}
-      onClick={(event) => goToCatalog(event, props.catalog)}
+      onClick={(event) => goToCatalog(event, props.catalog,chats)}
     >
       <span className={styles.catalogName}>{props.catalog.catalogName}</span>
       <div className={styles.infoContainer}>

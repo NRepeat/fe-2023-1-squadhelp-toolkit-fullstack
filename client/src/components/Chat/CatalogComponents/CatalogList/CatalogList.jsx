@@ -8,8 +8,7 @@ import {
 } from '../../../../store/slices/chatSlice';
 
 const CatalogList = (props) => {
-  const goToCatalog = (event, catalog) => {
-    console.log("🚀 ~ file: CatalogList.jsx:12 ~ goToCatalog ~ catalog:", catalog)
+  const goToCatalog = (event, catalog, chats) => {
     props.changeShowModeCatalog(catalog);
     event.stopPropagation();
   };

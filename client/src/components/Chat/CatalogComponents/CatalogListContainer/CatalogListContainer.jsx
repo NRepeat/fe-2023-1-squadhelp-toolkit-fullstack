@@ -20,6 +20,7 @@ class CatalogListContainer extends React.Component {
 
   getDialogsPreview = () => {
     const { messagesPreview, currentCatalog } = this.props.chatStore;
+   
  
     const chats = [];
     chats.push(currentCatalog.Converstion);
