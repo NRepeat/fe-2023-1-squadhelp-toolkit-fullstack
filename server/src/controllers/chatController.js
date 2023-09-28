@@ -196,12 +196,11 @@ module.exports.getPreview = async (req, res, next) => {
 			});
 		});
 		
-		console.log("🚀 ~ file: chatController.js:198 ~ module.exports.getPreview= ~ formattedConversations:", formattedConversations)
 		res.send(formattedConversations);
 	} catch (err) {
 		next(err);
 	}
-};
+};	
 
 
 
@@ -302,80 +301,97 @@ module.exports.favoriteChat = async (req, res, next) => {
 	}
 };
 
+
 module.exports.createCatalog = async (req, res, next) => {
-	const catalog = new Catalog({
-		userId: req.tokenData.userId,
-		catalogName: req.body.catalogName,
-		chats: [req.body.chatId],
-	});
-	try {
-		await catalog.save();
-		res.send(catalog);
-	} catch (err) {
-		next(err);
-	}
+  try {
+		console.log("🚀 ~ file: chatController.js:310 ~ module.exports.createCatalog= ~ req.body.catalogName:", req.body.catalogName)
+
+    const catalog = await db.Catalog.create({
+      userId: req.tokenData.userId,
+      catalogName: req.body.catalogName,
+    });
+    console.log("🚀 ~ file: chatController.js:311 ~ module.exports.createCatalog= ~ catalog:", catalog)
+    res.send(catalog);
+  } catch (err) {
+    next(err);
+  }
 };
 
 module.exports.updateNameCatalog = async (req, res, next) => {
-	try {
-		const catalog = await Catalog.findOneAndUpdate({
-			_id: req.body.catalogId,
-			userId: req.tokenData.userId,
-		}, { catalogName: req.body.catalogName }, { new: true });
-		res.send(catalog);
-	} catch (err) {
-		next(err);
-	}
+  try {
+    const updatedCatalog = await db.Catalog.update(
+      { catalogName: req.body.catalogName },
+      {
+        where: {
+          id: req.body.catalogId,
+          userId: req.tokenData.userId,
+        },
+        returning: true,
+      }
+    );
+    const catalog = updatedCatalog[1][0]; // Get the updated catalog
+    res.send(catalog);
+  } catch (err) {
+    next(err);
+  }
 };
 
 module.exports.addNewChatToCatalog = async (req, res, next) => {
-	try {
-		const catalog = await Catalog.findOneAndUpdate({
-			_id: req.body.catalogId,
-			userId: req.tokenData.userId,
-		}, { $addToSet: { chats: req.body.chatId } }, { new: true });
-		res.send(catalog);
-	} catch (err) {
-		next(err);
-	}
+  try {
+    const catalog = await db.Catalog.findByPk(req.body.catalogId);
+    if (!catalog) {
+      return res.status(404).send('Catalog not found');
+    }
+
+    await catalog.addChat(req.body.chatId);
+    res.send(catalog);
+  } catch (err) {
+    next(err);
+  }
 };
 
 module.exports.removeChatFromCatalog = async (req, res, next) => {
-	try {
-		const catalog = await Catalog.findOneAndUpdate({
-			_id: req.body.catalogId,
-			userId: req.tokenData.userId,
-		}, { $pull: { chats: req.body.chatId } }, { new: true });
-		res.send(catalog);
-	} catch (err) {
-		next(err);
-	}
+  try {
+    const catalog = await db.Catalog.findByPk(req.body.catalogId);
+    if (!catalog) {
+      return res.status(404).send('Catalog not found');
+    }
+
+    await catalog.removeChat(req.body.chatId);
+    res.send(catalog);
+  } catch (err) {
+    next(err);
+  }
 };
 
 module.exports.deleteCatalog = async (req, res, next) => {
-	try {
-		await Catalog.remove(
-			{ _id: req.body.catalogId, userId: req.tokenData.userId });
-		res.end();
-	} catch (err) {
-		next(err);
-	}
+  try {
+    const deletedCatalog = await db.Catalogs.destroy({
+      where: {
+        id: req.body.catalogId,
+        userId: req.tokenData.userId,
+      },
+    });
+    if (deletedCatalog === 0) {
+      return res.status(404).send('Catalog not found');
+    }
+    res.end();
+  } catch (err) {
+    next(err);
+  }
 };
 
 module.exports.getCatalogs = async (req, res, next) => {
-	try {
-		const catalogs = await Catalog.aggregate([
-			{ $match: { userId: req.tokenData.userId } },
-			{
-				$project: {
-					_id: 1,
-					catalogName: 1,
-					chats: 1,
-				},
-			},
-		]);
-		res.send(catalogs);
-	} catch (err) {
-		next(err);
-	}
+  try {
+    const catalogs = await db.Catalog.findAll({
+      where: {
+        userId: req.tokenData.userId,
+      },
+      attributes: ['id', 'catalogName'],
+    });
+    console.log("🚀 ~ file: chatController.js:392 ~ module.exports.getCatalogs= ~ catalogs:", catalogs)
+    res.send(catalogs);
+  } catch (err) {
+    next(err);
+  }
 };

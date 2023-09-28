@@ -11,19 +11,15 @@ module.exports = (sequelize) => {
 
 	Catalog.init(
 		{
-			id: {
-				type: DataTypes.INTEGER,
-				primaryKey: true,
-				autoIncrement: true,
-			},
-			user_id: {
+			
+			userId: {
 				type: DataTypes.INTEGER,
 				references: {
 					model: 'User',
 					key: 'id',
 				},
 			},
-			catalog_name: {
+			catalogName: {
 				type: DataTypes.STRING(255),
 				allowNull: false,
 			},

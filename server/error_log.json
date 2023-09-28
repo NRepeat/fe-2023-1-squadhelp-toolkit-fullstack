@@ -664,5 +664,167 @@
       "    at _next (/server/src/controllers/chatController.js:19:194)",
       "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
     ]
+  },
+  {
+    "message": "token error",
+    "time": 1695914034570,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: token error",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:24:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _throw (/server/src/middlewares/checkToken.js:5:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "token error",
+    "time": 1695914144236,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: token error",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:24:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.throw (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _throw (/server/src/middlewares/checkToken.js:5:291)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    ]
+  },
+  {
+    "message": "Wrong password",
+    "time": 1695914207575,
+    "code": 404,
+    "stackTrace": [
+      "UserNotFoundError: Wrong password",
+      "    at _callee$ (/server/src/controllers/userController.js:19:10)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/userController.js:7:103)",
+      "    at _next (/server/src/controllers/userController.js:9:194)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1695914231223,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "time": 1695917346962,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeValidationError: notNull Violation: Catalog.catalog_name cannot be null",
+      "    at InstanceValidator._validate (/server/node_modules/sequelize/lib/instance-validator.js:78:13)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at InstanceValidator._validateAndRunHooks (/server/node_modules/sequelize/lib/instance-validator.js:111:7)",
+      "    at InstanceValidator.validate (/server/node_modules/sequelize/lib/instance-validator.js:93:12)",
+      "    at Catalog.save (/server/node_modules/sequelize/lib/model.js:3877:7)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "time": 1695917357597,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeValidationError: notNull Violation: Catalog.catalog_name cannot be null",
+      "    at InstanceValidator._validate (/server/node_modules/sequelize/lib/instance-validator.js:78:13)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at InstanceValidator._validateAndRunHooks (/server/node_modules/sequelize/lib/instance-validator.js:111:7)",
+      "    at InstanceValidator.validate (/server/node_modules/sequelize/lib/instance-validator.js:93:12)",
+      "    at Catalog.save (/server/node_modules/sequelize/lib/model.js:3877:7)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "time": 1695917442449,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeValidationError: notNull Violation: Catalog.catalog_name cannot be null",
+      "    at InstanceValidator._validate (/server/node_modules/sequelize/lib/instance-validator.js:78:13)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at InstanceValidator._validateAndRunHooks (/server/node_modules/sequelize/lib/instance-validator.js:111:7)",
+      "    at InstanceValidator.validate (/server/node_modules/sequelize/lib/instance-validator.js:93:12)",
+      "    at Catalog.save (/server/node_modules/sequelize/lib/model.js:3877:7)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "time": 1695917479905,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeValidationError: notNull Violation: Catalog.catalog_name cannot be null",
+      "    at InstanceValidator._validate (/server/node_modules/sequelize/lib/instance-validator.js:78:13)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at InstanceValidator._validateAndRunHooks (/server/node_modules/sequelize/lib/instance-validator.js:111:7)",
+      "    at InstanceValidator.validate (/server/node_modules/sequelize/lib/instance-validator.js:93:12)",
+      "    at Catalog.save (/server/node_modules/sequelize/lib/model.js:3877:7)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "time": 1695917512718,
+    "code": 500,
+    "stackTrace": [
+      "SequelizeValidationError: notNull Violation: Catalog.catalog_name cannot be null",
+      "    at InstanceValidator._validate (/server/node_modules/sequelize/lib/instance-validator.js:78:13)",
+      "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "    at InstanceValidator._validateAndRunHooks (/server/node_modules/sequelize/lib/instance-validator.js:111:7)",
+      "    at InstanceValidator.validate (/server/node_modules/sequelize/lib/instance-validator.js:93:12)",
+      "    at Catalog.save (/server/node_modules/sequelize/lib/model.js:3877:7)",
+      "    at Function.create (/server/node_modules/sequelize/lib/model.js:2207:12)"
+    ]
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'create')",
+    "time": 1695917552960,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: Cannot read properties of undefined (reading 'create')",
+      "    at _callee8$ (/server/src/controllers/chatController.js:309:39)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/chatController.js:17:103)",
+      "    at _next (/server/src/controllers/chatController.js:19:194)",
+      "    at /server/src/controllers/chatController.js:19:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/chatController.js:19:97",
+      "    at /server/src/controllers/chatController.js:305:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
   }
 ]
