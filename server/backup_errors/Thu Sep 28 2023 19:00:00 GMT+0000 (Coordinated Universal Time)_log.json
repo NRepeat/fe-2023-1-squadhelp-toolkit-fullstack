@@ -1,0 +1,492 @@
+[
+  {
+    "message": "lastMessage is not defined",
+    "code": 500,
+    "time": 1695669640846
+  },
+  {
+    "message": "conversation is not defined",
+    "code": 500,
+    "time": 1695583484347
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695583749072
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695583758927
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695584067237
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695584157789
+  },
+  {
+    "message": "favoriteList is not defined",
+    "code": 500,
+    "time": 1695584366690
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695584388414
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695584444645
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695584499030
+  },
+  {
+    "message": "Missing where attribute in the options parameter",
+    "code": "ERR_ASSERTION",
+    "time": 1695584569304
+  },
+  {
+    "message": "sequelize is not defined",
+    "code": 500,
+    "time": 1695585155511
+  },
+  {
+    "message": "invalid input syntax for type boolean: \"{\"val\":\"favoriteList[2]\"}\"",
+    "code": 500,
+    "time": 1695585170548
+  },
+  {
+    "message": "column \"favoritelist\" does not exist",
+    "code": 500,
+    "time": 1695585277067
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695585593589
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695585619957
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695586088196
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695586117328
+  },
+  {
+    "message": "values.map is not a function",
+    "code": 500,
+    "time": 1695586221723
+  },
+  {
+    "message": "participants is not defined",
+    "code": 500,
+    "time": 1695589535883
+  },
+  {
+    "message": "dataValues is not defined",
+    "code": 500,
+    "time": 1695589648582
+  },
+  {
+    "message": "malformed array literal: \"{{\"false\",\"false\"},\"true\"}\"",
+    "code": 500,
+    "time": 1695590289521
+  },
+  {
+    "message": "tf2 is not defined",
+    "code": 500,
+    "time": 1695590314879
+  },
+  {
+    "message": "tf2 is not defined",
+    "code": 500,
+    "time": 1695590326840
+  },
+  {
+    "message": "Catalog validation failed: chats.0: Cast to [ObjectId] failed for value \"[3]\" (type string) at path \"chats.0\"",
+    "code": 500,
+    "time": 1695590374828
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695829741958
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695829838614
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695829840465
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695829840470
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695829842158
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'includes')",
+    "code": 500,
+    "time": 1695840421493
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "code": 500,
+    "time": 1695849675080
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "code": 500,
+    "time": 1695849680917
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "code": 500,
+    "time": 1695849754392
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'find')",
+    "code": 500,
+    "time": 1695849759317
+  },
+  {
+    "message": "token error",
+    "code": 408,
+    "time": 1695914034570
+  },
+  {
+    "message": "token error",
+    "code": 408,
+    "time": 1695914144236
+  },
+  {
+    "message": "Wrong password",
+    "code": 404,
+    "time": 1695914207575
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695914231223
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "code": 500,
+    "time": 1695917346962
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "code": 500,
+    "time": 1695917357597
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "code": 500,
+    "time": 1695917442449
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "code": 500,
+    "time": 1695917479905
+  },
+  {
+    "message": "notNull Violation: Catalog.catalog_name cannot be null",
+    "code": 500,
+    "time": 1695917512718
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'create')",
+    "code": 500,
+    "time": 1695917552960
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695918958722
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695918961888
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695918964360
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695918964365
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695918967908
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695919124893
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695919128018
+  },
+  {
+    "message": "missing FROM-clause entry for table \"conversationData\"",
+    "code": 500,
+    "time": 1695919237829
+  },
+  {
+    "message": "missing FROM-clause entry for table \"conversationData\"",
+    "code": 500,
+    "time": 1695919249112
+  },
+  {
+    "message": "missing FROM-clause entry for table \"conversationData\"",
+    "code": 500,
+    "time": 1695919306103
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'participants')",
+    "code": 500,
+    "time": 1695919341213
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'participants')",
+    "code": 500,
+    "time": 1695919344250
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'participants')",
+    "code": 500,
+    "time": 1695919345987
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695919378288
+  },
+  {
+    "message": "Conversation is associated to Message using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695919405287
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695919890195
+  },
+  {
+    "message": "catalog is not defined",
+    "code": 500,
+    "time": 1695920038474
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695920057459
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695920150333
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695920270213
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695920386639
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695920506056
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695920649438
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695923152307
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695923167804
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695923188043
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695923212870
+  },
+  {
+    "message": "column \"userId\" does not exist",
+    "code": 500,
+    "time": 1695923250087
+  },
+  {
+    "message": "token error",
+    "code": 408,
+    "time": 1695923570289
+  },
+  {
+    "message": "token error",
+    "code": 408,
+    "time": 1695923571887
+  },
+  {
+    "message": "token error",
+    "code": 408,
+    "time": 1695923573553
+  },
+  {
+    "message": "token error",
+    "code": 408,
+    "time": 1695923577018
+  },
+  {
+    "message": "token error",
+    "code": 408,
+    "time": 1695923578842
+  },
+  {
+    "message": "Cannot set headers after they are sent to the client",
+    "code": "ERR_HTTP_HEADERS_SENT",
+    "time": 1695923640551
+  },
+  {
+    "message": "Cannot set headers after they are sent to the client",
+    "code": "ERR_HTTP_HEADERS_SENT",
+    "time": 1695923678442
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'destroy')",
+    "code": 500,
+    "time": 1695924365590
+  },
+  {
+    "message": "Conversation is associated to CatalogChat using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695924813456
+  },
+  {
+    "message": "Conversation is associated to CatalogChat using an alias. You've included an alias (conversationData), but it does not match the alias(es) defined in your association (Conversation).",
+    "code": 500,
+    "time": 1695924842139
+  },
+  {
+    "message": "missing FROM-clause entry for table \"conversationData\"",
+    "code": 500,
+    "time": 1695924860460
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695925962850
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695925977422
+  },
+  {
+    "message": "invalid input syntax for type integer: \"\"",
+    "code": 500,
+    "time": 1695926019068
+  },
+  {
+    "message": "invalid input syntax for type integer: \"\"",
+    "code": 500,
+    "time": 1695926025009
+  },
+  {
+    "message": "WHERE parameter \"conversationId\" has invalid \"undefined\" value",
+    "code": 500,
+    "time": 1695926263325
+  },
+  {
+    "message": "column Catalog.conversationId does not exist",
+    "code": 500,
+    "time": 1695926306840
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695926342814
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695926478599
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927005674
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927106210
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927147296
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927161357
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927170758
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927459261
+  }
+]

@@ -20,22 +20,22 @@ class CatalogListContainer extends React.Component {
 
   getDialogsPreview = () => {
     const { messagesPreview, currentCatalog } = this.props.chatStore;
-    const { chats } = currentCatalog;
-    console.log("🚀 ~ file: CatalogListContainer.jsx:24 ~ CatalogListContainer ~ chats:", chats)
+ 
+    const chats = [];
+    chats.push(currentCatalog.Converstion);
     let dialogsInCatalog = [];
     for (let i = 0; i < messagesPreview.length; i++) {
       for (let j = 0; j < chats.length; j++) {
         if (chats[j] === messagesPreview[i].id) {
           dialogsInCatalog.push(messagesPreview[i]);
         }
-      }	
+      }
     }
 
     return dialogsInCatalog;
   };
 
   render() {
-		
     const { catalogList, isShowChatsInCatalog } = this.props.chatStore;
     const { id } = this.props.userStore.data;
     return (

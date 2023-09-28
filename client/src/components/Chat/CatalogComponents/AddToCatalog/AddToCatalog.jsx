@@ -8,6 +8,7 @@ import styles from './AddToCatalog.module.sass';
 const AddToCatalog = (props) => {
   const getCatalogsNames = () => {
     const { catalogList } = props;
+
     const namesArray = [];
     catalogList.forEach((catalog) => {
       namesArray.push(catalog.catalogName);
@@ -19,21 +20,26 @@ const AddToCatalog = (props) => {
     const { catalogList } = props;
     const valueArray = [];
     catalogList.forEach((catalog) => {
-      valueArray.push(catalog._id);
+
+      valueArray.push(catalog.id,catalog.userId);
     });
     return valueArray;
   };
 
   const click = (values) => {
     const { addChatId } = props;
-    props.addChatToCatalog({ chatId: addChatId, catalogId: values.catalogId });
+    props.addChatToCatalog({
+      chatId: addChatId,
+      catalogId: values.catalogId,
+      userId: values.userId,
+    });
   };
 
   const selectArray = getCatalogsNames();
   return (
     <>
       {selectArray.length !== 0 ? (
-        <Formik onSubmit={click} initialValues={{ catalogId: '' }}>
+        <Formik onSubmit={click} initialValues={getValueArray()}>
           <Form className={styles.form}>
             <SelectInput
               name="catalogId"

@@ -9,6 +9,7 @@ import {
 
 const CatalogList = (props) => {
   const goToCatalog = (event, catalog) => {
+    console.log("🚀 ~ file: CatalogList.jsx:12 ~ goToCatalog ~ catalog:", catalog)
     props.changeShowModeCatalog(catalog);
     event.stopPropagation();
   };
