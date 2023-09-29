@@ -1,11 +1,18 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect } from 'react';
+import { connect, useDispatch } from 'react-redux';
 import { Formik, Form } from 'formik';
 import SelectInput from '../../../SelectInput/SelectInput';
-import { addChatToCatalog } from '../../../../store/slices/chatSlice';
+import {
+  addChatToCatalog,
+  getCatalogList,
+} from '../../../../store/slices/chatSlice';
 import styles from './AddToCatalog.module.sass';
 
 const AddToCatalog = (props) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getCatalogList());
+  }, []);
   const getCatalogsNames = () => {
     const { catalogList } = props;
 
@@ -20,22 +27,20 @@ const AddToCatalog = (props) => {
     const { catalogList } = props;
     const valueArray = [];
     catalogList.forEach((catalog) => {
-			
       valueArray.push(catalog.id);
-      valueArray.push(catalog.userId);
     });
-    console.log("🚀 ~ file: AddToCatalog.jsx:22 ~ getValueArray ~ valueArray:", valueArray)
 
     return valueArray;
   };
 
   const click = (values) => {
-    console.log("🚀 ~ file: AddToCatalog.jsx:32 ~ click ~ values:", values)
-    const { addChatId } = props;
+    const { addChatId, catalogList } = props;
+    const catalogId = Number(values.catalogId);
+    const catalog = catalogList.filter((data) => data.id == catalogId);
     props.addChatToCatalog({
       chatId: addChatId,
-      catalogId: values.catalogId,
-      userId: values[1],
+      catalogId: catalogId,
+      userId: catalog[0].userId,
     });
   };
 
@@ -43,7 +48,7 @@ const AddToCatalog = (props) => {
   return (
     <>
       {selectArray.length !== 0 ? (
-        <Formik onSubmit={click} initialValues={getValueArray()}>
+        <Formik onSubmit={click} initialValues={{ user: '' }}>
           <Form className={styles.form}>
             <SelectInput
               name="catalogId"

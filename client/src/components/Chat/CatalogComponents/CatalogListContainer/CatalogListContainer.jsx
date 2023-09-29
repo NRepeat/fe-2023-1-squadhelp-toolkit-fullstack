@@ -9,12 +9,14 @@ import DialogList from '../../DialogComponents/DialogList/DialogList';
 
 class CatalogListContainer extends React.Component {
   componentDidMount() {
-    this.props.getCatalogList();
+    const id = this.props.userStore.data.id;
+    this.props.getCatalogList(id);
   }
 
   removeChatFromCatalog = (event, chatId) => {
-    const { id } = this.props.chatStore.currentCatalog;
-    this.props.removeChatFromCatalog({ chatId, catalogId: id });
+    const { userId, id } = this.props.chatStore.currentCatalog;
+    this.props.removeChatFromCatalog({ chatId, catalogId: id, userId });
+    this.props.getCatalogList();
     event.stopPropagation();
   };
   filterUniqueConversations = (conversations) => {
@@ -31,19 +33,36 @@ class CatalogListContainer extends React.Component {
     return result;
   };
   getDialogsPreview = () => {
-    const { messagesPreview, currentCatalog } = this.props.chatStore;
-
+    const { messagesPreview, currentCatalog, catalogToChats } =
+      this.props.chatStore;
+    console.log(
+      '🚀 ~ file: CatalogListContainer.jsx:37 ~ CatalogListContainer ~ this.props.chatStore:',
+      this.props.chatStore
+    );
+    console.log(
+      '🚀 ~ file: CatalogListContainer.jsx:37 ~ CatalogListContainer ~ messagesPreview:',
+      messagesPreview
+    );
+    console.log(
+      '🚀 ~ file: CatalogListContainer.jsx:37 ~ CatalogListContainer ~ currentCatalog:',
+      currentCatalog
+    );
+    const chat = catalogToChats
+      .map((chat) => chat)
+      .filter((data) => data.Catalog.id === currentCatalog.id);
+    
     const allConverstions = this.props.chatStore.catalogToChats.map(
       (data) => data.Conversation
     );
 
     const uniqueConversations = this.filterUniqueConversations(allConverstions);
 
-    const chats = uniqueConversations;
+    const chats =[...chat];
+    console.log("🚀 ~ file: CatalogListContainer.jsx:66 ~ CatalogListContainer ~ chats:", chats)
     let dialogsInCatalog = [];
     for (let i = 0; i < messagesPreview.length; i++) {
       for (let j = 0; j < chats.length; j++) {
-        if (chats[j].id === messagesPreview[i].id) {
+        if (chats[j].Conversation.id					=== messagesPreview[i].id) {
           dialogsInCatalog.push(messagesPreview[i]);
         }
       }
@@ -54,6 +73,7 @@ class CatalogListContainer extends React.Component {
 
   render() {
     const { catalogList, isShowChatsInCatalog } = this.props.chatStore;
+
     const { id } = this.props.userStore.data;
     return (
       <>

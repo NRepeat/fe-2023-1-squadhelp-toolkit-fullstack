@@ -176,8 +176,9 @@ export const getCatalogList = decorateAsyncThunk({
 const getCatalogListExtraReducers = createExtraReducers({
 	thunk: getCatalogList,
 	fulfilledReducer: (state, { payload }) => {
-		state.catalogToChats = [...payload]
-		const mapDat = payload.map((dat) => dat.Catalog)
+		const { catalogs, catalogsTochats } = payload
+		state.catalogToChats = [...catalogsTochats]
+		const mapDat = catalogsTochats.map((dat) => dat.Catalog)
 		const uniqueCatalogIds = new Set();
 
 		const uniqueCatalogs = mapDat.filter((item) => {
@@ -191,8 +192,21 @@ const getCatalogListExtraReducers = createExtraReducers({
 			return false;
 		});
 		state.isFetching = false;
+		let mapCatalogs = [...uniqueCatalogs, ...catalogs]
+		let seen = {};
+		let duplicates = [];
+		mapCatalogs = mapCatalogs.filter((obj) => {
+			const id = obj.id;
+			if (seen[id]) {
+				duplicates.push(obj);
+				return false;
+			} else {
+				seen[id] = true;
+				return true;
+			}
+		});
 
-		state.catalogList = [...uniqueCatalogs];
+		state.catalogList = [...mapCatalogs];
 	},
 	rejectedReducer,
 });
@@ -230,7 +244,6 @@ export const createCatalog = decorateAsyncThunk({
 	key: `${CHAT_SLICE_NAME}/createCatalog`,
 	thunk: async payload => {
 		const { data } = await restController.createCatalog(payload);
-		console.log("🚀 ~ file: chatSlice.js:222 ~ data add:", data)
 		return data;
 	},
 });
