@@ -10,10 +10,7 @@ class DialogListContainer extends React.Component {
 
   render() {
     const { messagesPreview, userId } = this.props;
-    console.log(
-      '🚀 ~ file: DialogListContainer.jsx:13 ~ DialogListContainer ~ render ~ messagesPreview:',
-      messagesPreview
-    );
+ 
     return (
       <DialogList
         preview={messagesPreview}
@@ -25,10 +22,7 @@ class DialogListContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(
-    '🚀 ~ file: DialogListContainer.jsx:19 ~ state.chatStore:',
-    state.chatStore
-  );
+
 
   return state.chatStore;
 };

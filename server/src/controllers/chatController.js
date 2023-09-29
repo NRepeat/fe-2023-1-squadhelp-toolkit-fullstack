@@ -349,7 +349,6 @@ module.exports.updateNameCatalog = async (req, res, next) => {
 module.exports.addNewChatToCatalog = async (req, res, next) => {
 	try {
 		const { chatId, catalogId, userId } = req.body
-		console.log("🚀 ~ file: chatController.js:352 ~ module.exports.addNewChatToCatalog= ~ chatId, catalogId, userId :", chatId, catalogId, userId )
 		const catalogIdnum = Number(catalogId)
 
 		const catalog = await db.CatalogChat.create({
@@ -415,7 +414,6 @@ module.exports.getCatalogs = async (req, res, next) => {
 
 
 		});
-		console.log("🚀 ~ file: chatController.js:417 ~ module.exports.getCatalogs= ~ catalogs:", catalogs)
 		res.send(catalogs);
 	} catch (err) {
 		next(err);

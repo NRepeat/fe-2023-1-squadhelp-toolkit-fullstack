@@ -17,17 +17,33 @@ class CatalogListContainer extends React.Component {
     this.props.removeChatFromCatalog({ chatId, catalogId: id });
     event.stopPropagation();
   };
+  filterUniqueConversations = (conversations) => {
+    const uniqueConversations = {};
+    const result = [];
 
+    for (const conversation of conversations) {
+      if (!uniqueConversations[conversation.id]) {
+        uniqueConversations[conversation.id] = true;
+        result.push(conversation);
+      }
+    }
+
+    return result;
+  };
   getDialogsPreview = () => {
     const { messagesPreview, currentCatalog } = this.props.chatStore;
-   
- 
-    const chats = [];
-    chats.push(currentCatalog.Converstion);
+
+    const allConverstions = this.props.chatStore.catalogToChats.map(
+      (data) => data.Conversation
+    );
+
+    const uniqueConversations = this.filterUniqueConversations(allConverstions);
+
+    const chats = uniqueConversations;
     let dialogsInCatalog = [];
     for (let i = 0; i < messagesPreview.length; i++) {
       for (let j = 0; j < chats.length; j++) {
-        if (chats[j] === messagesPreview[i].id) {
+        if (chats[j].id === messagesPreview[i].id) {
           dialogsInCatalog.push(messagesPreview[i]);
         }
       }

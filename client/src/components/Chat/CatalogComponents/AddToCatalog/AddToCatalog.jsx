@@ -30,11 +30,11 @@ const AddToCatalog = (props) => {
   };
 
   const click = (values) => {
-    console.log("🚀 ~ file: AddToCatalog.jsx:32 ~ click ~ values:", values[0])
+    console.log("🚀 ~ file: AddToCatalog.jsx:32 ~ click ~ values:", values)
     const { addChatId } = props;
     props.addChatToCatalog({
       chatId: addChatId,
-      catalogId: values[2],
+      catalogId: values.catalogId,
       userId: values[1],
     });
   };
