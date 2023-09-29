@@ -349,7 +349,6 @@ module.exports.updateNameCatalog = async (req, res, next) => {
 module.exports.addNewChatToCatalog = async (req, res, next) => {
 	try {
 		const { chatId, catalogId, userId } = req.body
-		console.log("🚀 ~ file: chatController.js:352 ~ module.exports.addNewChatToCatalog= ~ chatId, catalogId, userId:", chatId, catalogId, userId)
 		const catalogIdnum = Number(catalogId)
 
 		const catalog = await db.CatalogChat.create({
@@ -383,6 +382,12 @@ module.exports.removeChatFromCatalog = async (req, res, next) => {
 };
 module.exports.deleteCatalog = async (req, res, next) => {
 	try {
+		const deletedCatalogToCaht = await db.CatalogChat.destroy({
+			where: {
+				catalogId: req.body.catalogId,
+				userId: req.tokenData.userId,
+			},
+		})
 		const deletedCatalog = await db.Catalog.destroy({
 			where: {
 				id: req.body.catalogId,
@@ -400,7 +405,7 @@ module.exports.deleteCatalog = async (req, res, next) => {
 
 module.exports.getCatalogs = async (req, res, next) => {
 	try {
-		
+
 		const catalogsTochats = await db.CatalogChat.findAll({
 			where: {
 				userId: req.tokenData.userId,
@@ -419,12 +424,12 @@ module.exports.getCatalogs = async (req, res, next) => {
 
 		});
 		const catalogs = await db.Catalog.findAll({
-			where:{
-				userId:req.tokenData.userId
+			where: {
+				userId: req.tokenData.userId
 			}
 		})
 
-		res.send({catalogs,catalogsTochats});
+		res.send({ catalogs, catalogsTochats });
 	} catch (err) {
 		next(err);
 	}

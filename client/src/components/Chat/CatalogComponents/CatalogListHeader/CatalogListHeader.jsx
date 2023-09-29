@@ -1,16 +1,18 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { Formik, Form } from 'formik';
 import {
   changeShowModeCatalog,
   changeRenameCatalogMode,
   changeCatalogName,
+	getCatalogList
 } from '../../../../store/slices/chatSlice';
 import styles from './CatalogHeader.module.sass';
 import FormInput from '../../../FormInput/FormInput';
 import Schems from '../../../../utils/validators/validationSchems';
 
 const CatalogListHeader = (props) => {
+	const dispatch= useDispatch()
   const changeCatalogName = (values) => {
     const { changeCatalogName, id } = props;
     changeCatalogName({ catalogName: values.catalogName, catalogId: id });
@@ -25,7 +27,8 @@ const CatalogListHeader = (props) => {
     <div className={styles.headerContainer}>
       <i
         className="fas fa-long-arrow-alt-left"
-        onClick={() => changeShowModeCatalog()}
+        onClick={() => {changeShowModeCatalog()
+					dispatch(getCatalogList())}}
       />
       {!isRenameCatalog && (
         <div className={styles.infoContainer}>

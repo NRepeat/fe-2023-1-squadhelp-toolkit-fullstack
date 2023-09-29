@@ -20,7 +20,6 @@ const DialogBox = (props) => {
 
   const { favoriteList, participants, blackList, id, text, createAt } =
     chatPreview;
-    console.log("🚀 ~ file: DialogBox.jsx:23 ~ DialogBox ~ chatPreview:", chatPreview)
 
   const [isFavorite, setIsFavorite] = useState(
     favoriteList[participants.indexOf(userId)]

@@ -4,14 +4,20 @@ import styles from './Catalog.module.sass';
 const Catalog = (props) => {
   const { deleteCatalog, goToCatalog } = props;
   const chats = [];
-  const { id } = props.catalog;
-  chats.push(props.catalog.Conversation);
+  const { id } = props.catalog.catalog;
+  for (let i = 0; i < props.catalog.catalogToChats.length; i++) {
+    if (props.catalog.catalogToChats[i].catalogId === id) {
+      chats.push(props.catalog.catalogToChats[i].Conversation);
+    }
+  }
   return (
     <div
       className={styles.catalogContainer}
-      onClick={(event) => goToCatalog(event, props.catalog,chats)}
+      onClick={(event) => goToCatalog(event, props.catalog.catalog, chats)}
     >
-      <span className={styles.catalogName}>{props.catalog.catalogName}</span>
+      <span className={styles.catalogName}>
+        {props.catalog.catalog.catalogName}
+      </span>
       <div className={styles.infoContainer}>
         <span>Chats number: </span>
         <span className={styles.numbers}>{chats.length}</span>
