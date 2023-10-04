@@ -59,11 +59,15 @@ const Home = (props) => {
                 explore our hand-picked collection of premium names available
                 for immediate purchase
               </p>
-              <div className={styles.button}>
-                <Link className={styles.button__link} to="/dashboard">
-                  DASHBOARD
-                </Link>
-              </div>
+              {data == null ? (
+                <></>
+              ) : (
+                <div className={styles.button}>
+                  <Link className={styles.button__link} to="/dashboard">
+                    DASHBOARD
+                  </Link>
+                </div>
+              )}
             </div>
             <div className={styles.greyContainer}>
               <SlideBar
@@ -256,9 +260,15 @@ const Home = (props) => {
               carouselType={carouselConstants.EXAMPLE_SLIDER}
             />
             <div className={styles.button}>
-              <Link className={styles.button__link} to="/dashboard">
-                DASHBOARD
-              </Link>
+            {data == null ? (
+                <></>
+              ) : (
+                <div className={styles.button}>
+                  <Link className={styles.button__link} to="/dashboard">
+                    DASHBOARD
+                  </Link>
+                </div>
+              )}
             </div>
             <div className={styles.blueContainer}>
               <h2 className={styles.whiteUnderline}>What our customers say</h2>
