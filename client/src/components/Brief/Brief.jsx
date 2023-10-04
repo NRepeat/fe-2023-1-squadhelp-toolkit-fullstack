@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
 import {
   updateContest,
   clearContestUpdationStore,
 } from '../../store/slices/contestUpdationSlice';
 import { changeEditContest } from '../../store/slices/contestByIdSlice';
 import ContestForm from '../ContestForm/ContestForm';
-import styles from './Brief.module.sass';
+import styles from './Brief.module.scss';
 import ContestInfo from '../Contest/ContestInfo/ContestInfo';
 import Error from '../Error/Error';
 
-const Brief = (props) => {
+function Brief(props) {
+  const dispatch = useDispatch();
+
+  const isEditContest = useSelector(
+    (state) => state.contestByIdStore.isEditContest
+  );
+  const user = useSelector((state) => state.userStore.data);
+  const contestUpdationStore = useSelector(
+    (state) => state.contestUpdationStore
+  );
+
+  useEffect(() => {
+    dispatch(clearContestUpdationStore());
+  }, [dispatch]);
+
   const setNewContestData = (values) => {
     const data = new FormData();
     Object.keys(values).forEach((key) => {
@@ -21,7 +35,7 @@ const Brief = (props) => {
       data.append('file', values.file);
     }
     data.append('contestId', props.contestData.id);
-    props.update(data);
+    dispatch(updateContest(data));
   };
 
   const getContestObjInfo = () => {
@@ -64,55 +78,32 @@ const Brief = (props) => {
     return defaultData;
   };
 
-  const {
-    isEditContest,
-    contestData,
-    changeEditContest,
-    role,
-    goChat,
-    clearContestUpdationStore,
-  } = props;
-  const { error } = props.contestUpdationStore;
-  const { id } = props.userStore.data;
-  if (!isEditContest) {
-    return (
-      <ContestInfo
-        userId={id}
-        contestData={contestData}
-        changeEditContest={changeEditContest}
-        role={role}
-        goChat={goChat}
-      />
-    );
-  }
   return (
     <div className={styles.contestForm}>
-      {error && (
+      {contestUpdationStore.error && (
         <Error
-          data={error.data}
-          status={error.status}
-          clearError={clearContestUpdationStore}
+          data={contestUpdationStore.error.data}
+          status={contestUpdationStore.error.status}
+          clearError={() => dispatch(clearContestUpdationStore())}
         />
       )}
-      <ContestForm
-        contestType={contestData.contestType}
-        defaultData={getContestObjInfo()}
-        handleSubmit={setNewContestData}
-      />
+      {!isEditContest ? (
+        <ContestInfo
+          userId={user.id}
+          contestData={props.contestData}
+          changeEditContest={(data) => dispatch(changeEditContest(data))}
+          role={props.role}
+          goChat={props.goChat}
+        />
+      ) : (
+        <ContestForm
+          contestType={props.contestData.contestType}
+          defaultData={getContestObjInfo()}
+          handleSubmit={setNewContestData}
+        />
+      )}
     </div>
   );
-};
+}
 
-const mapStateToProps = (state) => {
-  const { isEditContest } = state.contestByIdStore;
-  const { contestUpdationStore, userStore } = state;
-  return { contestUpdationStore, userStore, isEditContest };
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  update: (data) => dispatch(updateContest(data)),
-  changeEditContest: (data) => dispatch(changeEditContest(data)),
-  clearContestUpdationStore: () => dispatch(clearContestUpdationStore()),
-});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Brief));
+export default withRouter(Brief);

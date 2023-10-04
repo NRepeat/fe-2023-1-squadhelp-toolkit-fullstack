@@ -27,16 +27,14 @@ const ChatHeader = (props) => {
 
   const isBlocked = (chatData, userId) => {
     const { participants, blackList } = chatData;
-    console.log(
-      '🚀 ~ file: ChatHeader.jsx:31 ~ isBlocked ~ blackList[participants.indexOf(userId):',
-      blackList[participants.indexOf(userId)]
-    );
 
     return blackList[participants.indexOf(userId)];
   };
-  const { avatar, firstName } = props.interlocutor;
-  const { backToDialogList, chatData, userId } = props;
+  const { avatar, firstName, id: userId } = props.interlocutor;
+  const { backToDialogList, chatData } = props;
+
   return (
+		
     <div className={styles.chatHeader}>
       <div
         className={styles.buttonContainer}
@@ -78,6 +76,7 @@ const ChatHeader = (props) => {
             />
             <i
               onClick={(event) =>
+								
                 changeBlackList(
                   {
                     participants: chatData.participants,

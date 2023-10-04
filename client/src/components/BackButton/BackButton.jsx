@@ -1,17 +1,16 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import styles from './BackButton.module.sass';
+import styles from './BackButton.module.scss';
 
-const BackButton = props => {
-  function clickHandler () {
+function BackButton(props) {
+  function clickHandler() {
     props.history.goBack();
   }
-
   return (
     <div onClick={clickHandler} className={styles.buttonContainer}>
       <span>Back</span>
     </div>
   );
-};
+}
 
 export default withRouter(BackButton);

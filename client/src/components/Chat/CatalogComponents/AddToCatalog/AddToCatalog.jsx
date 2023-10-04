@@ -6,9 +6,9 @@ import {
   addChatToCatalog,
   getCatalogList,
 } from '../../../../store/slices/chatSlice';
-import styles from './AddToCatalog.module.sass';
+import styles from './AddToCatalog.module.scss';
 
-const AddToCatalog = (props) => {
+function AddToCatalog(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCatalogList());
@@ -71,7 +71,7 @@ const AddToCatalog = (props) => {
       )}
     </>
   );
-};
+}
 
 const mapStateToProps = (state) => state.chatStore;
 

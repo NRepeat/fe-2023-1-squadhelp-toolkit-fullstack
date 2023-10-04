@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Catalog.module.sass';
+import styles from './Catalog.module.scss';
 
-const Catalog = (props) => {
+function Catalog  (props) {
   const { deleteCatalog, goToCatalog } = props;
   const chats = [];
   const { id } = props.catalog.catalog;

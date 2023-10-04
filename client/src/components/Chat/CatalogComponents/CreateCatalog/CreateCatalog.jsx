@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Formik, Form } from 'formik';
 import FormInput from '../../../FormInput/FormInput';
-import styles from './CreateCatalog.module.sass';
+import styles from './CreateCatalog.module.scss';
 import { createCatalog } from '../../../../store/slices/chatSlice';
 import Schems from '../../../../utils/validators/validationSchems';
 
-const CreateCatalog = (props) => {
+function CreateCatalog (props)  {
   const click = (values) => {
     const { createCatalog } = props;
     const { addChatId } = props;

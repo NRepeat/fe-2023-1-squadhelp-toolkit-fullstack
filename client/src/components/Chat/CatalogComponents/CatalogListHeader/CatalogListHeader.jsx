@@ -5,14 +5,14 @@ import {
   changeShowModeCatalog,
   changeRenameCatalogMode,
   changeCatalogName,
-	getCatalogList
+  getCatalogList,
 } from '../../../../store/slices/chatSlice';
-import styles from './CatalogHeader.module.sass';
+import styles from './CatalogHeader.module.scss';
 import FormInput from '../../../FormInput/FormInput';
 import Schems from '../../../../utils/validators/validationSchems';
 
-const CatalogListHeader = (props) => {
-	const dispatch= useDispatch()
+function CatalogListHeader(props) {
+  const dispatch = useDispatch();
   const changeCatalogName = (values) => {
     const { changeCatalogName, id } = props;
     changeCatalogName({ catalogName: values.catalogName, catalogId: id });
@@ -27,8 +27,10 @@ const CatalogListHeader = (props) => {
     <div className={styles.headerContainer}>
       <i
         className="fas fa-long-arrow-alt-left"
-        onClick={() => {changeShowModeCatalog()
-					dispatch(getCatalogList())}}
+        onClick={() => {
+          changeShowModeCatalog();
+          dispatch(getCatalogList());
+        }}
       />
       {!isRenameCatalog && (
         <div className={styles.infoContainer}>
@@ -65,7 +67,7 @@ const CatalogListHeader = (props) => {
       )}
     </div>
   );
-};
+}
 
 const mapStateToProps = (state) => {
   const { isRenameCatalog } = state.chatStore;

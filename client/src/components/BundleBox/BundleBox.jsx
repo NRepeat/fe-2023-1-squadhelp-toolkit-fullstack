@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './BundleBox.module.sass';
+import styles from './BundleBox.module.scss';
 import CONSTANTS from '../../constants';
 
-const BundleBox = props => {
+function BundleBox(props) {
   const defaultPathToImages = `${CONSTANTS.STATIC_IMAGES_PATH}contestLabels/`;
 
   const renderImage = () => {
@@ -56,6 +56,6 @@ const BundleBox = props => {
       </div>
     </div>
   );
-};
+}
 
 export default BundleBox;
