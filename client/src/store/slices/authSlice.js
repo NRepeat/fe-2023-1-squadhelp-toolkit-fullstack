@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import CONSTANTS from '../../constants';
-import * as restController from '../../api/rest/restController';
+import * as restController from '../../api/rest/authentication';
 import {
   decorateAsyncThunk,
   pendingReducer,

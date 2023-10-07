@@ -1,11 +1,11 @@
 import http from '../interceptor';
-export const registerRequest = async (data) => {
-	try {
-		return await http.post('/registration', data);
-	} catch (error) {
-		throw error;
-	}
-};
+// export const registerRequest = async (data) => {
+// 	try {
+// 		return await http.post('/registration', data);
+// 	} catch (error) {
+// 		throw error;
+// 	}
+// };
 
 export const loginRequest = async (data) => {
 	try {
@@ -15,13 +15,13 @@ export const loginRequest = async (data) => {
 	}
 };
 
-export const getUser = async () => {
-	try {
-		return await http.get('/getUser');
-	} catch (error) {
-		throw error;
-	}
-};
+// export const getUser = async () => {
+// 	try {
+// 		return await http.get('/getUser');
+// 	} catch (error) {
+// 		throw error;
+// 	}
+// };
 
 export const updateContest = async (data) => {
 	try {
@@ -80,8 +80,8 @@ export const getPreviewChat = async () => {
 
 export const getDialog = async (data) => {
 	try {
-		 const a = await http.post('chat/getChat', data);
-		 return a 
+		return await http.post('chat/getChat', data);
+
 	} catch (error) {
 		throw error;
 	}
@@ -130,8 +130,8 @@ export const changeChatFavorite = async (data) => {
 
 export const changeChatBlock = async (data) => {
 	try {
-		const datas = await http.post('chat/blackList', data);
-		return datas
+		return await http.post('chat/blackList', data);
+
 	} catch (error) {
 		throw error;
 	}
