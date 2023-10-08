@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { isEqual, remove } from 'lodash';
-import * as restController from '../../api/rest/restController';
+import * as restController from '../../api/rest/chat';
 import CONSTANTS from '../../constants';
 import {
 	decorateAsyncThunk,

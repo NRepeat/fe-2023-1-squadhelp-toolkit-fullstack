@@ -1,3 +1,5 @@
+import http from '../interceptor';
+
 export const payMent = async (data) => {
   try {
     return await http.post('pay', data.formData);

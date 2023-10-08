@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { updateStoreAfterUpdateContest } from './contestByIdSlice';
-import * as restController from '../../api/rest/restController';
+import * as restController from '../../api/rest/сontest';
 import {
   decorateAsyncThunk,
   pendingReducer,

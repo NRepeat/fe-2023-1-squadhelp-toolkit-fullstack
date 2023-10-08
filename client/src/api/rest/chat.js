@@ -1,3 +1,4 @@
+import http from '../interceptor';
 export const getPreviewChat = async () => {
   try {
     return await http.get('chat/getPreview');

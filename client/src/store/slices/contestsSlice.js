@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import * as restController from '../../api/rest/restController';
+import * as restController from '../../api/rest/сontest';
 import CONSTANTS from '../../constants';
 import { decorateAsyncThunk, pendingReducer } from '../../utils/store';
 

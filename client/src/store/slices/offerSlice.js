@@ -5,7 +5,7 @@ import {
 } from '../../utils/store';
 import { createSlice } from '@reduxjs/toolkit';
 import CONSTANTS from '../../constants';
-import * as restController from '../../api/rest/restController';
+import * as moderator   from '../../api/rest/moderator';
 
 
 const initialState = {
@@ -21,7 +21,7 @@ const OFFERS_SLICE_NAME = 'getOffers';
 export const getOffers = decorateAsyncThunk({
 	key: `${OFFERS_SLICE_NAME}`,
 	thunk: async payload => {
-		const { data } = await restController.getModerator(payload);
+		const { data } = await  moderator.getModerator(payload);
 
 		return {  data };
 	},
@@ -44,14 +44,14 @@ const getOffersReducers = createExtraReducers({
 export const changeOferrStatus = decorateAsyncThunk({
 	key: `${OFFERS_SLICE_NAME}/changeOferrStatus`,
 	thunk: async payload => {
-		const { data } = await restController.changeVarifiedOfeertStatus(payload);
+		const { data } = await moderator.changeVarifiedOfeertStatus(payload);
 		return data;
 	},
 })
 export const setOfferStatus = decorateAsyncThunk({
 	key: `${OFFERS_SLICE_NAME}/setOfferStatus`,
 	thunk: async payload => {
-		const { data } = await restController.setOfferStatus(payload);
+		const { data } = await moderator.setOfferStatus(payload);
 		return data;
 	},
 });
