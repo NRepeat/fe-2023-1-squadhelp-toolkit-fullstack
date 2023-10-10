@@ -3,9 +3,8 @@ import { changeOferrStatus, getOffers } from '../../store/slices/offerSlice';
 import { useDispatch } from 'react-redux';
 import constants from '../../constants';
 import ContestCard from './contestCard';
-import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-// import style from './ModeratorPage.module.scss';
+import style from './ModeratorPage.module.scss';
 
 export default function ModeratorPage(props) {
   const dispatch = useDispatch();
@@ -75,7 +74,7 @@ export default function ModeratorPage(props) {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    setCurrentPage(1); // При зміні вкладки скидаємо поточну сторінку на першу
+    setCurrentPage(1);
   };
 
   const paginate = (pageNumber) => {
@@ -90,98 +89,91 @@ export default function ModeratorPage(props) {
   );
 
   return (
-    <>
-      <div>
-        <div >
-          <h1>Contest Data</h1>
-          <div className={['tab-container']}>
+    <div className={style.formContainer}>
+      <h1>Contests </h1>
+
+      <div className={style.formWrapper}>
+        <div className={style.buttonWrapper}>
+          <div className={style.tabContainer}>
             <button
-              className={`tab-button ${
-                activeTab === 'ACTIVEcontest' ? 'active' : ''
+              className={`${style.tabButton} ${
+                activeTab === 'ACTIVEcontest' ? `${style.active}` : ''
               }`}
               onClick={() => handleTabChange('ACTIVEcontest')}
             >
               Active
             </button>
             <button
-              className={`tab-button ${
-                activeTab === 'PENDINGcontest' ? 'active' : ''
+              className={`${style.tabButton} ${
+                activeTab === 'PENDINGcontest' ? `${style.active}` : ''
               }`}
               onClick={() => handleTabChange('PENDINGcontest')}
             >
               Pending
             </button>
             <button
-              className={`tab-button ${
-                activeTab === 'FINISHEDcontest' ? 'active' : ''
+              className={`${style.tabButton} ${
+                activeTab === 'FINISHEDcontest' ? `${style.active}` : ''
               }`}
               onClick={() => handleTabChange('FINISHEDcontest')}
             >
               Finished
             </button>
           </div>
-
+        </div>
+        <div className={style.cardWrapper}>
           {loadingError ? (
             <div>{loadingError}</div>
           ) : (
-            <>
-              <div >
-                <div>
-                  {activeTab === 'ACTIVEcontest' && (
-                    <ContestCard
-                      contestData={currentContestData}
-                      onVerify={handleVerify}
-                      onReject={handleReject}
-                    />
-                  )}
-                </div>
-                <div >
-                  {activeTab === 'PENDINGcontest' && (
-                    <ContestCard
-                      contestData={currentContestData}
-                      onVerify={handleVerify}
-                      onReject={handleReject}
-                    />
-                  )}
-                </div>
-                <div>
-                  {activeTab === 'FINISHEDcontest' && (
-                    <ContestCard
-                      contestData={currentContestData}
-                      onVerify={handleVerify}
-                      onReject={handleReject}
-                    />
-                  )}
-                </div>
+            <div>
+              <div>
+                {activeTab === 'ACTIVEcontest' && (
+                  <ContestCard
+                    contestData={currentContestData}
+                    onVerify={handleVerify}
+                    onReject={handleReject}
+                  />
+                )}
               </div>
-
-              <ul className="pagination">
-                {Array.from({
-                  length: Math.ceil(
-                    categorizedContestsData[activeTab].length /
-                      itemsPerPage
-                  ),
-                }).map((_, index) => (
-                  <li
-                    key={index}
-                    className={`page-item ${
-                      index + 1 === currentPage ? 'active' : ''
-                    }`}
-                  >
-                    <button
-                      onClick={() => paginate(index + 1)}
-                      className="page-link"
-                    >
-                      {index + 1}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </>
+              <div>
+                {activeTab === 'PENDINGcontest' && (
+                  <ContestCard
+                    contestData={currentContestData}
+                    onVerify={handleVerify}
+                    onReject={handleReject}
+                  />
+                )}
+              </div>
+              <div>
+                {activeTab === 'FINISHEDcontest' && (
+                  <ContestCard
+                    contestData={currentContestData}
+                    onVerify={handleVerify}
+                    onReject={handleReject}
+                  />
+                )}
+              </div>
+            </div>
           )}
         </div>
+        <ul className={style.pagination}>
+          {Array.from({
+            length: Math.ceil(
+              categorizedContestsData[activeTab].length / itemsPerPage
+            ),
+          }).map((_, index) => (
+            <li
+              key={index}
+              className={`${style.pageItem} ${
+                index + 1 === currentPage ? `${style.active}` : ''
+              }`}
+            >
+              <button onClick={() => paginate(index + 1)}>{index + 1}</button>
+            </li>
+          ))}
+        </ul>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

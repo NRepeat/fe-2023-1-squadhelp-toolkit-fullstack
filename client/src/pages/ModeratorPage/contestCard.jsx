@@ -14,7 +14,11 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
 
   const mapedContestData = (contestData) => {
     return (
-      <>
+      <div
+        className={`${
+          contestData.length == 0 ? style.displayNone : style.mpaCardContainer
+        }`}
+      >
         {contestData.map((offer) => (
           <div key={offer.id} className={style.contestContainer}>
             <div className={style.contestInfo}>
@@ -25,11 +29,17 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
               <p>Prize: {offer.prize}</p>
               <div>
                 <div>
-                  <button onClick={() => toggleOfferVisibility(offer.id)}>
-                    {visibleOffers.includes(offer.id)
-                      ? 'Hide Offers'
-                      : 'Show Offers'}
-                  </button>
+                  {offer.Offers.length != 0 ? (
+                    <div className={style.buttonOffer}>
+                      <button onClick={() => toggleOfferVisibility(offer.id)}>
+                        {visibleOffers.includes(offer.id)
+                          ? 'Hide Offers'
+                          : 'Show Offers'}
+                      </button>
+                    </div>
+                  ) : (
+                    ''
+                  )}
                   {visibleOffers.includes(offer.id) && (
                     <div className={style.offerContainer}>
                       {offer.Offers.map((o) => (
@@ -37,12 +47,15 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
                           <p>Offer ID: {o.id}</p>
                           <p>Offer message: {o.text}</p>
                           <p>Status: {o.status}</p>
-                          {
-                            <img
-                              src={`${constants.publicContestsURL}${o.fileName}`}
-                              alt="user"
-                            />
-                          }
+                          <div className={style.imgWrapper}>
+                            {
+                              <img
+                                src={`${constants.publicContestsURL}${o.fileName}`}
+                                alt="userImg"
+                              />
+                            }
+                          </div>
+
                           <p>User Display Name: {o.User.displayName}</p>
                           <p>User Email: {o.User.email}</p>
                           <p>User First Name: {o.User.firstName}</p>
@@ -51,14 +64,14 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
                           <div>
                             {offer.status === 'active' &&
                               o.status === 'pending' && (
-                                <>
+                                <div>
                                   <button onClick={() => onVerify(o.id)}>
                                     Verify
                                   </button>
                                   <button onClick={() => onReject(o.id)}>
                                     Reject
                                   </button>
-                                </>
+                                </div>
                               )}
                           </div>
                         </div>
@@ -70,10 +83,9 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
             </div>
           </div>
         ))}
-      </>
+      </div>
     );
   };
-
 
   return <div>{mapedContestData(contestData)}</div>;
 }

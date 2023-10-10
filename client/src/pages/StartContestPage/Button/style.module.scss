@@ -1,0 +1,25 @@
+.buttonWrapper {
+  border: 2px solid rgba(128, 128, 128, 0.501);
+  border-radius: 5px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	max-width: 345px;
+  gap: 20px;
+  padding: 15px;
+  .head {
+    background-color: #5cb7b7;
+    width: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+    color: white;
+  }
+ 
+  
+}
+.buttonWrapper:hover {
+	border: 2px solid #5cb7b7;
+}

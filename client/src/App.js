@@ -20,7 +20,7 @@ import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
 import HowItWorksPage from './pages/HowItWorksPage/HowItWorksPage';
 import TimerPage from './pages/TimerPage/TimerPage';
-import ModeratorPage from './pages/moderatorPage/ModeratorPage';
+import ModeratorPage from './pages/ModeratorPage/ModeratorPage';
 
 class App extends Component {
   render () {

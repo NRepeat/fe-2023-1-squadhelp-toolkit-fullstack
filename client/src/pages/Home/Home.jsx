@@ -8,7 +8,7 @@ import Footer from '../../components/Footer/Footer';
 import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
-import ModeratorPage from '../moderatorPage/ModeratorPage';
+import ModeratorPage from '../ModeratorPage/ModeratorPage';
 
 const Home = (props) => {
   const [index, setIndex] = useState(0);

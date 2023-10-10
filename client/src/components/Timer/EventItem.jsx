@@ -2,15 +2,19 @@ import React, { useState, useEffect } from 'react';
 import styles from './Timer.module.scss';
 import { useDispatch } from 'react-redux';
 import { deleteEvent } from '../../store/slices/timerSlice';
-function EventItem({ event,id }) {
+
+function EventItem({ event, id }) {
   const dispatch = useDispatch();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(event));
   const [initialTimeLeft, setinitialTimeLeft] = useState([]);
+  const [isCompleted, setIsCompleted] = useState(false);
+
   useEffect(() => {
     const eventDate = new Date(`${event.date} ${event.time}`);
     const currentTime = new Date();
 
     if (eventDate <= currentTime) {
+      setIsCompleted(true);
       return;
     }
 
@@ -22,12 +26,13 @@ function EventItem({ event,id }) {
       clearInterval(timer);
     };
   }, [event]);
+
   useEffect(() => {
     setinitialTimeLeft(calculateTimeLeft(event));
   }, []);
 
   const handleDelete = (e) => {
-		dispatch(deleteEvent(event.id));
+    dispatch(deleteEvent(event.id));
   };
 
   function calculateTimeLeft(event) {
@@ -74,11 +79,10 @@ function EventItem({ event,id }) {
 
   return (
     <>
-      {' '}
       <div
         onClick={handleDelete}
-        className={`${styles.eventItem} ${
-          isEventSoon ? 'event-item-soon' : ''
+        className={`${styles.eventItem}  ${
+          isCompleted ? styles.eventItemCompleted : ''
         }`}
       >
         <h3>{event.name}</h3>

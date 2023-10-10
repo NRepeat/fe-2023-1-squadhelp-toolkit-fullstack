@@ -4,7 +4,7 @@ import CONSTANTS from '../../constants';
 import CustomerDashboard from '../../components/CustomerDashboard/CustomerDashboard';
 import CreatorDashboard from '../../components/CreatorDashboard/CreatorDashboard';
 import Header from '../../components/Header/Header';
-import ModeratorPage from '../moderatorPage/ModeratorPage';
+import ModeratorPage from '../ModeratorPage/ModeratorPage';
 
 const Dashboard = (props) => {
   const { role, history } = props;

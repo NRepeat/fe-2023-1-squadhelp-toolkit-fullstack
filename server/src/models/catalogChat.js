@@ -12,19 +12,19 @@ module.exports = (sequelize) => {
 
 	CatalogChat.init(
 		{
-			// Define fields that match your table columns here
+			
 			
 			catalogId: {
 				type: DataTypes.INTEGER,
 				references: {
-					model: 'Catalog', // Make sure 'Catalog' matches your actual Catalog model name
+					model: 'Catalog', 
 					key: 'id',
 				},
 			},
 			conversationId: {
 				type: DataTypes.INTEGER,
 				references: {
-					model: 'Conversation', // Make sure 'Conversation' matches your actual Conversation model name
+					model: 'Conversation', 
 					key: 'id',
 				},
 			},

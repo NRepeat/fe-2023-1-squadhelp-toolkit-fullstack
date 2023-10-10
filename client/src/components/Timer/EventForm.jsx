@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addEvent } from '../../store/slices/timerSlice';
 import styles from './Timer.module.scss';
 import { v4 as uuidv4 } from 'uuid';
+
 function EventForm() {
   const dispatch = useDispatch();
   const [eventName, setEventName] = useState('');
@@ -11,15 +12,28 @@ function EventForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!eventName || !eventDate || !eventTime) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    const selectedDate = new Date(`${eventDate}T${eventTime}`);
+    const currentDate = new Date();
+
+    if (selectedDate < currentDate) {
+      alert('Please select a future date and time.');
+      return;
+    }
+
     const newEvent = {
-			id: uuidv4(),
+      id: uuidv4(),
       name: eventName,
       date: eventDate,
       time: eventTime,
     };
 
     dispatch(addEvent(newEvent));
-
   };
 
   return (

@@ -11,7 +11,7 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Users', // Make sure 'Users' matches your actual Users table name
+          model: 'Users',
           key: 'id',
         },
       },

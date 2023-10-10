@@ -1,0 +1,151 @@
+.displayNone {
+  display: none;
+}
+
+.formContainer {
+  width: 100%;
+
+  h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: #54618a;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+    height: 81vh;
+    .tabContainer {
+      display: flex;
+      gap: 10px;
+
+      .tabButton {
+        padding: 10px 20px;
+        background-color: white;
+        color: #71cfcf;
+        border: 2px solid #71cfcf;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &.active {
+          background-color: #71cfcf;
+          color: white;
+        }
+      }
+    }
+    .cardWrapper {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      overflow-x: hidden;
+      width: 95%;
+      .mpaCardContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 5px;
+        padding: 5px;
+        border: 5px solid #71cfcf;
+
+        background-color: rgb(243, 240, 236);
+        .contestContainer {
+          border: 1px solid #54618a;
+          padding: 10px;
+          background-color: white;
+          .buttonOffer {
+            display: flex;
+            flex-direction: column;
+          }
+          .contestInfo {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            p:nth-child(1) {
+              color: red;
+              font-size: large;
+            }
+          }
+          button {
+            padding-bottom: 5px;
+            padding: 10px 20px;
+            background-color: white;
+            color: #71cfcf;
+            border: 2px solid #71cfcf;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          button:hover {
+            background-color: #71cfcf;
+            color: white;
+          }
+          .offerContainer {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .offerInfo {
+              display: flex;
+              flex-direction: column;
+              width: 250px;
+              gap: 5px;
+              text-align: left;
+              border: 3px solid #2b8787;
+              padding-left: 3px;
+              border-radius: 4px;
+              .imgWrapper {
+								max-height: 300px;
+								overflow-y: auto;
+                img {
+                  background-size: cover;
+                  max-width: 200px;
+                  max-height: 250px;
+                }
+              }
+
+              div {
+                display: flex;
+                flex-direction: column;
+                padding: 4px;
+                gap: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pagination {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      justify-self: flex-end;
+      .pageItem {
+        button {
+          padding: 5px 10px;
+          background-color: white;
+          color: #54618a;
+          border: 1px solid #54618a;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &.active {
+            background-color: #54618a;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
