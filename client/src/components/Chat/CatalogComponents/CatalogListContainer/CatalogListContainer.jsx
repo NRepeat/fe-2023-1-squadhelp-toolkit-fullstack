@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  getCatalogList,
+  getCatalogList, removeChatFromCatalogAction,
 } from '../../../../store/slices/chatSlice';
 import CatalogList from '../CatalogList/CatalogList';
 import DialogList from '../../DialogComponents/DialogList/DialogList';
@@ -20,7 +20,7 @@ function CatalogListContainer (){
   const removeChatFromCatalog = (event, chatId) => {
     const { id: catalogId } = chatStore.currentCatalog;
     const { id: userId } = userStore.data;
-    dispatch(removeChatFromCatalog({ chatId, catalogId, userId }));
+    dispatch(removeChatFromCatalogAction({ chatId, catalogId, userId }));
     event.stopPropagation();
   };
 

@@ -1,17 +1,17 @@
 import React from 'react';
 import constants from '../../constants';
 import styles from './style.module.scss';
-const ContestImg = ({ ...props }) => <img className={styles.Img} {...props} />;
+const ContestImg = ({ ...props }) => <img className={styles.Img} alt= 'ContestImg' {...props} />;
 ContestImg.defaultProps = {
   src: `${constants.STATIC_IMAGES_PATH}/howItwork/Contest.png`,
   alt: 'ContestImg',
 };
-const NameImg = ({ ...props }) => <img className={styles.Img} {...props} />;
+const NameImg = ({ ...props }) => <img className={styles.Img}  alt= 'NameImg' {...props} />;
 NameImg.defaultProps = {
   src: `${constants.STATIC_IMAGES_PATH}/howItwork/Name.png`,
   alt: 'NameImg',
 };
-const AgencyImg = ({ ...props }) => <img className={styles.Img} {...props} />;
+const AgencyImg = ({ ...props }) => <img className={styles.Img} alt= 'AgencyImg'{...props} />;
 AgencyImg.defaultProps = {
   src: `${constants.STATIC_IMAGES_PATH}/howItwork/Agency.png`,
   alt: 'AgencyImg',

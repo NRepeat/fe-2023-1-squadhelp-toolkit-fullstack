@@ -2,7 +2,7 @@ import React from 'react';
 import constants from '../../constants';
 import styles from './style.module.scss';
 const PhoneImg = ({ ...props }) => (
-  <img className={styles.phoneImhHDSW} {...props} />
+  <img className={styles.phoneImhHDSW} alt='phoneImg' {...props} />
 );
 PhoneImg.defaultProps = {
   src: `${constants.STATIC_IMAGES_PATH}/howItwork/phone.png`,

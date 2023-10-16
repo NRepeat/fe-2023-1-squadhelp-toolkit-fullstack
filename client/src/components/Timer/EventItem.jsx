@@ -3,7 +3,7 @@ import styles from './Timer.module.scss';
 import { useDispatch } from 'react-redux';
 import { deleteEvent } from '../../store/slices/timerSlice';
 
-function EventItem({ event, id }) {
+function EventItem({ event }) {
   const dispatch = useDispatch();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(event));
   const [initialTimeLeft, setinitialTimeLeft] = useState([]);
@@ -29,7 +29,7 @@ function EventItem({ event, id }) {
 
   useEffect(() => {
     setinitialTimeLeft(calculateTimeLeft(event));
-  }, []);
+  }, [event]);
 
   const handleDelete = (e) => {
     dispatch(deleteEvent(event.id));
@@ -55,9 +55,6 @@ function EventItem({ event, id }) {
 
     return { days, hours, minutes, seconds };
   }
-
-  const isEventSoon =
-    timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes < 10;
 
   const totalSeconds =
     initialTimeLeft.days * 24 * 60 * 60 +

@@ -4,7 +4,7 @@ import { useField } from 'formik';
 const FieldFileInput = ({ classes, name, ...rest }) => {
   const { fileUploadContainer, labelClass, fileNameClass, fileInput } = classes;
 
-  const [{ value, ...restField }, meta, helpers] = useField(name);
+  const [{ value, ...restField },  helpers] = useField(name);
 
   const getFileName = () => {
     if (value) {

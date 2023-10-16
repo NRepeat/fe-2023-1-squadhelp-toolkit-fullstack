@@ -274,7 +274,7 @@ function Header() {
                       to="/howItWorksPage"
                       style={{ textDecoration: 'none', color: 'white' }}
                     >
-                      <a style={{ color: 'none' }}>How It Works</a>
+                      <p style={{ color: 'none' }}>How It Works</p>
                     </Link>
                   </li>
                 </ul>

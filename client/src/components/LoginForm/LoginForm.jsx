@@ -13,10 +13,8 @@ const LoginForm = (props) => {
   const { error, isFetching } = auth;
 
   useEffect(() => {
-    return () => {
-      authClear();
-    };
-  }, []);
+    authClear();
+  }, [authClear]);
 
   const clicked = (values) => {
     loginRequest({ data: values, history });

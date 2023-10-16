@@ -16,7 +16,7 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
     return (
       <div
         className={`${
-          contestData.length == 0 ? style.displayNone : style.mpaCardContainer
+          contestData.length === 0 ? style.displayNone : style.mpaCardContainer
         }`}
       >
         {contestData.map((offer) => (
@@ -29,7 +29,7 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
               <p>Prize: {offer.prize}</p>
               <div>
                 <div>
-                  {offer.Offers.length != 0 ? (
+                  {offer.Offers.length !== 0 ? (
                     <div className={style.buttonOffer}>
                       <button onClick={() => toggleOfferVisibility(offer.id)}>
                         {visibleOffers.includes(offer.id)

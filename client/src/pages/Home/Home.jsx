@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
@@ -13,18 +13,19 @@ import ModeratorPage from '../ModeratorPage/ModeratorPage';
 const Home = (props) => {
   const [index, setIndex] = useState(0);
   const [styleName, setStyle] = useState(styles.headline__static);
-  let timeout;
+
+	const timeoutRef = useRef(null);
 
   useEffect(() => {
-    timeout = setInterval(() => {
-      setIndex(index + 1);
+    timeoutRef.current = setInterval(() => {
+      setIndex((prevIndex) => prevIndex + 1);
       setStyle(styles.headline__isloading);
     }, 3000);
     return () => {
       setStyle(styles.headline__static);
-      clearInterval(timeout);
+      clearInterval(timeoutRef.current);
     };
-  });
+  },); 
 
   const { isFetching, data } = props;
   const text =

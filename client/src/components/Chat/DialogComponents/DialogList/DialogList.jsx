@@ -14,13 +14,11 @@ import styles from './DialogList.module.sass';
 
 const DialogList = (props) => {
   const changeFavorite = (data, event) => {
-    // this.props.getChatPreview();
     props.changeChatFavorite(data);
     event.stopPropagation();
   };
 
   const changeBlackList = (data, event) => {
-    // this.props.getChatPreview();
     props.changeChatBlock(data);
     event.stopPropagation();
   };
@@ -53,7 +51,7 @@ const DialogList = (props) => {
       goToExpandedDialog,
       chatMode,
       removeChat,
-      interlocutor,
+  
     } = props;
 
     preview.forEach((chatPreview, index) => {

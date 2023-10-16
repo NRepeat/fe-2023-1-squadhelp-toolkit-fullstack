@@ -10,7 +10,7 @@ const PrivateHoc = (Component, props) => {
       if (!ownProps.data) {
         ownProps.getUser();
       }
-    }, []);
+    }, [ownProps]);
 
     return (
       <>

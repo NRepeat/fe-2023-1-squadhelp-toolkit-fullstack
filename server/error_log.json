@@ -1,7 +1,193 @@
 [
   {
+    "message": "\"avatar\" is read-only",
+    "time": 1697467594956,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: \"avatar\" is read-only",
+      "    at _readOnlyError (/server/src/controllers/userController.js:3:39)",
+      "    at _callee5$ (/server/src/controllers/userController.js:144:4)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/userController.js:7:103)",
+      "    at _next (/server/src/controllers/userController.js:9:194)",
+      "    at /server/src/controllers/userController.js:9:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/userController.js:9:97",
+      "    at /server/src/controllers/userController.js:140:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Immediate._onImmediate (/server/node_modules/multer/lib/make-middleware.js:53:37)",
+      "    at processImmediate (node:internal/timers:468:21)"
+    ]
+  },
+  {
+    "message": "\"avatar\" is read-only",
+    "time": 1697467605414,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: \"avatar\" is read-only",
+      "    at _readOnlyError (/server/src/controllers/userController.js:3:39)",
+      "    at _callee5$ (/server/src/controllers/userController.js:144:4)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/userController.js:7:103)",
+      "    at _next (/server/src/controllers/userController.js:9:194)",
+      "    at /server/src/controllers/userController.js:9:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/userController.js:9:97",
+      "    at /server/src/controllers/userController.js:140:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Immediate._onImmediate (/server/node_modules/multer/lib/make-middleware.js:53:37)",
+      "    at processImmediate (node:internal/timers:468:21)"
+    ]
+  },
+  {
+    "message": "\"avatar\" is read-only",
+    "time": 1697467735628,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: \"avatar\" is read-only",
+      "    at _readOnlyError (/server/src/controllers/userController.js:3:39)",
+      "    at _callee5$ (/server/src/controllers/userController.js:144:4)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/userController.js:7:103)",
+      "    at _next (/server/src/controllers/userController.js:9:194)",
+      "    at /server/src/controllers/userController.js:9:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/userController.js:9:97",
+      "    at /server/src/controllers/userController.js:140:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Immediate._onImmediate (/server/node_modules/multer/lib/make-middleware.js:53:37)",
+      "    at processImmediate (node:internal/timers:468:21)"
+    ]
+  },
+  {
+    "message": "\"avatar\" is read-only",
+    "time": 1697467744031,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: \"avatar\" is read-only",
+      "    at _readOnlyError (/server/src/controllers/userController.js:3:39)",
+      "    at _callee5$ (/server/src/controllers/userController.js:144:4)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/userController.js:7:103)",
+      "    at _next (/server/src/controllers/userController.js:9:194)",
+      "    at /server/src/controllers/userController.js:9:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/userController.js:9:97",
+      "    at /server/src/controllers/userController.js:140:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Immediate._onImmediate (/server/node_modules/multer/lib/make-middleware.js:53:37)",
+      "    at processImmediate (node:internal/timers:468:21)"
+    ]
+  },
+  {
     "message": "need token",
-    "time": 1696967086537,
+    "time": 1697467856131,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "\"avatar\" is read-only",
+    "time": 1697467865469,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: \"avatar\" is read-only",
+      "    at _readOnlyError (/server/src/controllers/userController.js:3:39)",
+      "    at _callee5$ (/server/src/controllers/userController.js:144:4)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/userController.js:7:103)",
+      "    at _next (/server/src/controllers/userController.js:9:194)",
+      "    at /server/src/controllers/userController.js:9:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/userController.js:9:97",
+      "    at /server/src/controllers/userController.js:140:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Immediate._onImmediate (/server/node_modules/multer/lib/make-middleware.js:53:37)",
+      "    at processImmediate (node:internal/timers:468:21)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1697468136749,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "\"avatar\" is read-only",
+    "time": 1697468147592,
+    "code": 500,
+    "stackTrace": [
+      "TypeError: \"avatar\" is read-only",
+      "    at _readOnlyError (/server/src/controllers/userController.js:3:39)",
+      "    at _callee5$ (/server/src/controllers/userController.js:144:4)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/controllers/userController.js:7:103)",
+      "    at _next (/server/src/controllers/userController.js:9:194)",
+      "    at /server/src/controllers/userController.js:9:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/controllers/userController.js:9:97",
+      "    at /server/src/controllers/userController.js:140:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Immediate._onImmediate (/server/node_modules/multer/lib/make-middleware.js:53:37)",
+      "    at processImmediate (node:internal/timers:468:21)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1697468494240,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -25,7 +211,7 @@
   },
   {
     "message": "need token",
-    "time": 1696967113087,
+    "time": 1697468505041,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -49,7 +235,7 @@
   },
   {
     "message": "need token",
-    "time": 1696967113090,
+    "time": 1697472042530,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -73,7 +259,7 @@
   },
   {
     "message": "need token",
-    "time": 1696967113093,
+    "time": 1697472042535,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -97,7 +283,7 @@
   },
   {
     "message": "need token",
-    "time": 1696967735441,
+    "time": 1697472220453,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",
@@ -121,7 +307,103 @@
   },
   {
     "message": "need token",
-    "time": 1696967735445,
+    "time": 1697472220457,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1697472220459,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1697472360528,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1697472360531,
+    "code": 408,
+    "stackTrace": [
+      "TokenError: need token",
+      "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
+      "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
+      "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
+      "    at Generator.next (/server/node_modules/regenerator-runtime/runtime.js:118:21)",
+      "    at asyncGeneratorStep (/server/src/middlewares/checkToken.js:3:103)",
+      "    at _next (/server/src/middlewares/checkToken.js:5:194)",
+      "    at /server/src/middlewares/checkToken.js:5:364",
+      "    at new Promise (<anonymous>)",
+      "    at /server/src/middlewares/checkToken.js:5:97",
+      "    at /server/src/middlewares/checkToken.js:5:1",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at next (/server/node_modules/express/lib/router/route.js:137:13)",
+      "    at Route.dispatch (/server/node_modules/express/lib/router/route.js:112:3)",
+      "    at Layer.handle [as handle_request] (/server/node_modules/express/lib/router/layer.js:95:5)",
+      "    at /server/node_modules/express/lib/router/index.js:281:22",
+      "    at Function.process_params (/server/node_modules/express/lib/router/index.js:335:12)"
+    ]
+  },
+  {
+    "message": "need token",
+    "time": 1697472360533,
     "code": 408,
     "stackTrace": [
       "TokenError: need token",

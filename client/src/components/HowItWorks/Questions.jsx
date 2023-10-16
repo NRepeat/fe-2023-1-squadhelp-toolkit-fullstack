@@ -3,27 +3,27 @@ import styles from './style.module.scss';
 import constants from '../../constants';
 export default function Questions() {
   const ForbesImg = ({ ...props }) => (
-    <img className={styles.stars} {...props} />
+    <img className={styles.stars} alt='ForbesImg' {...props} />
   );
   ForbesImg.defaultProps = {
     src: `${constants.STATIC_IMAGES_PATH}/howItwork/forbes.svg`,
     alt: 'ForbesImg',
   };
   const ChicagoImg = ({ ...props }) => (
-    <img className={styles.stars} {...props} />
+    <img className={styles.stars}alt='ChicagoImg' {...props} />
   );
   ChicagoImg.defaultProps = {
     src: `${constants.STATIC_IMAGES_PATH}/howItwork/chicago.svg`,
     alt: 'ChicagoImg',
   };
   const MashableImg = ({ ...props }) => (
-    <img className={styles.stars} {...props} />
+    <img className={styles.stars}alt='MashableImg' {...props} />
   );
   MashableImg.defaultProps = {
     src: `${constants.STATIC_IMAGES_PATH}/howItwork/Mashable.svg`,
     alt: 'MashableImg',
   };
-  const TNWImg = ({ ...props }) => <img className={styles.stars} {...props} />;
+  const TNWImg = ({ ...props }) => <img className={styles.stars} alt='TNWImg'{...props} />;
   TNWImg.defaultProps = {
     src: `${constants.STATIC_IMAGES_PATH}/howItwork/TNW.svg`,
     alt: 'TNWImg',

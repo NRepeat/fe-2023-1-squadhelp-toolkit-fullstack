@@ -3,21 +3,21 @@ import styles from './style.module.scss';
 import constants from '../../constants';
 export default function ReadyGetStarted() {
   const StarsImg = ({ ...props }) => (
-    <img className={styles.stars} {...props} />
+    <img className={styles.stars}  alt= 'StarsImg'{...props} />
   );
   StarsImg.defaultProps = {
     src: `${constants.STATIC_IMAGES_PATH}/howItwork/stars.svg`,
     alt: 'StarsImg',
   };
   const PeopleImg = ({ ...props }) => (
-    <img className={styles.stars} {...props} />
+    <img className={styles.stars} alt= 'PeopleImg'{...props} />
   );
   PeopleImg.defaultProps = {
     src: `${constants.STATIC_IMAGES_PATH}/howItwork/people.webp`,
     alt: 'PeopleImg',
   };
   const SharingfilesImg = ({ ...props }) => (
-    <img className={styles.stars} {...props} />
+    <img className={styles.stars}  alt= 'SharingfilesImg' {...props} />
   );
   SharingfilesImg.defaultProps = {
     src: `${constants.STATIC_IMAGES_PATH}/howItwork/sharing-files.svg`,

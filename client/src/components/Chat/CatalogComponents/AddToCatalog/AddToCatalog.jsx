@@ -12,7 +12,7 @@ function AddToCatalog(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCatalogList());
-  }, []);
+  }, [dispatch]);
   const getCatalogsNames = () => {
     const { catalogList } = props;
 
@@ -36,7 +36,7 @@ function AddToCatalog(props) {
   const click = (values) => {
     const { addChatId, catalogList } = props;
     const catalogId = Number(values.catalogId);
-    const catalog = catalogList.filter((data) => data.id == catalogId);
+    const catalog = catalogList.filter((data) => data.id === catalogId);
     props.addChatToCatalog({
       chatId: addChatId,
       catalogId: catalogId,

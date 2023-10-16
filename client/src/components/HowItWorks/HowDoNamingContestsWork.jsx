@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 import constants from '../../constants';
 
 const NotebookImg = ({ ...props }) => (
-  <img className={styles.NotebookImgHDNCW} {...props} />
+  <img className={styles.NotebookImgHDNCW} alt="NotebookImg" {...props} />
 );
 NotebookImg.defaultProps = {
   src: `${constants.STATIC_IMAGES_PATH}/howItwork/notebook.png`,
@@ -11,7 +11,7 @@ NotebookImg.defaultProps = {
 };
 
 const CubockImg = ({ ...props }) => (
-  <img className={styles.CubockImgHDNCW} {...props} />
+  <img className={styles.CubockImgHDNCW} alt="CubockImg" {...props} />
 );
 CubockImg.defaultProps = {
   src: `${constants.STATIC_IMAGES_PATH}/howItwork/cubock.png`,
@@ -20,9 +20,8 @@ CubockImg.defaultProps = {
 export default function HowDoNamingContestsWork() {
   return (
     <>
-      
       <div className={styles.HDNCWcontainer}>
-			<CubockImg />
+        <CubockImg />
         <h1 className={styles.HDNCWh1}>How Do Naming Contests Work?</h1>
         <div className={styles.HDNCWwrapper}>
           <div className={styles.HDNCWimg}>

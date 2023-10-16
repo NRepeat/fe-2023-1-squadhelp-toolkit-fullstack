@@ -5,9 +5,10 @@ import Spinner from '../Spinner/Spinner';
 
 const OnlyNotAuthorizedUserHoc = (Component) => {
   const HocForLoginSignUp = (props) => {
+		const {checkAuth,history} = props
     useEffect(() => {
-      props.checkAuth(props.history.replace);
-    }, []);
+      checkAuth(history.replace);
+    }, [checkAuth,history.replace]);
 
     if (props.isFetching) {
       return <Spinner />;

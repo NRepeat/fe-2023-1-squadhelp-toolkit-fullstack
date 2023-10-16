@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { changeOferrStatus, getOffers } from '../../store/slices/offerSlice';
 import { useDispatch } from 'react-redux';
 import constants from '../../constants';
@@ -20,7 +20,7 @@ export default function ModeratorPage(props) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  const fetchOffers = async () => {
+  const fetchOffers = useCallback(async () => {
     try {
       const response = await dispatch(getOffers());
       const offers = response.payload.data;
@@ -29,11 +29,10 @@ export default function ModeratorPage(props) {
       console.error('Error fetching offers:', error);
       setLoadingError('Error fetching offers');
     }
-  };
-
+  },[dispatch]);
   useEffect(() => {
     fetchOffers();
-  }, [rerenderFlag]);
+  }, [rerenderFlag, fetchOffers]);
 
   useEffect(() => {
     if (contestData.length > 0) {

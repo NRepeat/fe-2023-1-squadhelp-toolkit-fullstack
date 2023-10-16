@@ -1,6 +1,6 @@
 import CONSTANTS from './constants';
 
-export default {
+ const sliderData ={
   MAIN_SLIDER: 'MAIN_SLIDER',
   EXAMPLE_SLIDER: 'EXAMPLE_SLIDER',
   FEEDBACK_SLIDER: 'FEEDBACK_SLIDER',
@@ -123,3 +123,4 @@ export default {
     },
   ],
 };
+export default sliderData

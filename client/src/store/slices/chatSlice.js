@@ -284,9 +284,9 @@ const deleteCatalogExtraReducers = createExtraReducers({
 	},
 });
 
-//---------- removeChatFromCatalog
-export const removeChatFromCatalog = decorateAsyncThunk({
-	key: `${CHAT_SLICE_NAME}/removeChatFromCatalog`,
+//---------- removeChatFromCatalogAction
+export const removeChatFromCatalogAction = decorateAsyncThunk({
+	key: `${CHAT_SLICE_NAME}/removeChatFromCatalogAction`,
 	thunk: async payload => {
 		const { data } = await restController.removeChatFromCatalog(payload);
 		return data;
@@ -294,7 +294,7 @@ export const removeChatFromCatalog = decorateAsyncThunk({
 });
 
 const removeChatFromCatalogExtraReducers = createExtraReducers({
-	thunk: removeChatFromCatalog,
+	thunk: removeChatFromCatalogAction,
 	fulfilledReducer: (state, { payload }) => {
 		const { catalogList } = state;
 		for (let i = 0; i < catalogList.length; i++) {

@@ -4,11 +4,11 @@ import { getPreviewChat } from '../../../../store/slices/chatSlice';
 import DialogList from '../DialogList/DialogList';
 
 const DialogListContainer = (props) => {
-  useEffect(() => {
-    props.getChatPreview();
-  }, []);
+  const { messagesPreview, userId, getChatPreview } = props;
 
-  const { messagesPreview, userId } = props;
+  useEffect(() => {
+    getChatPreview();
+  }, [getChatPreview]);
 
   return (
     <DialogList
