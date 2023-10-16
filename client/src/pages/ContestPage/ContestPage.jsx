@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import isEqual from 'lodash/isEqual';
@@ -27,23 +27,18 @@ import Error from '../../components/Error/Error';
 function ContestPage(props) {
   const [isShowOnFull, setIsShowOnFull] = useState(false);
   const [imagePath, setImagePath] = useState(null);
-
+  const { changeEditContest, getData } = props;
   useEffect(() => {
-    props.changeEditContest(false);
-
-    return () => {
-      props.changeEditContest(false);
-    };
-  }, []);
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = () => {
+    changeEditContest(false);
+  }, [changeEditContest]);
+  const getContestData = useCallback(() => {
     const { params } = props.match;
-    props.getData({ contestId: params.id });
-  };
+    getData({ contestId: params.id });
+  }, [getData,props.match]);
+
+  useEffect(() => {
+    getContestData();
+  }, [getContestData]);
 
   const setOffersList = () => {
     const array = [];
@@ -73,7 +68,9 @@ function ContestPage(props) {
     const userId = props.userStore.data.id;
     const contestStatus = props.contestByIdStore.contestData.status;
     return (
-      contestCreatorId === userId && contestStatus === "active" && offerStatus === 'verified'
+      contestCreatorId === userId &&
+      contestStatus === 'active' &&
+      offerStatus === 'verified'
     );
   };
 
@@ -176,11 +173,7 @@ function ContestPage(props) {
               </span>
             </div>
             {isBrief ? (
-              <Brief
-                contestData={contestData}
-                role={role}
-                goChat={goChat}
-              />
+              <Brief contestData={contestData} role={role} goChat={goChat} />
             ) : (
               <div className={styles.offersContainer}>
                 {role === CONSTANTS.CREATOR &&

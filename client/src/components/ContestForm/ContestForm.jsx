@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { Form, Formik } from 'formik';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -30,10 +30,10 @@ const variableOptions = {
 };
 
 const ContestForm = (props) => {
-  const { isFetching, error } = props.dataForContest;
+	const {dataForContest,handleSubmit,initialValues,formRef,isEditContest,contestType, getData }=props
+  const { isFetching, error } = dataForContest;
 
-  const getPreference = () => {
-    const { contestType, getData } = props;
+  const getPreference = useCallback(() => {
     switch (contestType) {
       case CONSTANTS.NAME_CONTEST:
         getData({
@@ -50,11 +50,11 @@ const ContestForm = (props) => {
       default:
         break;
     }
-  };
+  },[contestType,getData]);
 
   useEffect(() => {
     getPreference();
-  }, []);
+  }, [getPreference]);
 
   if (error) {
     return <TryAgain getData={getPreference} />;
@@ -74,12 +74,12 @@ const ContestForm = (props) => {
             focusOfWork: '',
             targetCustomer: '',
             file: '',
-            ...variableOptions[props.contestType],
-            ...(props.initialValues || {}),
+            ...variableOptions[contestType],
+            ...(initialValues || {}),
           }}
-          onSubmit={props.handleSubmit}
+          onSubmit={handleSubmit}
           validationSchema={Schems.ContestSchem}
-          innerRef={props.formRef}
+          innerRef={formRef}
           enableReinitialize
         >
           <Form>
@@ -151,7 +151,7 @@ const ContestForm = (props) => {
               }}
               type="file"
             />
-            {props.isEditContest ? (
+            {isEditContest ? (
               <button type="submit" className={styles.changeData}>
                 Set Data
               </button>
