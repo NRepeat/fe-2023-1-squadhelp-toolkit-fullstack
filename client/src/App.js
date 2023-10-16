@@ -21,6 +21,7 @@ import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatCo
 import HowItWorksPage from './pages/HowItWorksPage/HowItWorksPage';
 import TimerPage from './pages/TimerPage/TimerPage';
 import ModeratorPage from './pages/ModeratorPage/ModeratorPage';
+import TimerNotification from './components/NotificationTimer';
 
 class App extends Component {
   render () {
@@ -92,6 +93,7 @@ class App extends Component {
           <Route component={NotFound} />
         </Switch>
         <ChatContainer />
+				<TimerNotification/>
       </Router>
     );
   }

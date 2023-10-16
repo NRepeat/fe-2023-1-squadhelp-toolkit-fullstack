@@ -25,7 +25,7 @@ function EventItem({ event }) {
     return () => {
       clearInterval(timer);
     };
-  }, [event]);
+  }, [event,timeLeft]);
 
   useEffect(() => {
     setinitialTimeLeft(calculateTimeLeft(event));
@@ -83,7 +83,7 @@ function EventItem({ event }) {
         }`}
       >
         <h3>{event.name}</h3>
-        <p className="time-left">
+        <p >
           {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
           {timeLeft.seconds}s
         </p>

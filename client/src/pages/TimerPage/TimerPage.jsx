@@ -14,12 +14,10 @@ export default function TimerPage() {
           <div className={styles.eventform}>
             <EventForm />
           </div>
-
           <div className={styles.eventlist}>
             <span>
               <h2>Event List</h2> <p>Remaining time </p>
             </span>
-
             <EventList />
           </div>
         </div>

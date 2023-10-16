@@ -272,9 +272,9 @@ function Header() {
                   <li className={styles.last}>
                     <Link
                       to="/howItWorksPage"
-                      style={{ textDecoration: 'none', color: 'white' }}
+                      style={{ textDecoration: 'none',  }}
                     >
-                      <p style={{ color: 'none' }}>How It Works</p>
+                      <p >How It Works</p>
                     </Link>
                   </li>
                 </ul>

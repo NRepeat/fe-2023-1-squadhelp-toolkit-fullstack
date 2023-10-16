@@ -9,11 +9,12 @@ function EventForm() {
   const [eventName, setEventName] = useState('');
   const [eventDate, setEventDate] = useState('');
   const [eventTime, setEventTime] = useState('');
+  const [notificationTime, setNotificationTime] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!eventName || !eventDate || !eventTime) {
+    if (!eventName || !eventDate || !eventTime || !notificationTime) {
       alert('Please fill in all fields.');
       return;
     }
@@ -26,11 +27,13 @@ function EventForm() {
       return;
     }
 
+
     const newEvent = {
       id: uuidv4(),
       name: eventName,
       date: eventDate,
       time: eventTime,
+      notificationTime: notificationTime,
     };
 
     dispatch(addEvent(newEvent));
@@ -59,6 +62,12 @@ function EventForm() {
             type="time"
             value={eventTime}
             onChange={(e) => setEventTime(e.target.value)}
+          />
+          <p>Enter notification time (minutes)</p>
+          <input
+            type="time"
+            value={notificationTime}
+            onChange={(e) => setNotificationTime(e.target.value)}
           />
         </div>
 
