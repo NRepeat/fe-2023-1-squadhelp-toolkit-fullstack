@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux';
 import { getPreviewChat } from '../../../../store/slices/chatSlice';
 
 const DialogBox = (props) => {
+  const dispatch = useDispatch();
+
   const {
     chatPreview,
     userId,
@@ -27,7 +29,6 @@ const DialogBox = (props) => {
   const [isBlocked, setIsBlocked] = useState(
     blackList[participants.indexOf(userId)]
   );
-  const dispatch = useDispatch();
   return (
     <div
       className={styles.previewChatBox}

@@ -258,7 +258,7 @@ module.exports.getCustomersContests = (req, res, next) => {
 
 
 module.exports.getContests = (req, res, next) => {
-	const { body: { typeIndex, contestId, industry, awardSort, limit, offset, ownEntries } } = req
+	const { params: { typeIndex, contestId, industry, awardSort, limit, offset, ownEntries } } = req
 	const predicates = UtilFunctions.createWhereForAllContests(typeIndex,
 		contestId, industry, awardSort);
 	db.Contest.findAll({

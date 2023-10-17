@@ -8,7 +8,7 @@ contestRouter.get(
   contestController.getCustomersContests,
 );
 
-contestRouter.post(
+contestRouter.get(
   '/all',
   basicMiddlewares.onlyForCreative,
   contestController.getContests,
