@@ -6,7 +6,7 @@ const controller = require('../socketInit');
 const UtilFunctions = require('../utils/functions');
 const CONSTANTS = require('../constants');
 
-
+const PAGE_SIZE = 10;
 
 
 

@@ -16,7 +16,7 @@ export default function ModeratorPage(props) {
   });
   const [loadingError, setLoadingError] = useState(null);
   const [rerenderFlag, setRerenderFlag] = useState(false);
-  const [activeTab, setActiveTab] = useState('ACTIVEcontest');
+  const [activeTab, setActiveTab] = useState(constants.ACTIVE_TAB_MODERATOR);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -41,14 +41,14 @@ export default function ModeratorPage(props) {
   }, [contestData, rerenderFlag]);
 
   function handleVerify(id) {
-    const status = 'verified';
+    const status = constants.CONTEST_STATUS_VERIFIED;
     dispatch(changeOferrStatus({ id, status }));
     fetchOffers();
     setRerenderFlag(!rerenderFlag);
   }
 
   function handleReject(id) {
-    const status = 'rejected';
+    const status = constants.CONTEST_STATUS_REJECTED;
     dispatch(changeOferrStatus({ id, status }));
     fetchOffers();
     setRerenderFlag(!rerenderFlag);
@@ -90,31 +90,30 @@ export default function ModeratorPage(props) {
   return (
     <div className={style.formContainer}>
       <h1>Contests </h1>
-
       <div className={style.formWrapper}>
         <div className={style.buttonWrapper}>
           <div className={style.tabContainer}>
             <button
               className={`${style.tabButton} ${
-                activeTab === 'ACTIVEcontest' ? `${style.active}` : ''
+                activeTab === constants.ACTIVE_TAB_MODERATOR ? `${style.active}` : ''
               }`}
-              onClick={() => handleTabChange('ACTIVEcontest')}
+              onClick={() => handleTabChange(constants.ACTIVE_TAB_MODERATOR)}
             >
               Active
             </button>
             <button
               className={`${style.tabButton} ${
-                activeTab === 'PENDINGcontest' ? `${style.active}` : ''
+                activeTab === constants.PENDING_TAB_MODERATOR ? `${style.active}` : ''
               }`}
-              onClick={() => handleTabChange('PENDINGcontest')}
+              onClick={() => handleTabChange(constants.PENDING_TAB_MODERATOR)}
             >
               Pending
             </button>
             <button
               className={`${style.tabButton} ${
-                activeTab === 'FINISHEDcontest' ? `${style.active}` : ''
+                activeTab === constants.FINISHED_TAB_MODERATOR ? `${style.active}` : ''
               }`}
-              onClick={() => handleTabChange('FINISHEDcontest')}
+              onClick={() => handleTabChange(constants.FINISHED_TAB_MODERATOR )}
             >
               Finished
             </button>
@@ -126,7 +125,7 @@ export default function ModeratorPage(props) {
           ) : (
             <div>
               <div>
-                {activeTab === 'ACTIVEcontest' && (
+                {activeTab === constants.ACTIVE_TAB_MODERATOR && (
                   <ContestCard
                     contestData={currentContestData}
                     onVerify={handleVerify}
@@ -135,7 +134,7 @@ export default function ModeratorPage(props) {
                 )}
               </div>
               <div>
-                {activeTab === 'PENDINGcontest' && (
+                {activeTab === constants.PENDING_TAB_MODERATOR && (
                   <ContestCard
                     contestData={currentContestData}
                     onVerify={handleVerify}
@@ -144,7 +143,7 @@ export default function ModeratorPage(props) {
                 )}
               </div>
               <div>
-                {activeTab === 'FINISHEDcontest' && (
+                {activeTab === constants.FINISHED_TAB_MODERATOR  && (
                   <ContestCard
                     contestData={currentContestData}
                     onVerify={handleVerify}
