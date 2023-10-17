@@ -1,0 +1,22 @@
+
+.pagination {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	justify-self: flex-end;
+	.pageItem {
+		button {
+			padding: 5px 10px;
+			background-color: white;
+			color: #54618a;
+			border: 1px solid #54618a;
+			border-radius: 5px;
+			cursor: pointer;
+
+			&.active {
+				background-color: #54618a;
+				color: white;
+			}
+		}
+	}
+}

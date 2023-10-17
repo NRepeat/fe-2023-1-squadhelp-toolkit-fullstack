@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import style from './ModeratorPage.module.scss';
-import constants from '../../constants';
+import style from './ContestCard.module.scss';
+import constants from '../../../constants';
+
 export default function ContestCard({ contestData, onVerify, onReject }) {
   const [visibleOffers, setVisibleOffers] = useState([]);
 
@@ -13,13 +14,14 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
   };
 
   const mapedContestData = (contestData) => {
+    const sortedContestData = contestData.slice().sort((a, b) => a.id - b.id);
     return (
       <div
         className={`${
           contestData.length === 0 ? style.displayNone : style.mpaCardContainer
         }`}
       >
-        {contestData.map((offer) => (
+        {sortedContestData.map((offer) => (
           <div key={offer.id} className={style.contestContainer}>
             <div className={style.contestInfo}>
               <p>Contest ID: {offer.id}</p>
@@ -47,14 +49,16 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
                           <p>Offer ID: {o.id}</p>
                           <p>Offer message: {o.text}</p>
                           <p>Status: {o.status}</p>
-                          <div className={style.imgWrapper}>
-                            {
-                              <img
-                                src={`${constants.publicContestsURL}${o.fileName}`}
-                                alt="userImg"
-                              />
-                            }
-                          </div>
+                          {o.fileName && (
+                            <div className={style.imgWrapper}>
+                              {
+                                <img
+                                  src={`${constants.publicContestsURL}${o.fileName}`}
+                                  alt="userImg"
+                                />
+                              }
+                            </div>
+                          )}
 
                           <p>User Display Name: {o.User.displayName}</p>
                           <p>User Email: {o.User.email}</p>
@@ -62,17 +66,25 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
                           <p>User Last Name: {o.User.lastName}</p>
                           <p>User Rating: {o.User.rating}</p>
                           <div>
-                            {offer.status === 'active' &&
-                              o.status === 'pending' && (
-                                <div>
-                                  <button onClick={() => onVerify(o.id)}>
-                                    Verify
-                                  </button>
-                                  <button onClick={() => onReject(o.id)}>
-                                    Reject
-                                  </button>
-                                </div>
-                              )}
+                            {offer.status === constants.OFFER_STATUS_ACTIVE && (
+                              <>
+                                {o.status != constants.OFFER_STATUS_VERIFIED ? (
+                                  o.status ===
+                                    constants.OFFER_STATUS_PENDING && (
+                                    <div>
+                                      <button onClick={() => onVerify(o.id)}>
+                                        Verify
+                                      </button>
+                                      <button onClick={() => onReject(o.id)}>
+                                        Reject
+                                      </button>
+                                    </div>
+                                  )
+                                ) : (
+                                  <div className={style.VERIFIED}>VERIFIED</div>
+                                )}
+                              </>
+                            )}
                           </div>
                         </div>
                       ))}

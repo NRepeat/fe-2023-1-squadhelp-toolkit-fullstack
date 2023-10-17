@@ -2,9 +2,11 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { changeOferrStatus, getOffers } from '../../store/slices/offerSlice';
 import { useDispatch } from 'react-redux';
 import constants from '../../constants';
-import ContestCard from './contestCard';
 import Footer from '../../components/Footer/Footer';
 import style from './ModeratorPage.module.scss';
+import ContestCardList from '../../components/ModeratorCommponents/ContestCardList';
+import TabContainer from '../../components/ModeratorCommponents/TabContainer';
+import Pagination from '../../components/ModeratorCommponents/Pagination';
 
 export default function ModeratorPage(props) {
   const dispatch = useDispatch();
@@ -29,7 +31,7 @@ export default function ModeratorPage(props) {
       console.error('Error fetching offers:', error);
       setLoadingError('Error fetching offers');
     }
-  },[dispatch]);
+  }, [dispatch]);
   useEffect(() => {
     fetchOffers();
   }, [rerenderFlag, fetchOffers]);
@@ -41,14 +43,14 @@ export default function ModeratorPage(props) {
   }, [contestData, rerenderFlag]);
 
   function handleVerify(id) {
-    const status = constants.CONTEST_STATUS_VERIFIED;
+    const status = constants.OFFER_STATUS_VERIFIED;
     dispatch(changeOferrStatus({ id, status }));
     fetchOffers();
     setRerenderFlag(!rerenderFlag);
   }
 
   function handleReject(id) {
-    const status = constants.CONTEST_STATUS_REJECTED;
+    const status = constants.OFFER_STATUS_REJECTED;
     dispatch(changeOferrStatus({ id, status }));
     fetchOffers();
     setRerenderFlag(!rerenderFlag);
@@ -92,84 +94,31 @@ export default function ModeratorPage(props) {
       <h1>Contests </h1>
       <div className={style.formWrapper}>
         <div className={style.buttonWrapper}>
-          <div className={style.tabContainer}>
-            <button
-              className={`${style.tabButton} ${
-                activeTab === constants.ACTIVE_TAB_MODERATOR ? `${style.active}` : ''
-              }`}
-              onClick={() => handleTabChange(constants.ACTIVE_TAB_MODERATOR)}
-            >
-              Active
-            </button>
-            <button
-              className={`${style.tabButton} ${
-                activeTab === constants.PENDING_TAB_MODERATOR ? `${style.active}` : ''
-              }`}
-              onClick={() => handleTabChange(constants.PENDING_TAB_MODERATOR)}
-            >
-              Pending
-            </button>
-            <button
-              className={`${style.tabButton} ${
-                activeTab === constants.FINISHED_TAB_MODERATOR ? `${style.active}` : ''
-              }`}
-              onClick={() => handleTabChange(constants.FINISHED_TAB_MODERATOR )}
-            >
-              Finished
-            </button>
-          </div>
+          <TabContainer
+            activeTab={activeTab}
+            handleTabChange={handleTabChange}
+          />
         </div>
         <div className={style.cardWrapper}>
           {loadingError ? (
             <div>{loadingError}</div>
           ) : (
-            <div>
-              <div>
-                {activeTab === constants.ACTIVE_TAB_MODERATOR && (
-                  <ContestCard
-                    contestData={currentContestData}
-                    onVerify={handleVerify}
-                    onReject={handleReject}
-                  />
-                )}
-              </div>
-              <div>
-                {activeTab === constants.PENDING_TAB_MODERATOR && (
-                  <ContestCard
-                    contestData={currentContestData}
-                    onVerify={handleVerify}
-                    onReject={handleReject}
-                  />
-                )}
-              </div>
-              <div>
-                {activeTab === constants.FINISHED_TAB_MODERATOR  && (
-                  <ContestCard
-                    contestData={currentContestData}
-                    onVerify={handleVerify}
-                    onReject={handleReject}
-                  />
-                )}
-              </div>
-            </div>
+            <ContestCardList
+              activeTab={activeTab}
+              currentContestData={currentContestData}
+              onVerify={handleVerify}
+              onReject={handleReject}
+              loadingError={loadingError}
+            />
           )}
         </div>
-        <ul className={style.pagination}>
-          {Array.from({
-            length: Math.ceil(
-              categorizedContestsData[activeTab].length / itemsPerPage
-            ),
-          }).map((_, index) => (
-            <li
-              key={index}
-              className={`${style.pageItem} ${
-                index + 1 === currentPage ? `${style.active}` : ''
-              }`}
-            >
-              <button onClick={() => paginate(index + 1)}>{index + 1}</button>
-            </li>
-          ))}
-        </ul>
+        <Pagination
+          categorizedContestsData={categorizedContestsData}
+          activeTab={activeTab}
+          itemsPerPage={itemsPerPage}
+          paginate={paginate}
+          currentPage={currentPage}
+        />
       </div>
       <Footer />
     </div>

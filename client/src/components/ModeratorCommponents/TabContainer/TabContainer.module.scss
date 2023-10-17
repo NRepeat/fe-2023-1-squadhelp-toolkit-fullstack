@@ -1,0 +1,18 @@
+.tabContainer {
+  display: flex;
+  gap: 10px;
+
+  .tabButton {
+    padding: 10px 20px;
+    background-color: white;
+    color: #71cfcf;
+    border: 2px solid #71cfcf;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.active {
+      background-color: #71cfcf;
+      color: white;
+    }
+  }
+}

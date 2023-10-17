@@ -17,6 +17,7 @@ const constants = {
 	LOGO_CONTEST: 'logo',
 	TAGLINE_CONTEST: 'tagline',
 	OFFER_STATUS_REJECTED: 'rejected',
+	OFFER_STATUS_ACTIVE: 'active',
 	OFFER_STATUS_WON: 'won',
 	OFFER_STATUS_VERIFIED: 'verified',
 	OFFER_STATUS_PENDING: 'pending',
