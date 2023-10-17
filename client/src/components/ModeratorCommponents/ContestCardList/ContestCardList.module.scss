@@ -1,17 +1,15 @@
-
 .cardWrapper {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  width: 95%;
+  width: 100%;
   .mpaCardContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
     border-radius: 5px;
     padding: 5px;
-    border: 5px solid #71cfcf;
 
     background-color: rgb(25, 163, 197);
     .contestContainer {

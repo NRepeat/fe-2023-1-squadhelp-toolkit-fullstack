@@ -3,12 +3,11 @@
   flex-direction: column;
   gap: 10px;
   border-radius: 5px;
-  padding: 5px;
-  border: 5px solid #71cfcf;
-
+  padding: 25px;
   background-color: rgb(243, 240, 236);
   .contestContainer {
     border: 1px solid #54618a;
+		border-radius: 4px;
     padding: 10px;
     background-color: rgba(199, 228, 245, 0.45);
     .buttonOffer {
