@@ -4,7 +4,7 @@
     "time": 1697534008552,
     "code": 408,
     "stackTrace": [
-      "TokenError: need token",
+      "TokenError: need tokena",
       "    at _callee$ (/server/src/middlewares/checkToken.js:8:17)",
       "    at tryCatch (/server/node_modules/regenerator-runtime/runtime.js:63:40)",
       "    at Generator.invoke [as _invoke] (/server/node_modules/regenerator-runtime/runtime.js:293:22)",
