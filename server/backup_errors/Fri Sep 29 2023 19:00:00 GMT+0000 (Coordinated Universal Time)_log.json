@@ -1,0 +1,437 @@
+[
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927601856
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927649375
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927776919
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927819924
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927934830
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695927972769
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695928019270
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695928037112
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695928113762
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695928145403
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695928170163
+  },
+  {
+    "message": "userId is not defined",
+    "code": 500,
+    "time": 1695928380877
+  },
+  {
+    "message": "catalog.addChat is not a function",
+    "code": 500,
+    "time": 1695928428091
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'destroy')",
+    "code": 500,
+    "time": 1695928462150
+  },
+  {
+    "message": "update or delete on table \"Catalogs\" violates foreign key constraint \"CatalogChats_catalogId_fkey\" on table \"CatalogChats\"",
+    "code": 500,
+    "time": 1695929163768
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'findAll')",
+    "code": 500,
+    "time": 1695930121976
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'findAll')",
+    "code": 500,
+    "time": 1695930124593
+  },
+  {
+    "message": "Cannot read properties of undefined (reading 'findAll')",
+    "code": 500,
+    "time": 1695930138901
+  },
+  {
+    "message": "Conversation is not associated to Catalog!",
+    "code": 500,
+    "time": 1695930155140
+  },
+  {
+    "message": "this page only for moderator",
+    "code": 423,
+    "time": 1695930178055
+  },
+  {
+    "message": "this page only for moderator",
+    "code": 423,
+    "time": 1695930179685
+  },
+  {
+    "message": "Conversation is not associated to Catalog!",
+    "code": 500,
+    "time": 1695931694122
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932201615
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932240097
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932547270
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932670769
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932697138
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932713457
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932777593
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932829220
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932882852
+  },
+  {
+    "message": "Cannot set headers after they are sent to the client",
+    "code": "ERR_HTTP_HEADERS_SENT",
+    "time": 1695932891702
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932925056
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932941892
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932952518
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932959890
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695932990694
+  },
+  {
+    "message": "Argument passed to findByPk is invalid: [object Object]",
+    "code": 500,
+    "time": 1695933037339
+  },
+  {
+    "message": "Argument passed to findByPk is invalid: [object Object]",
+    "code": 500,
+    "time": 1695933072557
+  },
+  {
+    "message": "Argument passed to findByPk is invalid: [object Object]",
+    "code": 500,
+    "time": 1695933109444
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933126248
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933168967
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933226947
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933241855
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933424070
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933445305
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933563147
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933714642
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933750635
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933851735
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695933956422
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695934850471
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695934931551
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695935005511
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695935077574
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695935116372
+  },
+  {
+    "message": "catalog.removeChat is not a function",
+    "code": 500,
+    "time": 1695942106208
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695942373456
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695942375959
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695942395821
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695942399642
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695942504706
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695988480583
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1695988480590
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695989126135
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695989182632
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695989187289
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695989188954
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695989193808
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695989201275
+  },
+  {
+    "message": "update or delete on table \"Catalogs\" violates foreign key constraint \"CatalogChats_catalogId_fkey\" on table \"CatalogChats\"",
+    "code": 500,
+    "time": 1695989207862
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695989253366
+  },
+  {
+    "message": "catalog.removeChat is not a function",
+    "code": 500,
+    "time": 1695990042529
+  },
+  {
+    "message": "catalog.removeChat is not a function",
+    "code": 500,
+    "time": 1695990120801
+  },
+  {
+    "message": "catalog.removeChat is not a function",
+    "code": 500,
+    "time": 1695990525839
+  },
+  {
+    "message": "catalog.removeChat is not a function",
+    "code": 500,
+    "time": 1695990555635
+  },
+  {
+    "message": "catalog.removeChat is not a function",
+    "code": 500,
+    "time": 1695990583812
+  },
+  {
+    "message": "catalog.removeChat is not a function",
+    "code": 500,
+    "time": 1695990693451
+  },
+  {
+    "message": "catalog.removeChat is not a function",
+    "code": 500,
+    "time": 1695990775971
+  },
+  {
+    "message": "catalog.removeChat is not a function",
+    "code": 500,
+    "time": 1695990927832
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695995293578
+  },
+  {
+    "message": "insert or update on table \"CatalogChats\" violates foreign key constraint \"CatalogChats_catalogId_fkey\"",
+    "code": 500,
+    "time": 1695995342084
+  },
+  {
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "code": 500,
+    "time": 1695995832198
+  },
+  {
+    "message": "update or delete on table \"Catalogs\" violates foreign key constraint \"CatalogChats_catalogId_fkey\" on table \"CatalogChats\"",
+    "code": 500,
+    "time": 1696001347901
+  },
+  {
+    "message": "update or delete on table \"Catalogs\" violates foreign key constraint \"CatalogChats_catalogId_fkey\" on table \"CatalogChats\"",
+    "code": 500,
+    "time": 1696001440837
+  },
+  {
+    "message": "update or delete on table \"Catalogs\" violates foreign key constraint \"CatalogChats_catalogId_fkey\" on table \"CatalogChats\"",
+    "code": 500,
+    "time": 1696001754257
+  },
+  {
+    "message": "need token",
+    "code": 408,
+    "time": 1696002072901
+  }
+]

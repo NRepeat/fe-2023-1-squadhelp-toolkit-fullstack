@@ -1,10 +1,14 @@
 const chatController = require('../controllers/chatController');
+const  chatPG= require('../controllers/sockets/chatPGController');
 const chatRouter = require('express').Router();
 chatRouter.post(
   '/newMessage',
   chatController.addMessage,
 );
-
+chatRouter.post(
+  '/newMessagePG',
+	chatPG.createMessage,
+);
 chatRouter.post(
   '/getChat',
   chatController.getChat,

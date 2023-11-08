@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import * as restController from '../../api/rest/user.js';
+import * as restController from '../../api/rest/userControll.js';
 import { controller } from '../../api/ws/socketController';
 import { rejectedReducer } from '../../utils/store';
 import { changeEditModeOnUserProfile } from './userProfileSlice';

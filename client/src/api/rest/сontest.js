@@ -67,16 +67,14 @@ export const getActiveContests = async ({
 	ownEntries,
 }) => {
 	try {
-		return await http.get('contests/all', {
-			params: {
-				offset,
-				limit,
-				typeIndex,
-				contestId,
-				industry,
-				awardSort,
-				ownEntries,
-			}
+		return await http.post('contests/all', {
+			offset,
+			limit,
+			typeIndex,
+			contestId,
+			industry,
+			awardSort,
+			ownEntries,
 		});
 	} catch (error) {
 		throw error;

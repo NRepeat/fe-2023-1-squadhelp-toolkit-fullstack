@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import {
   backToDialogList,
   changeChatFavorite,
   changeChatBlock,
-  getPreviewChat,
 } from '../../../../store/slices/chatSlice';
 import styles from './ChatHeader.module.sass';
 import CONSTANTS from '../../../../constants';
 
 const ChatHeader = (props) => {
-  const { avatar, firstName, id: userId } = props.interlocutor;
-  const { backToDialogList, chatData } = props;
-
   const changeFavorite = (data, event) => {
     props.changeChatFavorite(data);
     event.stopPropagation();
@@ -24,17 +20,21 @@ const ChatHeader = (props) => {
     event.stopPropagation();
   };
 
-  const [isFavorite, setIsFavorite] = useState(
-    props.chatData.favoriteList[props.chatData.participants.indexOf(userId)]
-  );
+  const isFavorite = (chatData, userId) => {
+    const { favoriteList, participants } = chatData;
+    return favoriteList[participants.indexOf(userId)];
+  };
 
-  const [isBlocked, setIsBlocked] = useState(
-    props.chatData?.blockedList?.[
-      props.chatData.participants.indexOf(userId)
-    ] || false
-  );
+  const isBlocked = (chatData, userId) => {
+    const { participants, blackList } = chatData;
+
+    return blackList[participants.indexOf(userId)];
+  };
+  const { avatar, firstName, id: userId } = props.interlocutor;
+  const { backToDialogList, chatData } = props;
 
   return (
+		
     <div className={styles.chatHeader}>
       <div
         className={styles.buttonContainer}
@@ -60,37 +60,34 @@ const ChatHeader = (props) => {
         {chatData && (
           <div>
             <i
-              onClick={(event) => {
-                const newFavoriteFlag = !isFavorite;
-                setIsFavorite(newFavoriteFlag);
+              onClick={(event) =>
                 changeFavorite(
                   {
                     participants: chatData.participants,
-                    favoriteFlag: newFavoriteFlag,
+                    favoriteFlag: !isFavorite(chatData, userId),
                   },
                   event
-                );
-              }}
+                )
+              }
               className={classNames({
-                'far fa-heart': !isFavorite,
-                'fas fa-heart': isFavorite,
+                'far fa-heart': !isFavorite(chatData, userId),
+                'fas fa-heart': isFavorite(chatData, userId),
               })}
             />
             <i
-              onClick={(event) => {
-                const newBlockListFlag = !isBlocked;
-                setIsBlocked(newBlockListFlag);
+              onClick={(event) =>
+								
                 changeBlackList(
                   {
                     participants: chatData.participants,
-                    blackListFlag: newBlockListFlag,
+                    blackListFlag: !isBlocked(chatData, userId),
                   },
                   event
-                );
-              }}
+                )
+              }
               className={classNames({
-                'fas fa-user-lock': !isBlocked,
-                'fas fa-unlock': isBlocked,
+                'fas fa-user-lock': !isBlocked(chatData, userId),
+                'fas fa-unlock': isBlocked(chatData, userId),
               })}
             />
           </div>
@@ -101,15 +98,14 @@ const ChatHeader = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  const { interlocutor, chatData, chatPreview } = state.chatStore;
-  return { interlocutor, chatData, chatPreview };
+  const { interlocutor, chatData } = state.chatStore;
+  return { interlocutor, chatData };
 };
 
 const mapDispatchToProps = (dispatch) => ({
   backToDialogList: () => dispatch(backToDialogList()),
   changeChatFavorite: (data) => dispatch(changeChatFavorite(data)),
   changeChatBlock: (data) => dispatch(changeChatBlock(data)),
-  getChatPreview: () => dispatch(getPreviewChat()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChatHeader);
