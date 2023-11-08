@@ -68,7 +68,7 @@ export default function ContestCard({ contestData, onVerify, onReject }) {
                           <div>
                             {offer.status === constants.OFFER_STATUS_ACTIVE && (
                               <>
-                                {o.status != constants.OFFER_STATUS_VERIFIED ? (
+                                {o.status !== constants.OFFER_STATUS_VERIFIED ? (
                                   o.status ===
                                     constants.OFFER_STATUS_PENDING && (
                                     <div>
